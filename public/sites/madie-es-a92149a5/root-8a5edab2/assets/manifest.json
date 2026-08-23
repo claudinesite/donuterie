@@ -1,0 +1,61 @@
+{
+  "assets": [
+    {
+      "contentType": "image/avif",
+      "id": "c5352357afa3358d",
+      "kind": "image",
+      "name": "ahgOk7K9tuLqENrz_vanilla.png",
+      "path": "C:\\Users\\claud\\AppData\\Local\\Temp/browser-use/assets/2dcba8b1-7ce1-4516-90a2-76e413a5bc4a/c5352357afa3358d.png",
+      "url": "https://images.prismic.io/madie/ahgOk7K9tuLqENrz_vanilla.png?auto=format%2Ccompress&fit=max&w=256"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "304158a5505a1cf5",
+      "kind": "image",
+      "name": "ahkdxgeQX7-eWaq3_madietreats.png",
+      "path": "C:\\Users\\claud\\AppData\\Local\\Temp/browser-use/assets/2dcba8b1-7ce1-4516-90a2-76e413a5bc4a/304158a5505a1cf5.png",
+      "url": "https://images.prismic.io/madie/ahkdxgeQX7-eWaq3_madietreats.png?auto=format%2Ccompress&fit=max&w=256"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "b39844ef0a1136eb",
+      "kind": "image",
+      "name": "ahgOoLK9tuLqENr2_chocolate.png",
+      "path": "C:\\Users\\claud\\AppData\\Local\\Temp/browser-use/assets/2dcba8b1-7ce1-4516-90a2-76e413a5bc4a/b39844ef0a1136eb.png",
+      "url": "https://images.prismic.io/madie/ahgOoLK9tuLqENr2_chocolate.png?auto=format%2Ccompress&fit=max&w=256"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "35d703f4e04e7407",
+      "kind": "image",
+      "name": "ahgOrbK9tuLqENr4_mix-c-and-v.png",
+      "path": "C:\\Users\\claud\\AppData\\Local\\Temp/browser-use/assets/2dcba8b1-7ce1-4516-90a2-76e413a5bc4a/35d703f4e04e7407.png",
+      "url": "https://images.prismic.io/madie/ahgOrbK9tuLqENr4_mix-c-and-v.png?auto=format%2Ccompress&fit=max&w=256"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "adb9edd773e0c191",
+      "kind": "image",
+      "name": "ahgOurK9tuLqENr5_mix-large.png",
+      "path": "C:\\Users\\claud\\AppData\\Local\\Temp/browser-use/assets/2dcba8b1-7ce1-4516-90a2-76e413a5bc4a/adb9edd773e0c191.png",
+      "url": "https://images.prismic.io/madie/ahgOurK9tuLqENr5_mix-large.png?auto=format%2Ccompress&fit=max&w=256"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "1e6de299a4c8261a",
+      "kind": "image",
+      "name": "ahgOxbK9tuLqENr7_boxes.png",
+      "path": "C:\\Users\\claud\\AppData\\Local\\Temp/browser-use/assets/2dcba8b1-7ce1-4516-90a2-76e413a5bc4a/1e6de299a4c8261a.png",
+      "url": "https://images.prismic.io/madie/ahgOxbK9tuLqENr7_boxes.png?auto=format%2Ccompress&fit=max&w=256"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "eb255236e2f9e81a",
+      "kind": "image",
+      "name": "ahkezQeQX7-eWaq-_coffeepack.png",
+      "path": "C:\\Users\\claud\\AppData\\Local\\Temp/browser-use/assets/2dcba8b1-7ce1-4516-90a2-76e413a5bc4a/eb255236e2f9e81a.png",
+      "url": "https://images.prismic.io/madie/ahkezQeQX7-eWaq-_coffeepack.png?auto=format%2Ccompress&fit=max&w=256"
+    }
+  ],
+  "failures": []
+}
