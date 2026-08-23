@@ -151,7 +151,7 @@ export function StoryGallery() {
 
   return (
     <section
-      className="relative min-h-[788.5px] overflow-hidden bg-[linear-gradient(120deg,#13A7B2_0%,#0A3D45_100%)] px-6 pt-16 pb-24 text-[#F3FAF8] lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
+      className="relative min-h-[788.5px] overflow-hidden bg-[linear-gradient(120deg,#07515B_0%,#0A3D45_100%)] px-6 pt-16 pb-24 text-[#F3FAF8] lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
       id="historia"
     >
       <div className="madie-grain" />

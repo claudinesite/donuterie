@@ -9,17 +9,32 @@ import { StoryGallery } from "@/components/sites/madie-es-a92149a5/root-8a5edab2
 import { StoryIntro } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/StoryIntro";
 
 interface WaveDividerProps {
-  burgundyToCream?: boolean;
+  tone?: "primary" | "deep";
+  reverse?: boolean;
   flip?: boolean;
 }
 
-function WaveDivider({ burgundyToCream = false, flip = false }: WaveDividerProps) {
+function WaveDivider({
+  tone = "primary",
+  reverse = false,
+  flip = false,
+}: WaveDividerProps) {
+  const isDeep = tone === "deep";
+  const background = reverse
+    ? isDeep
+      ? "bg-[#0A3D45]"
+      : "bg-[#13A7B2]"
+    : "bg-[#F3FAF8]";
+  const fill = reverse
+    ? "fill-[#F3FAF8]"
+    : isDeep
+      ? "fill-[#07515B]"
+      : "fill-[#13A7B2]";
+
   return (
     <div
       aria-hidden="true"
-      className={`relative h-[74px] overflow-hidden sm:h-[104px] lg:h-[138px] ${
-        burgundyToCream ? "bg-[#13A7B2]" : "bg-[#F3FAF8]"
-      }`}
+      className={`relative h-[48px] overflow-hidden sm:h-[64px] lg:h-[88px] ${background}`}
     >
       <svg
         className={`absolute inset-0 size-full ${flip ? "-scale-x-100" : ""}`}
@@ -27,8 +42,8 @@ function WaveDivider({ burgundyToCream = false, flip = false }: WaveDividerProps
         viewBox="0 0 1440 140"
       >
         <path
-          className={burgundyToCream ? "fill-[#F3FAF8]" : "fill-[#13A7B2]"}
-          d="M0 54C188 100 346 103 526 82C733 58 906 68 1062 80C1213 92 1332 88 1440 102V140H0V54Z"
+          className={fill}
+          d="M0 42C220 78 414 88 612 72C822 55 1056 58 1236 72C1324 78 1392 84 1440 90V140H0V42Z"
         />
       </svg>
     </div>
@@ -42,9 +57,9 @@ export default function Home() {
       <main>
         <HeroSection />
         <StoryIntro />
-        <WaveDivider />
+        <WaveDivider tone="deep" />
         <StoryGallery />
-        <WaveDivider burgundyToCream flip />
+        <WaveDivider tone="deep" reverse flip />
         <MenuSection />
         <CateringSection />
         <InstagramSection />
