@@ -116,7 +116,7 @@ export function Header() {
         <div className="flex items-start justify-between">
           <a
             aria-label="Le Petit Bleu — accueil"
-            className={`pointer-events-auto flex flex-col [font-family:var(--font-inter),system-ui,sans-serif] text-[19px] leading-[0.78] font-black tracking-[-0.065em] uppercase transition-colors duration-300 lg:text-[22px] ${controlColor}`}
+            className={`madie-hand pointer-events-auto flex flex-col text-[26px] leading-[0.68] font-bold tracking-[-0.04em] transition-colors duration-300 lg:text-[30px] ${controlColor}`}
             href="#inicio"
           >
             <span>Le Petit</span>
