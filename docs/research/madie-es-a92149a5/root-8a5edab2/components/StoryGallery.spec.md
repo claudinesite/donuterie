@@ -6,12 +6,12 @@
 - Interaction model: previous/next click plus horizontal drag/swipe.
 
 ## Styles
-- Burgundy→`#500018` gradient, cream text, grain 40% and pattern 5% overlays.
+- Teal→deep-teal (`#0A3D45`) gradient, cream text, grain 40% and pattern 5% overlays.
 - Desktop measured height 736.5px, padding 64px top/80px bottom. Mobile height 788.5px, padding 64px/96px.
 - Desktop grid: narrative/controls left and 440px card stack right. Mobile stacks cards first and copy beneath.
 - Card top image about 347×464; stack card width 78% of 550px stage with 3:4 ratio, radius about 18px, overflow hidden.
 - Stack positions: z50 `none`, z40 `translate(14px,6px) rotate(5deg)`, z30 `28px,12px,8deg`, z20 `42px,18px,11deg`; rear brightness .85.
-- Controls are 44px rose circular buttons with burgundy arrows; hover rose-light.
+- Controls are 44px coral circular buttons with deep-teal arrows; hover coral-light.
 - Counter is JetBrains Mono, compact cream text. Copy fades/raises 8px when state changes.
 
 ## States and content

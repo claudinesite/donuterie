@@ -6,13 +6,13 @@
 - Interaction model: click-driven tabs with horizontal slide and animated height.
 
 ## Styles
-- `#menu`, cream, burgundy text, overflow hidden. Desktop 128px vertical padding, initial height 2160.5px. Mobile 80px padding and about 2887.5px.
+- `#menu`, cream, teal text, overflow hidden. Desktop 128px vertical padding, initial height 2160.5px. Mobile 80px padding and about 2887.5px.
 - Header max-width 1200px, desktop px48; grid `1.2fr 1fr`, 64px gap, 48px bottom margin.
-- H2 Dazzle burgundy outlined/filled, 96px/96px desktop; 48px mobile. Intro body about 17px/1.6.
-- Pills: 12px Dazzle, 1.2px tracking, 20×10px padding, 38px high. Active rose; inactive transparent with 30% burgundy border.
+- H2 Dazzle teal outlined/filled, 96px/96px desktop; 48px mobile. Intro body about 17px/1.6.
+- Pills: 12px Dazzle, 1.2px tracking, 20×10px padding, 38px high. Active coral; inactive transparent with 30% teal border.
 - Sliding wrapper transition: transform and height `650ms cubic-bezier(.34,1.15,.64,1)`; transform 0/-100%/-200%.
 - Group headings: Dazzle outlined, 24px/32px, 1.2px tracking. Product grids 2 columns desktop, 1 mobile.
-- Product row: 140×140 object-contain art, title/body to the right; subtle bottom rule; art shadow `0 6px 14px rgba(99,0,30,.18)`.
+- Product row: 140×140 object-contain art, title/body to the right; subtle bottom rule; art shadow `0 6px 14px rgba(7,81,91,.18)`.
 
 ## Content
 - Madeleines/Clásicos: Vainilla, Chocolate, Marmoleada with the exact descriptions from the live page.

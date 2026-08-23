@@ -8,8 +8,8 @@
 ## DOM and styles
 - Fixed nav, z-index 60, width 50%, transparent. Desktop `left:28px; padding-top:48px`; tablet `28px/28px`; mobile `8px/28px`.
 - Inner row: 40px circular menu button, 16px gap, 93.7×32px logo.
-- Button/icon color is cream over hero and burgundy after hero; use an IntersectionObserver on `#inicio`.
-- Overlay: fixed inset 0 z-40, burgundy 95% → dark burgundy 95%, subtle blur, cream text, grain texture.
+- Button/icon color is cream over hero and teal after hero; use an IntersectionObserver on `#inicio`.
+- Overlay: fixed inset 0 z-40, teal 95% → dark teal 95%, subtle blur, cream text, grain texture.
 - Overlay transition: `clip-path 1.1s cubic-bezier(.83,0,.17,1)`; closed clips to top edge, open fills viewport. Body scroll locks while open.
 - Desktop content max 824px × 2 columns centered. Left image card about 374×500, radius 18px, dark bottom gradient, eyebrow caption. Right nav display text 72px/0.95; three lines.
 - Mobile: one column, 24px horizontal padding; no large image, no social links, smaller display nav around 36px/0.95.

@@ -63,7 +63,7 @@ export function InstagramSection() {
 
   return (
     <section
-      className="relative min-h-[1077px] overflow-hidden bg-[#f6efe6] px-6 py-24 text-[#13A7B2] lg:h-[880px] lg:min-h-0 lg:px-10 lg:py-32"
+      className="relative min-h-[1077px] overflow-hidden bg-[#F3FAF8] px-6 py-24 text-[#13A7B2] lg:h-[880px] lg:min-h-0 lg:px-10 lg:py-32"
       id="instagram"
       ref={sectionRef}
     >
@@ -93,15 +93,15 @@ export function InstagramSection() {
             </h2>
 
             <div className="self-end lg:pb-2">
-              <p className="max-w-[440px] text-[17px] leading-[1.6] text-[#2a0d10]">
+              <p className="max-w-[440px] text-[17px] leading-[1.6] text-[#102F35]">
                 Únete a las{" "}
-                <span className="font-bold text-[#ff99d3]">1365 personas</span>
+                <span className="font-bold text-[#FF8B6A]">1365 personas</span>
                 {" "}que nunca se pierden una hornada — cada creación y bebida de
                 temporada se estrena primero en nuestro Instagram.
               </p>
 
               <a
-                className="group mt-6 inline-flex items-center gap-3 border-b border-[#13A7B2]/45 pb-1 font-heading text-[13px] leading-5 font-bold tracking-[0.1em] text-[#13A7B2] uppercase transition-colors duration-200 hover:border-[#ff99d3] hover:text-[#ff99d3] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
+                className="group mt-6 inline-flex items-center gap-3 border-b border-[#13A7B2]/45 pb-1 font-heading text-[13px] leading-5 font-bold tracking-[0.1em] text-[#13A7B2] uppercase transition-colors duration-200 hover:border-[#FF8B6A] hover:text-[#FF8B6A] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
                 href={instagramUrl}
                 rel="noreferrer"
                 target="_blank"
@@ -117,7 +117,7 @@ export function InstagramSection() {
           {instagramImages.map((image, index) => (
             <a
               aria-label={`Ver publicación ${index + 1} de Madie en Instagram`}
-              className={`group relative aspect-[3/4] w-[260px] shrink-0 snap-center overflow-hidden rounded-[14px] bg-[#ecdfd0] shadow-[0_10px_30px_rgba(99,0,30,0.08)] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.7,.3,1)] lg:w-auto ${cardDelays[index]} ${revealClasses} motion-reduce:transform-none motion-reduce:transition-none`}
+              className={`group relative aspect-[3/4] w-[260px] shrink-0 snap-center overflow-hidden rounded-[14px] bg-[#DCEDEA] shadow-[0_10px_30px_rgba(7,81,91,0.08)] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.7,.3,1)] lg:w-auto ${cardDelays[index]} ${revealClasses} motion-reduce:transform-none motion-reduce:transition-none`}
               href={instagramUrl}
               key={image}
               rel="noreferrer"
@@ -137,9 +137,9 @@ export function InstagramSection() {
                 />
               </picture>
 
-              <span className="absolute inset-0 bg-[#ff99d3]/0 transition-colors duration-300 group-hover:bg-[#ff99d3]/25" />
-              <span className="absolute inset-0 flex scale-90 items-center justify-center text-[#f6efe6] opacity-0 transition-[opacity,transform] duration-300 group-hover:scale-100 group-hover:opacity-100">
-                <InstagramIcon className="size-10 drop-shadow-[0_2px_9px_rgba(61,0,18,0.35)]" />
+              <span className="absolute inset-0 bg-[#FF8B6A]/0 transition-colors duration-300 group-hover:bg-[#FF8B6A]/25" />
+              <span className="absolute inset-0 flex scale-90 items-center justify-center text-[#F3FAF8] opacity-0 transition-[opacity,transform] duration-300 group-hover:scale-100 group-hover:opacity-100">
+                <InstagramIcon className="size-10 drop-shadow-[0_2px_9px_rgba(7,81,91,0.35)]" />
               </span>
             </a>
           ))}

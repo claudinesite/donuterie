@@ -33,14 +33,14 @@ function RatingRow() {
   return (
     <div
       aria-label="Valoración de Google: 5,0 de 5, basada en 83 reseñas"
-      className="flex h-[18px] items-center gap-2 [font-family:var(--font-inter),system-ui,sans-serif] text-[12px] font-semibold leading-none text-[#f6efe6]"
+      className="flex h-[18px] items-center gap-2 [font-family:var(--font-inter),system-ui,sans-serif] text-[12px] font-semibold leading-none text-[#F3FAF8]"
     >
       <GoogleMark />
       <span aria-hidden="true" className="tracking-[1.4px] text-[#fbbc04]">
         ★★★★★
       </span>
       <span>5,0</span>
-      <span className="hidden text-[#f6efe6]/70 sm:inline">83 reseñas</span>
+      <span className="hidden text-[#F3FAF8]/70 sm:inline">83 reseñas</span>
     </div>
   );
 }
@@ -49,24 +49,24 @@ function LanguagePills() {
   return (
     <nav
       aria-label="Seleccionar idioma"
-      className="absolute top-5 right-5 z-20 flex h-9 items-center rounded-full border border-[#f6efe6]/20 bg-[#160007]/30 p-1 backdrop-blur-[2px] sm:top-7 sm:right-7 lg:top-12 lg:right-12"
+      className="absolute top-5 right-5 z-20 flex h-9 items-center rounded-full border border-[#F3FAF8]/20 bg-[#041D22]/30 p-1 backdrop-blur-[2px] sm:top-7 sm:right-7 lg:top-12 lg:right-12"
     >
       <a
         aria-current="page"
-        className="flex h-7 min-w-10 items-center justify-center rounded-full bg-[#f6efe6] px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#13A7B2] uppercase"
+        className="flex h-7 min-w-10 items-center justify-center rounded-full bg-[#F3FAF8] px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#13A7B2] uppercase"
         href="#inicio"
       >
         ES
       </a>
       <a
-        className="flex h-7 min-w-10 items-center justify-center rounded-full px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#f6efe6]/70 uppercase transition-colors duration-150 hover:text-[#f6efe6] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#f6efe6]/70"
+        className="flex h-7 min-w-10 items-center justify-center rounded-full px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#F3FAF8]/70 uppercase transition-colors duration-150 hover:text-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#F3FAF8]/70"
         href="#inicio"
         lang="en"
       >
         EN
       </a>
       <a
-        className="flex h-7 min-w-10 items-center justify-center rounded-full px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#f6efe6]/70 uppercase transition-colors duration-150 hover:text-[#f6efe6] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#f6efe6]/70"
+        className="flex h-7 min-w-10 items-center justify-center rounded-full px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#F3FAF8]/70 uppercase transition-colors duration-150 hover:text-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#F3FAF8]/70"
         href="#inicio"
         lang="fr"
       >
@@ -80,7 +80,7 @@ function ScrollCue() {
   return (
     <a
       aria-label="Sobre el café"
-      className="group absolute right-12 bottom-12 z-20 hidden size-[140px] items-center justify-center rounded-full border border-[#f6efe6]/30 text-[#f6efe6] transition-transform duration-700 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f6efe6] lg:flex motion-reduce:transition-none"
+      className="group absolute right-12 bottom-12 z-20 hidden size-[140px] items-center justify-center rounded-full border border-[#F3FAF8]/30 text-[#F3FAF8] transition-transform duration-700 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F3FAF8] lg:flex motion-reduce:transition-none"
       href="#story"
     >
       <svg
@@ -114,10 +114,10 @@ function ScrollCue() {
 export function HeroSection() {
   return (
     <section
-      className="relative h-[100svh] bg-[#f6efe6] sm:min-h-[720px]"
+      className="relative h-[100svh] bg-[#F3FAF8] sm:min-h-[720px]"
       id="inicio"
     >
-      <div className="absolute inset-2 overflow-hidden rounded-[20px] bg-[#3d0012] lg:inset-5 lg:rounded-[28px]">
+      <div className="absolute inset-2 overflow-hidden rounded-[20px] bg-[#07515B] lg:inset-5 lg:rounded-[28px]">
         <picture className="absolute inset-0 block size-full">
           <source
             media="(min-width: 640px)"
@@ -133,21 +133,21 @@ export function HeroSection() {
         </picture>
 
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(10,0,5,0.55)_0%,rgba(20,0,8,0.25)_30%,rgba(35,0,12,0.6)_100%)]" />
-        <div className="pointer-events-none absolute inset-0 bg-[#21000b]/10" />
+        <div className="pointer-events-none absolute inset-0 bg-[#05272D]/10" />
 
         <LanguagePills />
 
-        <div className="absolute right-6 bottom-[136px] left-6 z-10 text-[#f6efe6] sm:right-10 sm:bottom-[184px] sm:left-10 lg:right-12 lg:bottom-[207px] lg:left-12">
+        <div className="absolute right-6 bottom-[136px] left-6 z-10 text-[#F3FAF8] sm:right-10 sm:bottom-[184px] sm:left-10 lg:right-12 lg:bottom-[207px] lg:left-12">
           <RatingRow />
 
           <h1 className="mt-[52px] max-w-[320px] font-heading text-[36px] leading-[43.2px] font-bold tracking-[0.01em] uppercase sm:mt-10 sm:max-w-[640px] sm:text-[48px] sm:leading-[57.6px] lg:max-w-[768px] lg:text-[60px] lg:leading-[72px]">
-            <span className="madie-text-stroke block text-[#f6efe6]">
+            <span className="madie-text-stroke block text-[#F3FAF8]">
               Madeleines francesas.
             </span>
-            <span className="block text-[#f6efe6]">Mañanas de Madrid.</span>
+            <span className="block text-[#F3FAF8]">Mañanas de Madrid.</span>
           </h1>
 
-          <p className="mt-4 max-w-[320px] text-[16px] leading-[24px] text-[#f6efe6]/80 sm:mt-6 sm:max-w-[576px] lg:text-[16.8px] lg:leading-[25.2px]">
+          <p className="mt-4 max-w-[320px] text-[16px] leading-[24px] text-[#F3FAF8]/80 sm:mt-6 sm:max-w-[576px] lg:text-[16.8px] lg:leading-[25.2px]">
             <span className="sm:hidden">
               Nuevo en <strong>Chamberí.</strong> Madeleines horneadas cada día,
               maridadas con cafés de especialidad — un sabor nuevo cada semana,
@@ -163,7 +163,7 @@ export function HeroSection() {
         </div>
 
         <a
-          className="group absolute bottom-[38px] left-6 z-20 inline-flex h-[46.72px] items-center gap-3 rounded-full bg-[#ff99d3] px-7 py-3.5 font-heading text-[12.48px] leading-[18.72px] font-bold tracking-[1.248px] text-[#3d0012] uppercase transition-all duration-150 hover:-translate-y-0.5 hover:gap-4 hover:bg-[#f6efe6] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f6efe6] sm:bottom-12 sm:left-10 lg:left-12 motion-reduce:transform-none"
+          className="group absolute bottom-[38px] left-6 z-20 inline-flex h-[46.72px] items-center gap-3 rounded-full bg-[#FF8B6A] px-7 py-3.5 font-heading text-[12.48px] leading-[18.72px] font-bold tracking-[1.248px] text-[#07515B] uppercase transition-all duration-150 hover:-translate-y-0.5 hover:gap-4 hover:bg-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F3FAF8] sm:bottom-12 sm:left-10 lg:left-12 motion-reduce:transform-none"
           href="#menu"
         >
           <span>Encuentra tu favorita</span>

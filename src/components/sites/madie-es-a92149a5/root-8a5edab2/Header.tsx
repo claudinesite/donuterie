@@ -153,7 +153,7 @@ export function Header() {
         aria-label="Menú principal"
         aria-hidden={!isOpen}
         inert={!isOpen}
-        className={`fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-[linear-gradient(135deg,rgba(99,0,30,0.95),rgba(61,0,18,0.95))] text-madie-cream backdrop-blur-[3px] transition-[clip-path] duration-[1100ms] ease-[cubic-bezier(.83,0,.17,1)] ${
+        className={`fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-[linear-gradient(135deg,rgba(19,167,178,0.95),rgba(7,81,91,0.95))] text-madie-cream backdrop-blur-[3px] transition-[clip-path] duration-[1100ms] ease-[cubic-bezier(.83,0,.17,1)] ${
           isOpen
             ? "pointer-events-auto [clip-path:polygon(0_0,100%_0,100%_100%,0_100%)]"
             : "pointer-events-none [clip-path:polygon(0_0,100%_0,100%_0,0_0)]"

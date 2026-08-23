@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="min-h-[337.5px] bg-[#3d0012] px-6 text-madie-cream/70 lg:h-[337.5px]">
+    <footer className="min-h-[337.5px] bg-[#07515B] px-6 text-madie-cream/70 lg:h-[337.5px]">
       <div className="mx-auto flex min-h-[337.5px] max-w-[1200px] flex-col lg:h-full">
         <div className="flex flex-1 items-center justify-center py-10">
           {/* The source is an extensionless AVIF payload, so browser-native decoding is intentional. */}

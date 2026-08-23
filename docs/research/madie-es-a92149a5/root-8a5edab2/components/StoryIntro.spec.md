@@ -9,8 +9,8 @@
 - `#story`, cream, paper texture at 10% opacity, overflow hidden.
 - Desktop padding 128px 0, measured height 689.14px; tablet/mobile padding 96px, mobile height 639.25px.
 - Container max-width 800px, centered; desktop padding 40px and content width 720px; mobile 24px.
-- Eyebrow centered, Inter 11px/16.5px, 2.42px tracking, 70% burgundy, 28px bottom margin.
-- H2 Dazzle outlined burgundy, 72px/72px desktop, 36px mobile. `reinventada` is filled and italic-like.
+- Eyebrow centered, Inter 11px/16.5px, 2.42px tracking, 70% teal, 28px bottom margin.
+- H2 Dazzle outlined teal, 72px/72px desktop, 36px mobile. `reinventada` is filled and italic-like.
 - Body block desktop max 58ch, 17.28px/28.08px, 48px top margin, 75% ink; paragraphs spaced 20px.
 
 ## Text

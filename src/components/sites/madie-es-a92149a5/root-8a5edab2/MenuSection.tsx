@@ -273,7 +273,7 @@ function ProductCard({ product }: { product: Product }) {
         width={140}
         height={140}
         sizes="140px"
-        className="size-[140px] object-contain drop-shadow-[0_6px_14px_rgba(99,0,30,0.18)]"
+        className="size-[140px] object-contain drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)]"
       />
 
       <div className="min-w-0 pt-2">

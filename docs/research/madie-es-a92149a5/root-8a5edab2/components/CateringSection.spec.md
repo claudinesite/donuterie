@@ -12,7 +12,7 @@
 - Centered content max-width 850px (770px inner), px40 desktop, cream text.
 - Eyebrow Inter 11px. H2 Dazzle outlined cream, 96px/105.6px desktop, 36–48px mobile.
 - Body centered, max 58ch, cream 85%, around 18px/1.6.
-- CTA rose pill matching hero CTA.
+- CTA coral pill matching hero CTA.
 
 ## Text
 - Eyebrow: `Catering`

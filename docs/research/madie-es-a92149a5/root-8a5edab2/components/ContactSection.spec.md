@@ -6,12 +6,12 @@
 - Interaction model: click-driven map zoom/reset; links are standard anchors.
 
 ## Styles
-- `#contacto`, burgundy→dark-burgundy gradient, cream text, grain 40%.
+- `#contacto`, teal→deep-teal gradient, cream text, grain 40%.
 - Desktop height 908.63px, padding 64px top/0 bottom; mobile about 1330.94px, 48px top/64px bottom.
 - Outer max-width 1280px, px40 desktop. Header centered max-width 600px, 64px bottom margin.
 - H2 Dazzle outlined/filled cream, 72px/79.2px desktop, 36px mobile.
 - Main grid desktop `1.4fr 1fr`, 40px gap; stack on mobile.
-- Map is a 568px rounded panel, overflow hidden, dark burgundy border. Background image is centered and can scale/pan; station labels are cream pills and Metro icons.
+- Map is a 568px rounded panel, overflow hidden, dark teal border. Background image is centered and can scale/pan; station labels are cream pills and Metro icons.
 - Details panel uses eyebrow labels, 17px body, 32px group gaps, fine cream rules.
 
 ## Content

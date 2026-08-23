@@ -50,7 +50,7 @@ export function ContactSection() {
   return (
     <section
       id="contacto"
-      className="relative scroll-mt-20 overflow-hidden bg-[linear-gradient(145deg,#13A7B2_0%,#3d0012_100%)] pt-12 pb-16 text-madie-cream lg:pt-16 lg:pb-0"
+      className="relative scroll-mt-20 overflow-hidden bg-[linear-gradient(145deg,#13A7B2_0%,#07515B_100%)] pt-12 pb-16 text-madie-cream lg:pt-16 lg:pb-0"
     >
       <div className="madie-grain" aria-hidden="true" />
 
@@ -96,7 +96,7 @@ export function ContactSection() {
               <img
                 src={`${assetRoot}/9133fcfa121b28e4`}
                 alt="Madie"
-                className="absolute top-[47%] left-[53%] w-[116px] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_5px_12px_rgba(61,0,18,0.3)]"
+                className="absolute top-[47%] left-[53%] w-[116px] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_5px_12px_rgba(7,81,91,0.3)]"
               />
             </div>
 

@@ -7,11 +7,11 @@
 
 ## Styles
 - Cream section, desktop 880.36px with 128px padding; tablet/mobile 96px and about 1077px mobile.
-- Top max-width 1200px, asymmetric grid. H2 72px/79.2px Dazzle burgundy outline/filled; body 17px/1.6.
-- Rose follower count sits inline in the paragraph.
-- CTA is an underlined/arrow editorial link with rose hover.
+- Top max-width 1200px, asymmetric grid. H2 72px/79.2px Dazzle teal outline/filled; body 17px/1.6.
+- coral follower count sits inline in the paragraph.
+- CTA is an underlined/arrow editorial link with coral hover.
 - Six-image strip: desktop six equal cards around 184.7×246.9px with 18px gaps; mobile horizontal scroll/snap or two-column compact grid.
-- Cards are 3:4, rounded about 14px, overflow hidden. Hover scales image to ~1.05 and adds rose wash/Instagram icon.
+- Cards are 3:4, rounded about 14px, overflow hidden. Hover scales image to ~1.05 and adds coral wash/Instagram icon.
 
 ## Text
 - Eyebrow: `Madie en Instagram`

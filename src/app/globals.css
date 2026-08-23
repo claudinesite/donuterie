@@ -49,8 +49,8 @@
 }
 
 :root {
-  --background: #f6efe6;
-  --foreground: #2a0d10;
+  --background: #F3FAF8;
+  --foreground: #102F35;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -132,27 +132,27 @@
 
 @theme inline {
   --color-madie-burgundy: #13A7B2;
-  --color-madie-burgundy-dark: #3d0012;
-  --color-madie-burgundy-light: #8b1c3c;
-  --color-madie-rose: #ff99d3;
-  --color-madie-rose-light: #ffc5e6;
-  --color-madie-cream: #f6efe6;
-  --color-madie-cream-dark: #ecdfd0;
-  --color-madie-sky: #67cbf2;
-  --color-madie-ink: #2a0d10;
+  --color-madie-burgundy-dark: #07515B;
+  --color-madie-burgundy-light: #2A7E86;
+  --color-madie-rose: #FF8B6A;
+  --color-madie-rose-light: #FFD1C4;
+  --color-madie-cream: #F3FAF8;
+  --color-madie-cream-dark: #DCEDEA;
+  --color-madie-sky: #75D7E0;
+  --color-madie-ink: #102F35;
 }
 
 @layer components {
   .madie-site {
     --madie-burgundy: #13A7B2;
-    --madie-burgundy-dark: #3d0012;
-    --madie-burgundy-light: #8b1c3c;
-    --madie-rose: #ff99d3;
-    --madie-rose-light: #ffc5e6;
-    --madie-cream: #f6efe6;
-    --madie-cream-dark: #ecdfd0;
-    --madie-sky: #67cbf2;
-    --madie-ink: #2a0d10;
+    --madie-burgundy-dark: #07515B;
+    --madie-burgundy-light: #2A7E86;
+    --madie-rose: #FF8B6A;
+    --madie-rose-light: #FFD1C4;
+    --madie-cream: #F3FAF8;
+    --madie-cream-dark: #DCEDEA;
+    --madie-sky: #75D7E0;
+    --madie-ink: #102F35;
     min-height: 100svh;
     overflow: clip;
     background: var(--madie-cream);

@@ -1,14 +1,14 @@
 # Design Tokens
 
-- Cream: `#f6efe6`
-- Cream dark: `#ecdfd0`
-- Ink: `#2a0d10`
-- Burgundy: `#13A7B2`
-- Burgundy dark: `#3d0012`
-- Burgundy light: `#8b1c3c`
-- Rose: `#ff99d3`
-- Rose light: `#ffc5e6`
-- Sky: `#67cbf2`
+- Cream: `#F3FAF8`
+- Cream dark: `#DCEDEA`
+- Ink: `#102F35`
+- Teal: `#13A7B2`
+- Deep teal: `#07515B`
+- Teal light: `#2A7E86`
+- Coral: `#FF8B6A`
+- Coral light: `#FFD1C4`
+- Sky: `#75D7E0`
 - Body font: Cottorway Pro 400/700
 - Display font: Dazzle Unicase Bold
 - Eyebrow font: Inter 500, 11px/16.5px, 0.22em tracking

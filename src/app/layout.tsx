@@ -51,7 +51,7 @@ export default function RootLayout({
       lang="es"
       className={`${cottorway.variable} ${dazzle.variable} ${inter.variable} ${jetbrainsMono.variable} ${caveat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#f6efe6] text-[#2a0d10]">
+      <body className="min-h-full flex flex-col bg-[#F3FAF8] text-[#102F35]">
         {children}
       </body>
     </html>
