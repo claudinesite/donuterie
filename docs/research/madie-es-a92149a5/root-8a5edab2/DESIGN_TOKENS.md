@@ -3,7 +3,7 @@
 - Cream: `#f6efe6`
 - Cream dark: `#ecdfd0`
 - Ink: `#2a0d10`
-- Burgundy: `#63001e`
+- Burgundy: `#13A7B2`
 - Burgundy dark: `#3d0012`
 - Burgundy light: `#8b1c3c`
 - Rose: `#ff99d3`

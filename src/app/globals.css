@@ -131,7 +131,7 @@
 }
 
 @theme inline {
-  --color-madie-burgundy: #63001e;
+  --color-madie-burgundy: #13A7B2;
   --color-madie-burgundy-dark: #3d0012;
   --color-madie-burgundy-light: #8b1c3c;
   --color-madie-rose: #ff99d3;
@@ -144,7 +144,7 @@
 
 @layer components {
   .madie-site {
-    --madie-burgundy: #63001e;
+    --madie-burgundy: #13A7B2;
     --madie-burgundy-dark: #3d0012;
     --madie-burgundy-light: #8b1c3c;
     --madie-rose: #ff99d3;

@@ -63,7 +63,7 @@ export function InstagramSection() {
 
   return (
     <section
-      className="relative min-h-[1077px] overflow-hidden bg-[#f6efe6] px-6 py-24 text-[#63001e] lg:h-[880px] lg:min-h-0 lg:px-10 lg:py-32"
+      className="relative min-h-[1077px] overflow-hidden bg-[#f6efe6] px-6 py-24 text-[#13A7B2] lg:h-[880px] lg:min-h-0 lg:px-10 lg:py-32"
       id="instagram"
       ref={sectionRef}
     >
@@ -73,21 +73,21 @@ export function InstagramSection() {
         <div
           className={`${revealClasses} transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.7,.3,1)] motion-reduce:transform-none motion-reduce:transition-none`}
         >
-          <p className="madie-eyebrow flex items-center gap-2.5 text-[#63001e]/75">
+          <p className="madie-eyebrow flex items-center gap-2.5 text-[#13A7B2]/75">
             <InstagramIcon className="size-6 stroke-[1.8]" />
             <span>Madie en Instagram</span>
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-8 lg:mt-12 lg:grid-cols-[1.5fr_.9fr] lg:gap-16">
             <h2 className="max-w-[760px] font-heading text-[44px] leading-[48.4px] font-bold tracking-[0.01em] uppercase sm:text-[60px] sm:leading-[66px] lg:text-[72px] lg:leading-[79.2px]">
-              <span className="madie-text-stroke block text-[#63001e]">
+              <span className="madie-text-stroke block text-[#13A7B2]">
                 Mira qué se{" "}
-                <span className="[-webkit-text-fill-color:#63001e] [-webkit-text-stroke:0]">
+                <span className="[-webkit-text-fill-color:#13A7B2] [-webkit-text-stroke:0]">
                   está
                 </span>
               </span>
-              <span className="block text-[#63001e]">horneando</span>
-              <span className="madie-text-stroke block text-[#63001e]">
+              <span className="block text-[#13A7B2]">horneando</span>
+              <span className="madie-text-stroke block text-[#13A7B2]">
                 antes que nadie.
               </span>
             </h2>
@@ -101,7 +101,7 @@ export function InstagramSection() {
               </p>
 
               <a
-                className="group mt-6 inline-flex items-center gap-3 border-b border-[#63001e]/45 pb-1 font-heading text-[13px] leading-5 font-bold tracking-[0.1em] text-[#63001e] uppercase transition-colors duration-200 hover:border-[#ff99d3] hover:text-[#ff99d3] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#63001e]"
+                className="group mt-6 inline-flex items-center gap-3 border-b border-[#13A7B2]/45 pb-1 font-heading text-[13px] leading-5 font-bold tracking-[0.1em] text-[#13A7B2] uppercase transition-colors duration-200 hover:border-[#ff99d3] hover:text-[#ff99d3] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
                 href={instagramUrl}
                 rel="noreferrer"
                 target="_blank"

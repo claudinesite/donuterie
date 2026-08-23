@@ -18,7 +18,7 @@ function WaveDivider({ burgundyToCream = false, flip = false }: WaveDividerProps
     <div
       aria-hidden="true"
       className={`relative h-[74px] overflow-hidden sm:h-[104px] lg:h-[138px] ${
-        burgundyToCream ? "bg-[#63001e]" : "bg-[#f6efe6]"
+        burgundyToCream ? "bg-[#13A7B2]" : "bg-[#f6efe6]"
       }`}
     >
       <svg
@@ -27,7 +27,7 @@ function WaveDivider({ burgundyToCream = false, flip = false }: WaveDividerProps
         viewBox="0 0 1440 140"
       >
         <path
-          className={burgundyToCream ? "fill-[#f6efe6]" : "fill-[#63001e]"}
+          className={burgundyToCream ? "fill-[#f6efe6]" : "fill-[#13A7B2]"}
           d="M0 54C188 100 346 103 526 82C733 58 906 68 1062 80C1213 92 1332 88 1440 102V140H0V54Z"
         />
       </svg>

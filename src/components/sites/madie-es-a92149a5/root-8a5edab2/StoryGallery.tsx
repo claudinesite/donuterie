@@ -151,7 +151,7 @@ export function StoryGallery() {
 
   return (
     <section
-      className="relative min-h-[788.5px] overflow-hidden bg-[linear-gradient(120deg,#63001e_0%,#500018_100%)] px-6 pt-16 pb-24 text-[#f6efe6] lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
+      className="relative min-h-[788.5px] overflow-hidden bg-[linear-gradient(120deg,#13A7B2_0%,#500018_100%)] px-6 pt-16 pb-24 text-[#f6efe6] lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
       id="historia"
     >
       <div className="madie-grain" />
@@ -189,7 +189,7 @@ export function StoryGallery() {
           <div className="mt-8 flex items-center gap-3 lg:mt-11">
             <button
               aria-label="Historia anterior"
-              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#ff99d3] text-[#63001e] transition-colors duration-150 hover:bg-[#ffc5e6] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f6efe6]"
+              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#ff99d3] text-[#13A7B2] transition-colors duration-150 hover:bg-[#ffc5e6] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f6efe6]"
               onClick={() => changeStory(-1)}
               type="button"
             >
@@ -197,7 +197,7 @@ export function StoryGallery() {
             </button>
             <button
               aria-label="Historia siguiente"
-              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#ff99d3] text-[#63001e] transition-colors duration-150 hover:bg-[#ffc5e6] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f6efe6]"
+              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#ff99d3] text-[#13A7B2] transition-colors duration-150 hover:bg-[#ffc5e6] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f6efe6]"
               onClick={() => changeStory(1)}
               type="button"
             >

@@ -53,7 +53,7 @@ function LanguagePills() {
     >
       <a
         aria-current="page"
-        className="flex h-7 min-w-10 items-center justify-center rounded-full bg-[#f6efe6] px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#63001e] uppercase"
+        className="flex h-7 min-w-10 items-center justify-center rounded-full bg-[#f6efe6] px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#13A7B2] uppercase"
         href="#inicio"
       >
         ES

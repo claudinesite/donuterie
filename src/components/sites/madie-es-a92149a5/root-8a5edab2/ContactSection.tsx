@@ -50,7 +50,7 @@ export function ContactSection() {
   return (
     <section
       id="contacto"
-      className="relative scroll-mt-20 overflow-hidden bg-[linear-gradient(145deg,#63001e_0%,#3d0012_100%)] pt-12 pb-16 text-madie-cream lg:pt-16 lg:pb-0"
+      className="relative scroll-mt-20 overflow-hidden bg-[linear-gradient(145deg,#13A7B2_0%,#3d0012_100%)] pt-12 pb-16 text-madie-cream lg:pt-16 lg:pb-0"
     >
       <div className="madie-grain" aria-hidden="true" />
 
