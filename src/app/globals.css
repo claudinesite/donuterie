@@ -202,13 +202,14 @@
   }
 
   .madie-stripes {
-    background: repeating-linear-gradient(
+    background-color: #13a7b2 !important;
+    background-image: repeating-linear-gradient(
       90deg,
       #13a7b2 0,
       #13a7b2 28px,
       #ffffff 28px,
       #ffffff 56px
-    );
+    ) !important;
   }
 
   .madie-reveal {
