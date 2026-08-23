@@ -112,7 +112,7 @@ export function Header() {
 
   return (
     <>
-      <header className="pointer-events-none fixed top-7 left-2 z-[60] w-1/2 sm:left-7 lg:top-12">
+      <header className="pointer-events-none fixed top-7 left-5 z-[60] w-1/2 sm:left-7 lg:top-12">
         <div className="pointer-events-auto flex items-center gap-4">
           <button
             type="button"
@@ -139,7 +139,9 @@ export function Header() {
             width={94}
             height={32}
             preload
-            className="h-8 w-[93.7px] object-contain"
+            className={`h-8 w-[93.7px] object-contain transition-[filter] duration-300 ${
+              isOpen || !isPastHero ? "brightness-0 invert" : ""
+            }`}
           />
         </div>
       </header>

@@ -9,9 +9,15 @@ function useRevealOnce() {
   useEffect(() => {
     const section = sectionRef.current;
 
-    if (!section || typeof IntersectionObserver === "undefined") {
-      setIsVisible(true);
+    if (!section) {
       return;
+    }
+
+    if (typeof IntersectionObserver === "undefined") {
+      const animationFrame = window.requestAnimationFrame(() => {
+        setIsVisible(true);
+      });
+      return () => window.cancelAnimationFrame(animationFrame);
     }
 
     const observer = new IntersectionObserver(

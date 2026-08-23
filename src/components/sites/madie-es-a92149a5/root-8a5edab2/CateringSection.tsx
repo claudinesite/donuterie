@@ -10,9 +10,15 @@ function useCateringMotion() {
   useEffect(() => {
     const section = sectionRef.current;
 
-    if (!section || typeof IntersectionObserver === "undefined") {
-      setIsVisible(true);
+    if (!section) {
       return;
+    }
+
+    if (typeof IntersectionObserver === "undefined") {
+      const animationFrame = window.requestAnimationFrame(() => {
+        setIsVisible(true);
+      });
+      return () => window.cancelAnimationFrame(animationFrame);
     }
 
     const observer = new IntersectionObserver(
@@ -107,6 +113,8 @@ export function CateringSection() {
         aria-hidden="true"
         className="pointer-events-none absolute -top-[8%] h-[116%] w-full will-change-transform"
       >
+        {/* Native image preserves the source AVIF payload stored under a .jpg filename. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/sites/madie-es-a92149a5/root-8a5edab2/assets/772c78b0d8dee890.jpg"
           alt=""
