@@ -92,19 +92,19 @@ export function Header() {
   return (
     <>
       <header className="pointer-events-none fixed inset-x-2 top-2 z-[60] sm:inset-x-4 sm:top-4 lg:inset-x-8 lg:top-6">
-        <div className="relative h-[64px] rounded-[8px] border border-[#13A7B2]/25 bg-white/95 shadow-[0_4px_18px_rgba(19,167,178,0.05)] backdrop-blur-sm sm:h-[76px]">
+        <div className="relative h-[54px] rounded-[7px] border border-white/60 bg-white/[0.38] shadow-[0_10px_28px_rgba(7,81,91,0.12)] backdrop-blur-xl sm:h-[66px]">
           <a
             aria-label="Le Petit Bleu — accueil"
-            className="madie-hand pointer-events-auto absolute inset-y-0 left-5 flex items-center whitespace-nowrap text-[32px] leading-none text-[#13A7B2] transition-opacity duration-200 hover:opacity-75 sm:left-7 sm:text-[40px] lg:left-9 lg:text-[48px]"
+            className="madie-hand pointer-events-auto absolute inset-y-0 left-4 flex items-center whitespace-nowrap text-[26px] leading-none text-[#07515B] transition-opacity duration-200 hover:opacity-75 sm:left-6 sm:text-[34px] lg:left-8 lg:text-[40px]"
             href="#inicio"
           >
             Le petit bleu
           </a>
 
-          <div className="pointer-events-auto absolute inset-y-0 right-5 flex items-center sm:right-7">
+          <div className="pointer-events-auto absolute inset-y-0 right-4 flex items-center sm:right-6">
             <button
               type="button"
-              className="flex h-8 w-9 cursor-pointer items-center justify-center text-[#13A7B2] transition-opacity duration-200 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
+              className="flex h-8 w-9 cursor-pointer items-center justify-center text-[#07515B] transition-opacity duration-200 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#07515B]"
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isOpen}
               aria-controls="madie-menu-overlay"
@@ -114,9 +114,9 @@ export function Header() {
             </button>
           </div>
 
-          <div className="pointer-events-auto absolute inset-y-0 right-20 flex items-center sm:right-24">
+          <div className="pointer-events-auto absolute inset-y-0 right-18 hidden items-center sm:flex sm:right-22">
             <a
-              className="font-sans text-[14px] font-semibold tracking-[0.04em] text-[#13A7B2] uppercase transition-opacity duration-200 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
+              className="font-sans text-[12px] font-semibold tracking-[0.04em] text-[#07515B] uppercase transition-opacity duration-200 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#07515B]"
               href="#menu"
             >
               Commander
