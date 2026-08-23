@@ -65,13 +65,6 @@ function LanguagePills() {
       >
         EN
       </a>
-      <a
-        className="flex h-7 min-w-10 items-center justify-center rounded-full px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#F3FAF8]/70 uppercase transition-colors duration-150 hover:text-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#F3FAF8]/70"
-        href="#inicio"
-              lang="es"
-      >
-        ES
-      </a>
     </nav>
   );
 }

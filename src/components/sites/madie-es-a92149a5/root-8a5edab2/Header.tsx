@@ -33,7 +33,7 @@ const menuItems = [
 
 type MenuItem = (typeof menuItems)[number];
 
-const languages = ["FR", "EN", "ES"] as const;
+const languages = ["FR", "EN"] as const;
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
