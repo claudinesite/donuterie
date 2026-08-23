@@ -151,7 +151,7 @@ export function StoryGallery() {
 
   return (
     <section
-      className="relative min-h-[788.5px] overflow-hidden bg-white px-6 pt-16 pb-24 text-[#102F35] lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
+      className="relative min-h-[788.5px] overflow-hidden bg-[#13A7B2] px-6 pt-16 pb-24 text-white lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
       id="historia"
     >
       <div className="madie-grain" />
@@ -189,7 +189,7 @@ export function StoryGallery() {
           <div className="mt-8 flex items-center gap-3 lg:mt-11">
             <button
               aria-label="Historia anterior"
-              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
+              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               onClick={() => changeStory(-1)}
               type="button"
             >
@@ -197,20 +197,20 @@ export function StoryGallery() {
             </button>
             <button
               aria-label="Historia siguiente"
-              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
+              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               onClick={() => changeStory(1)}
               type="button"
             >
               <ArrowRightIcon className="size-5" />
             </button>
-            <span className="madie-mono ml-1 text-[11px] leading-none tracking-[0.04em] text-[#102F35]/75">
+            <span className="madie-mono ml-1 text-[11px] leading-none tracking-[0.04em] text-white/80">
               {String(activeIndex + 1).padStart(2, "0")} / 04
             </span>
           </div>
         </div>
 
         <div className="relative order-1 mx-auto h-[380px] w-full max-w-[550px] lg:order-2 lg:h-[572px]">
-          <p className="madie-eyebrow absolute -top-8 left-1/2 hidden -translate-x-1/2 whitespace-nowrap text-[#102F35]/55 lg:block">
+          <p className="madie-eyebrow absolute -top-8 left-1/2 hidden -translate-x-1/2 whitespace-nowrap text-white/65 lg:block">
             Arrástrame →
           </p>
 
@@ -231,7 +231,7 @@ export function StoryGallery() {
                       ? `Historia de Madie ${activeIndex + 1} de ${storyStates.length}`
                       : undefined
                   }
-                  className={`relative aspect-[3/4] w-[78%] origin-center overflow-hidden rounded-[18px] border border-[#102F35]/25 bg-white shadow-[0_18px_42px_rgba(4,29,34,0.16)] transition-all duration-[550ms] ease-[cubic-bezier(.2,.7,.3,1)] will-change-transform ${stackPositionClasses[position]} ${isActive ? "pointer-events-auto cursor-grab touch-none select-none active:cursor-grabbing" : ""}`}
+                  className={`relative aspect-[3/4] w-[78%] origin-center overflow-hidden rounded-[18px] border border-white/65 bg-[#07515B] shadow-[0_18px_42px_rgba(4,29,34,0.28)] transition-all duration-[550ms] ease-[cubic-bezier(.2,.7,.3,1)] will-change-transform ${stackPositionClasses[position]} ${isActive ? "pointer-events-auto cursor-grab touch-none select-none active:cursor-grabbing" : ""}`}
                   onPointerCancel={(event) => finishDrag(event, true)}
                   onPointerDown={isActive ? handlePointerDown : undefined}
                   onPointerMove={isActive ? handlePointerMove : undefined}
