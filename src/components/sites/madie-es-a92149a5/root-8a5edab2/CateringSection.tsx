@@ -116,7 +116,7 @@ export function CateringSection() {
         {/* Native image preserves the source AVIF payload stored under a .jpg filename. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/sites/madie-es-a92149a5/root-8a5edab2/assets/772c78b0d8dee890.jpg"
+          src="/sites/madie-es-a92149a5/root-8a5edab2/assets/le-petit-bleu-evenements.png"
           alt=""
           loading="lazy"
           decoding="async"
