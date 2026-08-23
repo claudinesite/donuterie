@@ -48,7 +48,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <StoryIntro />
-        <WaveDivider />
         <StoryGallery />
         <WaveDivider reverse flip />
         <MenuSection />
