@@ -19,24 +19,15 @@ function WaveDivider({
   reverse = false,
   flip = false,
 }: WaveDividerProps) {
-  const isDeep = tone === "deep";
-  const background = reverse
-    ? isDeep
-      ? "bg-[#0A3D45]"
-      : "bg-[#13A7B2]"
-    : isDeep
-      ? "bg-[#13A7B2]"
-      : "bg-[#F3FAF8]";
-  const fill = reverse
-    ? "fill-[#F3FAF8]"
-    : isDeep
-      ? "fill-[#07515B]"
-      : "fill-[#13A7B2]";
+  const sectionColor = tone === "deep" ? "bg-[#07515B]" : "bg-[#13A7B2]";
+  const wavePath = reverse
+    ? "M0 54C188 100 346 103 526 82C733 58 906 68 1062 80C1213 92 1332 88 1440 102V140H0V54Z"
+    : "M0 54C188 100 346 103 526 82C733 58 906 68 1062 80C1213 92 1332 88 1440 102V0H0V54Z";
 
   return (
     <div
       aria-hidden="true"
-      className={`relative h-[74px] overflow-hidden sm:h-[104px] lg:h-[138px] ${background}`}
+      className={`relative h-[74px] overflow-hidden sm:h-[104px] lg:h-[138px] ${sectionColor}`}
     >
       <svg
         className={`absolute inset-0 size-full ${flip ? "-scale-x-100" : ""}`}
@@ -44,8 +35,8 @@ function WaveDivider({
         viewBox="0 0 1440 140"
       >
         <path
-          className={fill}
-          d="M0 54C188 100 346 103 526 82C733 58 906 68 1062 80C1213 92 1332 88 1440 102V140H0V54Z"
+          className="fill-[#F3FAF8]"
+          d={wavePath}
         />
       </svg>
     </div>
@@ -59,7 +50,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <StoryIntro />
-        <WaveDivider tone="deep" />
+        <WaveDivider />
         <StoryGallery />
         <WaveDivider tone="deep" reverse flip />
         <MenuSection />
