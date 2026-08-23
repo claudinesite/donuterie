@@ -112,14 +112,48 @@ export function Header() {
 
   return (
     <>
-      <header className="pointer-events-none fixed top-7 left-5 z-[60] w-1/2 sm:left-7 lg:top-12">
-        <div className="pointer-events-auto flex items-center gap-4">
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-[60] px-6 pt-6 sm:pr-0 sm:pl-8 sm:pt-7 lg:pr-4">
+        <div className="flex items-start justify-between">
+          <a
+            aria-label="Le Petit Bleu — accueil"
+            className={`pointer-events-auto flex flex-col [font-family:var(--font-inter),system-ui,sans-serif] text-[19px] leading-[0.78] font-black tracking-[-0.065em] uppercase transition-colors duration-300 lg:text-[22px] ${controlColor}`}
+            href="#inicio"
+          >
+            <span>Le Petit</span>
+            <span>Bleu.</span>
+          </a>
+
+          <div className="pointer-events-auto flex items-center gap-3">
+            <a
+              className={`hidden h-10 w-[205px] items-center gap-3 rounded-full px-5 [font-family:var(--font-inter),system-ui,sans-serif] text-[9px] font-medium transition-[color,background-color,opacity,transform] duration-300 md:flex ${
+                isOpen
+                  ? "pointer-events-none translate-y-[-6px] opacity-0"
+                  : isPastHero
+                    ? "bg-white/95 text-madie-burgundy shadow-[0_8px_24px_rgba(7,81,91,0.12)]"
+                    : "bg-[#087F89]/48 text-white/65 backdrop-blur-md"
+              }`}
+              href="#menu"
+            >
+              <svg
+                aria-hidden="true"
+                className="size-4 shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="1.8" />
+                <path d="m16 16 4 4" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />
+              </svg>
+              <span>Quel donut aujourd’hui ?</span>
+            </a>
+
           <button
             type="button"
             className={`flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full transition-[color,background-color,transform] duration-300 hover:scale-105 focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:outline-none ${controlColor} ${
               isOpen
-                ? "bg-madie-burgundy-dark/30"
-                : "bg-madie-cream/10 backdrop-blur-[2px]"
+                ? "bg-white/10"
+                : isPastHero
+                  ? "bg-white/95 shadow-[0_8px_24px_rgba(7,81,91,0.12)]"
+                  : "bg-[#087F89]/48 backdrop-blur-md"
             }`}
             aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isOpen}
@@ -127,19 +161,12 @@ export function Header() {
             onClick={() => setIsOpen((open) => !open)}
           >
             {isOpen ? (
-              <CloseIcon className="size-7" />
+              <CloseIcon className="size-5" />
             ) : (
-              <MenuIcon className="size-7" />
+              <MenuIcon className="size-5" />
             )}
           </button>
-
-          <span
-            className={`madie-hand inline-flex h-8 w-[130px] items-center text-[28px] leading-none transition-colors duration-300 ${
-              isOpen || !isPastHero ? "text-white" : "text-madie-burgundy"
-            }`}
-          >
-            Le Petit Bleu
-          </span>
+          </div>
         </div>
       </header>
 
@@ -158,7 +185,7 @@ export function Header() {
       >
         <div className="madie-grain" aria-hidden="true" />
 
-        <div className="absolute top-7 right-6 z-10 flex h-10 items-center rounded-full border border-madie-cream/20 p-1 madie-eyebrow lg:top-12 lg:right-12">
+        <div className="absolute top-24 left-6 z-10 flex h-10 items-center rounded-full border border-madie-cream/20 p-1 madie-eyebrow sm:left-9 lg:top-28 lg:left-12">
           {languages.map((language) => (
             <button
               key={language}

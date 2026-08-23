@@ -1,169 +1,96 @@
-import { ArrowRightIcon } from "../shared/icons";
+import Image from "next/image";
 
-const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
+import { ArrowLeftIcon, ArrowRightIcon } from "../shared/icons";
 
-function GoogleMark() {
+const donutStack =
+  "/sites/madie-es-a92149a5/root-8a5edab2/assets/le-petit-bleu-donut-stack.png";
+
+function HeroPagination() {
   return (
-    <svg
-      aria-hidden="true"
-      className="size-5 shrink-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M21.8 12.23c0-.71-.06-1.23-.2-1.78H12v3.48h5.64a5.06 5.06 0 0 1-2.09 3.2l-.02.12 3.04 2.36.21.02c1.93-1.79 3.02-4.42 3.02-7.4Z"
-        fill="#4285F4"
-      />
-      <path
-        d="M12 22c2.76 0 5.08-.91 6.78-2.47l-3.23-2.5c-.86.59-2.03 1-3.55 1-2.66 0-4.92-1.8-5.73-4.28l-.11.01-3.16 2.44-.04.11A10.24 10.24 0 0 0 12 22Z"
-        fill="#34A853"
-      />
-      <path
-        d="M6.27 13.75A6.22 6.22 0 0 1 5.94 12c0-.61.11-1.2.31-1.75v-.12L3.05 7.65l-.1.05A10.12 10.12 0 0 0 1.8 12c0 1.55.4 3.02 1.16 4.3l3.31-2.55Z"
-        fill="#FBBC05"
-      />
-      <path
-        d="M12 5.97c1.92 0 3.22.83 3.97 1.52l2.88-2.81A9.72 9.72 0 0 0 12 2a10.24 10.24 0 0 0-9.04 5.7l3.29 2.55C7.08 7.77 9.34 5.97 12 5.97Z"
-        fill="#EA4335"
-      />
-    </svg>
-  );
-}
-
-function RatingRow() {
-  return (
-    <div
-      aria-label="Note Google : 5,0 sur 5, basée sur 83 avis"
-      className="flex h-[18px] items-center gap-2 [font-family:var(--font-inter),system-ui,sans-serif] text-[12px] font-semibold leading-none text-[#F3FAF8]"
-    >
-      <GoogleMark />
-      <span aria-hidden="true" className="tracking-[1.4px] text-[#fbbc04]">
-        ★★★★★
-      </span>
-      <span>5,0</span>
-      <span className="hidden text-[#F3FAF8]/70 sm:inline">83 avis</span>
+    <div className="absolute bottom-7 left-6 z-30 flex items-center gap-3 text-white sm:left-9 lg:bottom-10 lg:left-12">
+      <button
+        aria-label="Donut précédent"
+        className="flex size-9 items-center justify-center rounded-full bg-[#087F89]/55 text-white/80 backdrop-blur-sm transition-colors hover:bg-white hover:text-[#13A7B2] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-white"
+        type="button"
+      >
+        <ArrowLeftIcon className="size-4" />
+      </button>
+      <button
+        aria-label="Donut suivant"
+        className="flex size-9 items-center justify-center rounded-full bg-[#087F89]/55 text-white/80 backdrop-blur-sm transition-colors hover:bg-white hover:text-[#13A7B2] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-white"
+        type="button"
+      >
+        <ArrowRightIcon className="size-4" />
+      </button>
+      <p className="ml-2 flex items-baseline [font-family:var(--font-inter),system-ui,sans-serif] font-bold">
+        <span className="text-[15px]">02</span>
+        <span className="ml-1 text-[25px] leading-none text-white/14">03</span>
+      </p>
     </div>
   );
 }
 
-function LanguagePills() {
+function RecipeCard() {
   return (
-    <nav
-      aria-label="Sélectionner la langue"
-      className="absolute top-5 right-5 z-20 flex h-9 items-center rounded-full border border-[#F3FAF8]/20 bg-[#041D22]/30 p-1 backdrop-blur-[2px] sm:top-7 sm:right-7 lg:top-12 lg:right-12"
-    >
+    <aside className="absolute right-0 bottom-6 z-30 hidden w-[190px] rounded-l-[16px] bg-[#087F89]/60 p-3 text-white shadow-[0_18px_45px_rgba(4,71,77,0.16)] backdrop-blur-md sm:block lg:bottom-8 lg:w-[225px] lg:p-5">
+      <p className="[font-family:var(--font-inter),system-ui,sans-serif] text-[9px] font-medium tracking-[0.04em] text-white/60 uppercase">
+        La recette du jour
+      </p>
+      <h2 className="mt-1.5 [font-family:var(--font-inter),system-ui,sans-serif] text-[14px] leading-none font-bold lg:text-[16px]">
+        Donut caramel
+      </h2>
       <a
-        aria-current="page"
-        className="flex h-7 min-w-10 items-center justify-center rounded-full bg-[#F3FAF8] px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#13A7B2] uppercase"
-        href="#inicio"
+        className="mt-3.5 flex items-center justify-between [font-family:var(--font-inter),system-ui,sans-serif] text-[9px] font-semibold text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:text-[10px]"
+        href="#menu"
       >
-        FR
+        <span>Découvrir la recette</span>
+        <span className="flex size-7 items-center justify-center rounded-full bg-white text-[#13A7B2] lg:size-8">
+          <span className="ml-0.5 block h-0 w-0 border-y-[4px] border-l-[6px] border-y-transparent border-l-[#13A7B2]" />
+        </span>
       </a>
-      <a
-        className="flex h-7 min-w-10 items-center justify-center rounded-full px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#F3FAF8]/70 uppercase transition-colors duration-150 hover:text-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#F3FAF8]/70"
-        href="#inicio"
-        lang="en"
-      >
-        EN
-      </a>
-    </nav>
-  );
-}
-
-function ScrollCue() {
-  return (
-    <a
-      aria-label="À propos de nos donuts"
-      className="group absolute right-12 bottom-12 z-20 hidden size-[140px] items-center justify-center rounded-full border border-[#F3FAF8]/30 text-[#F3FAF8] transition-transform duration-700 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F3FAF8] lg:flex motion-reduce:transition-none"
-      href="#story"
-    >
-      <svg
-        aria-hidden="true"
-        className="absolute inset-0 size-full [animation:madie-spin_22s_linear_infinite] motion-reduce:animate-none"
-        viewBox="0 0 140 140"
-      >
-        <defs>
-          <path
-            d="M70 13a57 57 0 1 1 0 114 57 57 0 1 1 0-114"
-            id="hero-scroll-circle"
-          />
-        </defs>
-        <text
-          fill="currentColor"
-          fontFamily="var(--font-inter), system-ui, sans-serif"
-          fontSize="9.5"
-          fontWeight="500"
-          letterSpacing="2.1"
-        >
-          <textPath href="#hero-scroll-circle">
-            NOS DONUTS · NOS DONUTS · NOS DONUTS ·
-          </textPath>
-        </text>
-      </svg>
-      <ArrowRightIcon className="size-8 [animation:madie-scroll-nudge_1.3s_ease-in-out_infinite] motion-reduce:animate-none" />
-    </a>
+    </aside>
   );
 }
 
 export function HeroSection() {
   return (
     <section
-      className="relative h-[100svh] bg-white sm:min-h-[720px]"
+      className="relative isolate h-[100svh] min-h-[560px] overflow-hidden bg-[#13A7B2] text-white"
       id="inicio"
     >
-      <div className="absolute inset-2 overflow-hidden rounded-[20px] bg-[#07515B] lg:inset-5 lg:rounded-[28px]">
-        <picture className="absolute inset-0 block size-full">
-          <source
-            media="(min-width: 640px)"
-            srcSet={`${assetRoot}/17ca35115ce152ea.jpg`}
-          />
-          <img
-            alt=""
-            className="size-full object-cover object-center"
-            decoding="async"
-            fetchPriority="high"
-            src={`${assetRoot}/9163e53a5bad6b60.jpg`}
-          />
-        </picture>
+      <div
+        aria-hidden="true"
+        className="absolute top-1/2 left-1/2 z-0 aspect-square w-[min(33vw,500px)] min-w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0B8690]/55"
+      />
+      <div
+        aria-hidden="true"
+        className="madie-grain pointer-events-none absolute inset-0 z-[1] opacity-[0.07]"
+      />
 
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(10,0,5,0.55)_0%,rgba(20,0,8,0.25)_30%,rgba(35,0,12,0.6)_100%)]" />
-        <div className="pointer-events-none absolute inset-0 bg-[#05272D]/10" />
+      <h1 className="absolute top-1/2 left-1/2 z-10 hidden w-[72%] -translate-x-1/2 -translate-y-1/2 items-center justify-between [font-family:var(--font-inter),system-ui,sans-serif] text-[clamp(52px,6vw,94px)] leading-none font-bold tracking-[-0.055em] sm:flex">
+        <span>Caramel</span>
+        <span className="-translate-x-7">Donuts</span>
+      </h1>
 
-        <LanguagePills />
+      <h1 className="pointer-events-none absolute inset-x-5 top-28 bottom-36 z-30 flex flex-col justify-between [font-family:var(--font-inter),system-ui,sans-serif] text-[44px] leading-[0.9] font-bold tracking-[-0.055em] sm:hidden">
+        <span className="self-start">Caramel</span>
+        <span className="self-end">Donuts</span>
+      </h1>
 
-        <div className="absolute right-6 bottom-[136px] left-6 z-10 text-[#F3FAF8] sm:right-10 sm:bottom-[184px] sm:left-10 lg:right-12 lg:bottom-[207px] lg:left-12">
-          <RatingRow />
-
-          <h1 className="mt-[52px] max-w-[320px] font-heading text-[36px] leading-[43.2px] font-bold tracking-[0.01em] uppercase sm:mt-10 sm:max-w-[640px] sm:text-[48px] sm:leading-[57.6px] lg:max-w-[768px] lg:text-[60px] lg:leading-[72px]">
-            <span className="madie-text-stroke block text-[#F3FAF8]">
-              Donuts artisanaux.
-            </span>
-            <span className="block text-[#F3FAF8]">Matins gourmands.</span>
-          </h1>
-
-          <p className="mt-4 max-w-[320px] text-[16px] leading-[24px] text-[#F3FAF8]/80 sm:mt-6 sm:max-w-[576px] lg:text-[16.8px] lg:leading-[25.2px]">
-            <span className="sm:hidden">
-              Nouveau à Madrid. <strong>Donuts préparés chaque jour</strong>, cafés
-              de spécialité, une saveur inédite chaque semaine et des classiques
-              à partager.
-            </span>
-            <span className="hidden sm:inline">
-              Quelque chose de délicieux se prépare à Madrid. Des donuts frais,
-              des cafés de spécialité, une nouvelle saveur chaque semaine et les
-              grands classiques que l’on aime retrouver.
-            </span>
-          </p>
-        </div>
-
-        <a
-          className="group absolute bottom-[38px] left-6 z-20 inline-flex h-[46.72px] items-center gap-3 rounded-full bg-[#FF8B6A] px-7 py-3.5 font-heading text-[12.48px] leading-[18.72px] font-bold tracking-[1.248px] text-[#07515B] uppercase transition-all duration-150 hover:-translate-y-0.5 hover:gap-4 hover:bg-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F3FAF8] sm:bottom-12 sm:left-10 lg:left-12 motion-reduce:transform-none"
-          href="#menu"
-        >
-          <span>Trouve ton donut</span>
-          <ArrowRightIcon className="size-5 shrink-0" />
-        </a>
-
-        <ScrollCue />
+      <div className="pointer-events-none absolute inset-y-0 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center">
+        <Image
+          alt="Pile verticale de donuts artisanaux au caramel et au chocolat"
+          className="h-[70%] w-auto max-w-none object-contain drop-shadow-[0_26px_28px_rgba(4,72,77,0.24)] sm:h-[82%]"
+          height={1672}
+          priority
+          sizes="(max-width: 639px) 66vw, 34vw"
+          src={donutStack}
+          width={941}
+        />
       </div>
+
+      <HeroPagination />
+      <RecipeCard />
     </section>
   );
 }
