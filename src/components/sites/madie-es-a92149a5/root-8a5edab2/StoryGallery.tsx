@@ -33,7 +33,7 @@ const storyStates: readonly StoryState[] = [
     lead: "Por eso hemos transformado la receta tradicional en una colección de ",
     emphasis: "más de 15 variedades únicas",
     tail: " que cambian, evolucionan y sorprenden constantemente.",
-    media: { kind: "video", src: `${assetRoot}/story-ig.mp4` },
+    media: { kind: "video", src: `${assetRoot}/le-petit-bleu-animation.mp4` },
   },
   {
     lead: "Cada pieza se hornea a diario con ingredientes seleccionados, buscando siempre el ",
