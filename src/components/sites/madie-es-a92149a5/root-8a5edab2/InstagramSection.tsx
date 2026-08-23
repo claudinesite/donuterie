@@ -75,29 +75,29 @@ export function InstagramSection() {
         >
           <p className="madie-eyebrow flex items-center gap-2.5 text-[#13A7B2]/75">
             <InstagramIcon className="size-6 stroke-[1.8]" />
-            <span>Le Petit Bleu en Instagram</span>
+            <span>Le Petit Bleu sur Instagram</span>
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-8 lg:mt-12 lg:grid-cols-[1.5fr_.9fr] lg:gap-16">
             <h2 className="max-w-[760px] font-heading text-[44px] leading-[48.4px] font-bold tracking-[0.01em] uppercase sm:text-[60px] sm:leading-[66px] lg:text-[72px] lg:leading-[79.2px]">
               <span className="madie-text-stroke block text-[#13A7B2]">
-                Mira qué se{" "}
+                Découvre ce qui{" "}
                 <span className="[-webkit-text-fill-color:#13A7B2] [-webkit-text-stroke:0]">
-                  está
+                  sort
                 </span>
               </span>
-              <span className="block text-[#13A7B2]">horneando</span>
+              <span className="block text-[#13A7B2]">de notre four</span>
               <span className="madie-text-stroke block text-[#13A7B2]">
-                antes que nadie.
+                avant tout le monde.
               </span>
             </h2>
 
             <div className="self-end lg:pb-2">
               <p className="max-w-[440px] text-[17px] leading-[1.6] text-[#102F35]">
-                Únete a las{" "}
-                <span className="font-bold text-[#FF8B6A]">1365 personas</span>
-                {" "}que nunca se pierden una hornada — cada creación y bebida de
-                temporada se estrena primero en nuestro Instagram.
+                Rejoins les{" "}
+                <span className="font-bold text-[#FF8B6A]">1 365 gourmands</span>
+                {" "}qui ne manquent jamais une fournée : chaque création et boisson
+                de saison apparaît d’abord sur notre Instagram.
               </p>
 
               <a
@@ -106,7 +106,7 @@ export function InstagramSection() {
                 rel="noreferrer"
                 target="_blank"
               >
-                <span>Le Petit Bleu en IG</span>
+                <span>Le Petit Bleu sur Instagram</span>
                 <ArrowRightIcon className="size-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
             </div>
@@ -116,7 +116,7 @@ export function InstagramSection() {
         <div className="-mx-6 mt-14 flex snap-x snap-mandatory gap-[18px] overflow-x-auto px-6 pb-4 [scrollbar-width:none] lg:mx-0 lg:mt-16 lg:grid lg:grid-cols-6 lg:overflow-visible lg:px-0 lg:pb-0 [&::-webkit-scrollbar]:hidden">
           {instagramImages.map((image, index) => (
             <a
-                aria-label={`Ver publicación ${index + 1} de Le Petit Bleu en Instagram`}
+                aria-label={`Voir la publication ${index + 1} de Le Petit Bleu sur Instagram`}
               className={`group relative aspect-[3/4] w-[260px] shrink-0 snap-center overflow-hidden rounded-[14px] bg-[#DCEDEA] shadow-[0_10px_30px_rgba(7,81,91,0.08)] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.7,.3,1)] lg:w-auto ${cardDelays[index]} ${revealClasses} motion-reduce:transform-none motion-reduce:transition-none`}
               href={instagramUrl}
               key={image}

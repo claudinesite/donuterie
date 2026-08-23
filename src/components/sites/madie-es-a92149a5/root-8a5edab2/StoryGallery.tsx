@@ -24,26 +24,26 @@ type StoryState = {
 
 const storyStates: readonly StoryState[] = [
   {
-    lead: "LE PETIT BLEU también nace de la idea de ",
-    emphasis: "reinterpretar lo clásico.",
-    tail: " De mezclar tradición con creatividad, París con Madrid, lo artesanal con lo inesperado.",
+    lead: "LE PETIT BLEU est né de l’envie de ",
+    emphasis: "réinventer les classiques.",
+    tail: " Mélanger le savoir-faire, la créativité et l’inattendu autour d’un bon donut.",
     media: { kind: "image", src: `${assetRoot}/dbf2832577ec8d08` },
   },
   {
-    lead: "Por eso hemos transformado la receta tradicional en una colección de ",
-    emphasis: "más de 15 variedades únicas",
-    tail: " que cambian, evolucionan y sorprenden constantemente.",
+    lead: "C’est pourquoi notre vitrine réunit ",
+    emphasis: "plus de 15 recettes originales",
+    tail: " qui changent, évoluent et surprennent chaque semaine.",
     media: { kind: "video", src: `${assetRoot}/le-petit-bleu-animation.mp4` },
   },
   {
-    lead: "Cada pieza se hornea a diario con ingredientes seleccionados, buscando siempre el ",
-    emphasis: "equilibrio entre textura, aroma y estética.",
+    lead: "Chaque donut est préparé chaque jour avec des ingrédients choisis, à la recherche du ",
+    emphasis: "juste équilibre entre texture, goût et couleur.",
     tail: "",
     media: { kind: "image", src: `${assetRoot}/a91c3e23425caf55` },
   },
   {
-    lead: "Porque Le Petit Bleu no es solo una cafetería. Es un lugar donde ",
-    emphasis: "la tradición se reinventa.",
+    lead: "Parce que Le Petit Bleu n’est pas qu’une donuterie. C’est un lieu où ",
+    emphasis: "la gourmandise se réinvente.",
     tail: "",
     media: { kind: "image", src: `${assetRoot}/c6c18df4fa64c020` },
   },
@@ -185,7 +185,7 @@ export function StoryGallery() {
 
           <div className="mt-8 flex items-center gap-3 lg:mt-11">
             <button
-              aria-label="Historia anterior"
+              aria-label="Histoire précédente"
               className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               onClick={() => changeStory(-1)}
               type="button"
@@ -193,7 +193,7 @@ export function StoryGallery() {
               <ArrowLeftIcon className="size-5" />
             </button>
             <button
-              aria-label="Historia siguiente"
+              aria-label="Histoire suivante"
               className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               onClick={() => changeStory(1)}
               type="button"
@@ -208,7 +208,7 @@ export function StoryGallery() {
 
         <div className="relative order-1 mx-auto h-[380px] w-full max-w-[550px] lg:order-2 lg:h-[572px]">
           <p className="madie-eyebrow absolute -top-8 left-1/2 hidden -translate-x-1/2 whitespace-nowrap text-[#102F35]/65 lg:block">
-            Arrástrame →
+            Fais glisser →
           </p>
 
           {storyStates.map((story, index) => {
@@ -225,7 +225,7 @@ export function StoryGallery() {
                 <div
                   aria-label={
                     isActive
-                      ? `Historia de Le Petit Bleu ${activeIndex + 1} de ${storyStates.length}`
+                      ? `Histoire Le Petit Bleu ${activeIndex + 1} sur ${storyStates.length}`
                       : undefined
                   }
                   className={`relative aspect-[3/4] w-[78%] origin-center overflow-hidden rounded-[18px] border border-[#102F35]/30 bg-white shadow-[0_18px_42px_rgba(4,29,34,0.2)] transition-all duration-[550ms] ease-[cubic-bezier(.2,.7,.3,1)] will-change-transform ${stackPositionClasses[position]} ${isActive ? "pointer-events-auto cursor-grab touch-none select-none active:cursor-grabbing" : ""}`}

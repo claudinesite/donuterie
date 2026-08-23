@@ -61,28 +61,28 @@ export function StoryIntro() {
         className={`madie-reveal relative mx-auto max-w-[800px] px-6 md:px-10 ${isVisible ? "is-visible" : ""}`}
       >
         <p className="madie-eyebrow mb-7 text-center text-madie-burgundy/70">
-          Nuestra historia
+          Notre histoire
         </p>
 
         <h2 className="madie-display madie-text-stroke text-center text-[36px] leading-none text-madie-burgundy sm:text-[44px] md:text-[56px] lg:text-[72px] lg:leading-[72px]">
-          Una tradición{" "}
+          Une tradition{" "}
           <span className="inline-block italic [-webkit-text-fill-color:currentColor] [-webkit-text-stroke:0]">
-            reinventada
+            réinventée
           </span>
         </h2>
 
         <div className="mx-auto mt-12 max-w-[58ch] space-y-5 text-[16px] leading-6 text-madie-ink/75 md:text-[17.28px] md:leading-[28.08px]">
           <p>
-            En Le Petit Bleu creemos que una madeleine puede contar mucho más que una
-            receta.
+            Chez Le Petit Bleu, nous pensons qu’un donut peut raconter bien plus
+            qu’une simple recette.
           </p>
           <p>
-            Todo empieza con una receta francesa tradicional, transmitida de
-            generación en generación. Una elaboración sencilla, delicada y
-            cuidada, inspirada en esas pastelerías donde el olor a mantequilla
-            recién horneada forma parte de los recuerdos.
+            Tout commence avec le goût des vitrines de quartier : une pâte légère,
+            un glaçage généreux et le parfum réconfortant des fournées du matin.
+            Chaque donut est préparé avec soin, pour retrouver ce plaisir simple
+            à chaque bouchée.
           </p>
-          <p>Esa receta original es el corazón de LE PETIT BLEU.</p>
+          <p>Cette gourmandise est au cœur de LE PETIT BLEU.</p>
         </div>
       </div>
     </section>

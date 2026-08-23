@@ -12,28 +12,28 @@ const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
 
 const menuItems = [
   {
-    label: "Carta",
+    label: "Menu",
     href: "#menu",
     image: `${assetRoot}/64b30c39412940e3.jpg`,
-    caption: "Recién horneado cada mañana",
+    caption: "Préparé chaque matin",
   },
   {
-    label: "Catering",
+    label: "Événements",
     href: "#catering",
     image: `${assetRoot}/5a5fb6ad0c2dff8f.jpg`,
-    caption: "Una mesa hecha para compartir",
+    caption: "Une table pensée pour partager",
   },
   {
-    label: "Visítanos",
+    label: "Nous trouver",
     href: "#contacto",
     image: `${assetRoot}/de2e0b19d937fb62.jpg`,
-    caption: "Te esperamos en Chamberí",
+    caption: "On t’attend à Madrid",
   },
 ] as const;
 
 type MenuItem = (typeof menuItems)[number];
 
-const languages = ["ES", "EN", "FR"] as const;
+const languages = ["FR", "EN", "ES"] as const;
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -121,7 +121,7 @@ export function Header() {
                 ? "bg-madie-burgundy-dark/30"
                 : "bg-madie-cream/10 backdrop-blur-[2px]"
             }`}
-            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isOpen}
             aria-controls="madie-menu-overlay"
             onClick={() => setIsOpen((open) => !open)}
@@ -147,7 +147,7 @@ export function Header() {
         id="madie-menu-overlay"
         role="dialog"
         aria-modal="true"
-        aria-label="Menú principal"
+        aria-label="Menu principal"
         aria-hidden={!isOpen}
         inert={!isOpen}
         className={`fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-[linear-gradient(135deg,rgba(19,167,178,0.95),rgba(7,81,91,0.95))] text-madie-cream backdrop-blur-[3px] transition-[clip-path] duration-[1100ms] ease-[cubic-bezier(.83,0,.17,1)] ${
@@ -164,12 +164,12 @@ export function Header() {
               key={language}
               type="button"
               className={`flex h-8 min-w-10 cursor-pointer items-center justify-center rounded-full px-3 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-madie-cream ${
-                language === "ES"
+                language === "FR"
                   ? "bg-madie-cream text-madie-burgundy"
                   : "text-madie-cream/60 hover:text-madie-cream"
               }`}
-              aria-current={language === "ES" ? "true" : undefined}
-              aria-label={`Cambiar idioma a ${language}`}
+              aria-current={language === "FR" ? "true" : undefined}
+              aria-label={`Changer la langue vers ${language}`}
             >
               {language}
             </button>
@@ -213,10 +213,10 @@ export function Header() {
 
             <div className="min-w-0">
               <p className="madie-eyebrow mb-8 flex items-center gap-4 text-madie-cream/45 before:h-px before:w-7 before:bg-current before:content-['']">
-                Navegar
+                Navigation
               </p>
 
-              <nav aria-label="Navegación principal">
+              <nav aria-label="Navigation principale">
                 <ul className="flex flex-col">
                   {menuItems.map((item) => (
                     <li key={item.href}>
@@ -237,7 +237,7 @@ export function Header() {
               <div className="mt-12 grid grid-cols-1 gap-8 text-[15px] leading-[1.55] text-madie-cream/75 sm:grid-cols-2 sm:gap-10 lg:mt-16 lg:grid-cols-[140px_1fr] lg:gap-9">
                 <div className="hidden lg:block">
                   <p className="madie-eyebrow mb-4 text-madie-cream/45">
-                    Contacto
+                    Contact
                   </p>
                   <div className="flex flex-col items-start gap-1.5">
                     <a
@@ -267,7 +267,7 @@ export function Header() {
 
                 <div>
                   <p className="madie-eyebrow mb-4 text-madie-cream/45">
-                    Encuéntranos
+                    Nous trouver
                   </p>
                   <address className="not-italic">
                     C/ de Donoso Cortés, 62, Chamberí,
@@ -284,18 +284,18 @@ export function Header() {
 
                 <div className="sm:col-start-2 lg:col-start-2">
                   <p className="madie-eyebrow mb-4 text-madie-cream/45">
-                    Horario
+                    Horaires
                   </p>
                   <p>
-                    Lun · 11:00–20:30
+                    Lun. · 11 h 00 – 20 h 30
                     <br />
-                    Mar–Jue · Cerrado
+                    Mar.–Jeu. · fermé
                     <br />
-                    Vie · 13:00–20:30
+                    Ven. · 13 h 00 – 20 h 30
                     <br />
-                    Sáb · 17:00–20:30
+                    Sam. · 17 h 00 – 20 h 30
                     <br />
-                    Dom · 13:30–20:30
+                    Dim. · 13 h 30 – 20 h 30
                   </p>
                 </div>
               </div>
@@ -310,7 +310,7 @@ export function Header() {
             rel="noreferrer"
             className="madie-eyebrow text-madie-cream/45 transition-colors duration-200 hover:text-madie-cream"
           >
-            Site by RyanMac
+            Site par RyanMac
           </a>
         </div>
       </div>

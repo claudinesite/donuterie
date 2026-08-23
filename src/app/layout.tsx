@@ -36,9 +36,9 @@ const caveat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Le Petit Bleu — Pastelería de Madeleines Francesas en Chamberí, Madrid",
+  title: "Le Petit Bleu — Donuterie artisanale à Madrid",
   description:
-    "Madeleines francesas recién horneadas y cafés de especialidad en Chamberí, Madrid.",
+    "Des donuts artisanaux et des cafés de spécialité chez Le Petit Bleu.",
 };
 
 export default function RootLayout({
@@ -48,7 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="es"
+      lang="fr"
       className={`${cottorway.variable} ${dazzle.variable} ${inter.variable} ${jetbrainsMono.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-[#102F35]">

@@ -30,99 +30,101 @@ type MenuPanel = {
 
 const menuPanels: MenuPanel[] = [
   {
-    label: "Madeleines",
+    label: "Donuts",
     groups: [
       {
-        title: "Clásicos",
+        title: "Les classiques",
         products: [
           {
-            name: "Vainilla",
+            name: "Vanille",
             description:
-              "La receta clásica francesa: tierna, esponjosa y con un delicado aroma a vainilla. Simple, auténtica y perfecta para acompañar el café.",
+              "Le grand classique : un donut moelleux, léger et délicatement parfumé à la vanille. Simple, authentique et parfait avec un café.",
             image: "a141bf8a7536a154.png",
           },
           {
             name: "Chocolate",
             description:
-              "Madeleine de cacao intenso con interior suave y esponjoso. Un clásico para los amantes del chocolate más puro.",
+              "Un donut au cacao intense, avec un cœur tendre et moelleux. Un incontournable pour les amoureux du chocolat.",
             image: "e7e2d6c9b7c5cbd1.png",
           },
           {
-            name: "Marmoleada",
+            name: "Marbré",
             description:
-              "La mezcla perfecta entre vainilla y chocolate en una madeleine suave y esponjosa. Clásica, nostálgica y adictiva.",
+              "Le mariage de la vanille et du chocolat dans un donut tendre et marbré. Classique, réconfortant et irrésistible.",
             image: "01d642bf49256cd4.png",
           },
         ],
       },
       {
-        title: "Especiales",
+        title: "Créations",
         products: [
           {
-            name: "White Pistacho",
+            name: "Pistache blanche",
             description:
-              "Cobertura cremosa de chocolate blanco con pistacho troceado. Suave, elegante y con el toque tostado perfecto para los amantes del pistacho.",
+              "Un glaçage crémeux au chocolat blanc et des éclats de pistache. Doux, élégant et délicatement torréfié.",
             image: "9e09fc284006ddbd.png",
-            badge: "Best seller",
+            badge: "Meilleure vente",
           },
           {
-            name: "Rosa",
+            name: "Rose",
             description:
-              "Cobertura afrutada con notas florales y un interior esponjoso que la hace delicada y especial. Una madeleine diferente, dulce y muy visual.",
+              "Un glaçage fruité aux notes florales et un cœur moelleux. Un donut délicat, gourmand et très coloré.",
             image: "7daeb867e3fc2cde.png",
           },
           {
             name: "Matcha",
             description:
-              "Madeleine cubierta de chocolate de matcha con un sabor equilibrado entre dulzor y té verde japonés. Cremosa, intensa y muy especial.",
+              "Un donut enrobé de chocolat au matcha, au parfait équilibre entre douceur et thé vert japonais.",
             image: "9432c0cb28480de0.png",
-            badge: "Best seller",
+            badge: "Meilleure vente",
           },
           {
-            name: "Arándanos",
+            name: "Myrtille",
             description:
-              "Cobertura cremosa de arándanos con topping de fruta natural. Dulce, fresca y con un ligero toque ácido irresistible.",
+              "Un glaçage crémeux à la myrtille, relevé de fruits naturels. Doux, frais et légèrement acidulé.",
             image: "fbaf039fb9decc77.png",
           },
           {
-            name: "Limón",
+            name: "Citron",
             description:
-              "Madeleine con un glaseado de limón suave y refrescante.",
+              "Un donut avec un glaçage citron doux et rafraîchissant.",
             image: "26100ef699035982.png",
           },
           {
-            name: "Coco Con Carbón Activo",
+            name: "Coco au charbon actif",
             description:
-              "Una combinación sorprendente de coco dulce y cacao negro con carbón activo. Exótica, cremosa y diferente a cualquier otra.",
+              "Une alliance surprenante de coco, cacao noir et charbon actif. Exotique, crémeuse et singulière.",
             image: "22918087e8b1a3f8.png",
-            note: "Frutos de cáscara",
+            note: "Fruits à coque",
           },
           {
             name: "Chai",
             description:
-              "Inspirada en el clásico té chai, con notas especiadas de canela, vainilla y cardamomo. Aromática, cálida y muy reconfortante.",
+              "Inspiré du chai, avec des notes de cannelle, vanille et cardamome. Aromatique, chaleureux et réconfortant.",
             image: "0b29af24c9ebd195.png",
           },
           {
             name: "Fresa",
             description:
-              "Cobertura de chocolate de fresa con topping crujiente de fruta. Dulce, intensa y con sabor a golosina elegante.",
+              "Un glaçage au chocolat à la fraise, avec un topping fruité croquant. Doux, intense et joyeux.",
             image: "398ac48acc24b977.png",
           },
           {
-            name: "Naranja",
+            name: "Orange",
             description:
-              "Madeleine glaseada con naranja natural y un toque cítrico refrescante. Ligera, aromática y muy jugosa.",
+              "Un donut glacé à l’orange naturelle, léger, parfumé et délicatement acidulé.",
             image: "2b4bd6eb8b03786e.png",
           },
           {
             name: "Mango",
             description:
-              "Cobertura cremosa de mango con un sabor tropical suave y dulce. Fresca, exótica y perfecta para cualquier momento.",
+              "Un glaçage crémeux à la mangue, doux et tropical. Frais, exotique et parfait à tout moment.",
             image: "aeef5a80884f14cb.png",
           },
           {
-            name: "Spirulina Azul",
+            name: "Spiruline bleue",
+            description:
+              "Un glaçage naturellement bleu à la spiruline, doux, velouté et relevé d’une note de coco.",
             image: "43fcfc4ca22de4c3.png",
           },
         ],
@@ -133,30 +135,30 @@ const menuPanels: MenuPanel[] = [
     label: "Café",
     groups: [
       {
-        title: "Café de especialidad",
+        title: "Café de spécialité",
         products: [
           {
             name: "Latte",
             description:
-              "Café espresso combinado con leche cremosa y suave latte art. Equilibrado, cálido y perfecto para cualquier momento.",
+              "Un espresso et du lait crémeux, avec un latte art tout en douceur. Équilibré, chaleureux et parfait à tout moment.",
             image: "9fa05e7aac8e3863.png",
           },
           {
             name: "Capuchino",
             description:
-              "Espresso intenso con espuma cremosa y un toque de cacao o canela. Clásico, elegante y reconfortante.",
+              "Un espresso intense, une mousse crémeuse et une touche de cacao ou de cannelle. Classique et réconfortant.",
             image: "aeea95e2935f849e.png",
           },
           {
-            name: "Expresso",
+            name: "Espresso",
             description:
-              "Café espresso de sabor intenso y aroma profundo. Corto, potente y lleno de carácter.",
+              "Un espresso court au goût intense et à l’arôme profond. Puissant et plein de caractère.",
             image: "9f516bc2485e6c75.png",
           },
           {
             name: "Americano",
             description:
-              "Espresso suavizado con agua caliente para un café más ligero y aromático. Perfecto para disfrutar lentamente.",
+              "Un espresso adouci à l’eau chaude, pour un café léger et aromatique à savourer lentement.",
             image: "e2d3114a5a42a1fb.png",
           },
         ],
@@ -167,37 +169,37 @@ const menuPanels: MenuPanel[] = [
           {
             name: "Coco Matcha",
             description:
-              "Matcha japonés de sabor suave y equilibrado combinado con leche cremosa. Refrescante, delicado y perfecto para amantes del té verde.",
+              "Un matcha japonais doux et équilibré, mélangé à du lait crémeux. Rafraîchissant et délicat.",
             image: "a8541c71504da466.png",
           },
           {
             name: "Chai Latte",
             description:
-              "Bebida cremosa con especias chai como canela, vainilla y cardamomo. Dulce, aromática y muy reconfortante.",
+              "Une boisson onctueuse aux épices chai : cannelle, vanille et cardamome. Douce et réconfortante.",
             image: "31cebb4682e01ce7.png",
           },
           {
             name: "Ube Matcha Latte",
             description:
-              "La mezcla más especial de Le Petit Bleu: ube dulce y cremoso combinado con matcha japonés. Visual, diferente y sorprendentemente adictivo.",
+              "La création signature de Le Petit Bleu : ube doux et crémeux avec du matcha japonais. Colorée, étonnante et addictive.",
             image: "d3cff6c5c4973034.png",
           },
           {
             name: "Matcha",
             description:
-              "Matcha puro con leche y hielo para disfrutar todo el sabor auténtico del té verde japonés. Intenso, fresco y energético.",
+              "Du matcha pur, du lait et des glaçons pour une boisson intense, fraîche et énergisante.",
             image: "5c974c6dd9c9e6bb.png",
           },
           {
             name: "Thai Tea Latte",
             description:
-              "Té tailandés tradicional con leche cremosa y un sabor dulce y especiado muy característico. Exótico y refrescante.",
+              "Un thé thaï traditionnel au lait crémeux, doux et délicatement épicé.",
             image: "52d9734e7feb3b8f.png",
           },
           {
             name: "Ube Latte",
             description:
-              "Bebida cremosa de ube con un suave sabor dulce y vainilla natural. Color vibrante y textura irresistible.",
+              "Une boisson onctueuse à l’ube, avec une touche naturelle de vanille. Une couleur vibrante et une texture irrésistible.",
             image: "9b7dced6e9e5190d.png",
           },
         ],
@@ -205,48 +207,48 @@ const menuPanels: MenuPanel[] = [
     ],
   },
   {
-    label: "Para llevar",
+    label: "À emporter",
     groups: [
       {
-        title: "Le Petit Bleu Packs",
+        title: "Packs Le Petit Bleu",
         products: [
           {
-            name: "Le Petit Bleu Vainilla",
-            description: "3 madeleines clásicas de vainilla",
+            name: "Le Petit Bleu Vanille",
+            description: "3 donuts classiques à la vanille",
             image: "c5352357afa3358d.png",
           },
           {
-            name: "Le Petit Bleu Chocolate",
-            description: "3 madeleines clásicas de chocolate",
+            name: "Le Petit Bleu Chocolat",
+            description: "3 donuts classiques au chocolat",
             image: "b39844ef0a1136eb.png",
           },
           {
-            name: "Mix Mini Le Petit Bleu Chocolate & Vainilla",
+            name: "Mini mix Le Petit Bleu chocolat & vanille",
             description:
-              "Mix de madeleines clásicas de chocolate y vainilla",
+              "Un mix de mini donuts classiques au chocolat et à la vanille",
             image: "adb9edd773e0c191.png",
           },
           {
-            name: "Mix Le Petit Bleu Chocolate Y Vainilla",
+            name: "Mix Le Petit Bleu chocolat & vanille",
             description:
-              "3 madeleines clásicas mix chocolate y vainilla",
+              "Un assortiment de donuts classiques au chocolat et à la vanille",
             image: "35d703f4e04e7407.png",
           },
           {
-            name: "Le Petit Bleu Box",
+            name: "Boîte Le Petit Bleu",
             description:
-              "Madeleines artesanales en pack de 6, 12 o 24 piezas.",
+              "Des donuts artisanaux en boîte de 6, 12 ou 24 pièces.",
             image: "1e6de299a4c8261a.png",
           },
           {
-            name: "Le Petit Bleu for Doggies",
-            description: "¡Solo por tiempo limitado!",
+            name: "Le Petit Bleu pour les chiens",
+            description: "Édition limitée !",
             image: "304158a5505a1cf5.png",
           },
         ],
       },
       {
-        title: "Café & té en bolsa",
+        title: "Café & thé en sachet",
         products: [
           {
             name: "Le Petit Bleu Guatemala Café Nica",
@@ -372,20 +374,20 @@ export function MenuSection() {
     >
       <div className="mx-auto mb-12 grid w-full max-w-[1200px] grid-cols-1 gap-8 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:px-12">
         <h2 className="madie-display text-5xl leading-none font-bold tracking-[0.01em] uppercase lg:text-[96px] lg:leading-[96px]">
-          <span className="madie-text-stroke-thin">El</span> Menú
+          <span className="madie-text-stroke-thin">Le</span> menu
         </h2>
 
         <div className="lg:pt-2">
           <p className="max-w-[520px] text-[17px] leading-[1.6] text-madie-burgundy/80">
-            Descubre nuestra selección de madeleines artesanales, cafés de
-            especialidad y bebidas únicas. Todo preparado a diario en nuestro
-            obrador de Chamberí.
+            Découvrez notre sélection de donuts artisanaux, de cafés de
+            spécialité et de boissons créatives. Tout est préparé chaque jour
+            dans notre atelier à Madrid.
           </p>
 
           <div
             className="mt-7 flex flex-wrap gap-2.5"
             role="tablist"
-            aria-label="Categorías del menú"
+            aria-label="Catégories du menu"
           >
             {menuPanels.map((panel, index) => {
               const isActive = index === activeIndex;

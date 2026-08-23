@@ -132,26 +132,26 @@ export function CateringSection() {
           className={`madie-reveal mx-auto max-w-[770px] motion-reduce:transform-none motion-reduce:transition-none ${isVisible ? "is-visible" : ""}`}
         >
           <p className="madie-eyebrow mb-6 flex items-center justify-center gap-4 text-madie-cream/85 before:h-px before:w-7 before:bg-madie-cream/50 before:content-[''] after:h-px after:w-7 after:bg-madie-cream/50 after:content-['']">
-            Catering
+            Événements
           </p>
 
           <h2 className="madie-display madie-text-stroke text-[36px] leading-[1.1] text-madie-cream sm:text-[48px] lg:text-[96px] lg:leading-[105.6px]">
-            <span className="block">Días grandes,</span>
-            <span className="block">más dulces</span>
-          <span className="block">con Le Petit Bleu</span>
+            <span className="block">Les grands jours,</span>
+            <span className="block">encore plus doux</span>
+            <span className="block">avec Le Petit Bleu</span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-[58ch] text-[16px] leading-[1.6] text-madie-cream/85 md:text-[18px]">
-            Bodas, inauguraciones, un martes en la oficina que quiere parecer
-            menos un martes. Preparamos pedidos especiales y experiencias
-            personalizadas para cualquier ocasión.
+            Mariages, lancements ou un mardi au bureau qui mérite mieux : nous
+            imaginons des boîtes de donuts sur mesure et des instants gourmands
+            pour toutes les occasions.
           </p>
 
           <a
             href="mailto:hola@madie.es"
             className="madie-eyebrow mt-8 inline-flex h-12 items-center justify-center rounded-full bg-madie-rose px-8 text-madie-ink transition-colors duration-300 hover:bg-madie-rose-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-madie-cream"
           >
-            Pedir ahora
+            Commander
           </a>
         </div>
       </div>

@@ -57,12 +57,12 @@ export function ContactSection() {
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 lg:px-10">
         <header className="mx-auto mb-16 max-w-[600px] text-center">
           <p className="madie-eyebrow mb-4 text-madie-ink/60">
-            Pásate a vernos
+            Passe nous voir
           </p>
           <h2 className="madie-display text-[36px] leading-[1.1] font-bold tracking-[0.01em] uppercase lg:text-[72px] lg:leading-[79.2px]">
-            <span className="madie-text-stroke-thin">Encuéntranos</span>
+            <span className="madie-text-stroke-thin">Retrouve-nous</span>
             <br />
-            <span>en Chamberí.</span>
+            <span>à Madrid.</span>
           </h2>
         </header>
 
@@ -75,7 +75,7 @@ export function ContactSection() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`${assetRoot}/2627c1191ccf1fa9`}
-                alt="Mapa ilustrado de Chamberí alrededor de Le Petit Bleu"
+                alt="Plan illustré de Madrid autour de Le Petit Bleu"
                 className="absolute inset-0 size-full object-cover object-center"
               />
 
@@ -104,7 +104,7 @@ export function ContactSection() {
               <button
                 type="button"
                 className="flex size-10 cursor-pointer items-center justify-center border-b border-madie-cream/10 text-xl leading-none transition-colors hover:bg-madie-cream/10 disabled:cursor-not-allowed disabled:opacity-40"
-                aria-label="Acercar mapa"
+                aria-label="Zoomer sur la carte"
                 disabled={zoomIndex === zoomClasses.length - 1}
                 onClick={zoomIn}
               >
@@ -113,7 +113,7 @@ export function ContactSection() {
               <button
                 type="button"
                 className="flex size-10 cursor-pointer items-center justify-center border-b border-madie-cream/10 text-xl leading-none transition-colors hover:bg-madie-cream/10 disabled:cursor-not-allowed disabled:opacity-40"
-                aria-label="Alejar mapa"
+                aria-label="Dézoomer la carte"
                 disabled={zoomIndex === 0}
                 onClick={zoomOut}
               >
@@ -122,7 +122,7 @@ export function ContactSection() {
               <button
                 type="button"
                 className="flex size-10 cursor-pointer items-center justify-center text-sm leading-none transition-colors hover:bg-madie-cream/10 disabled:cursor-default disabled:opacity-40"
-                aria-label="Restablecer mapa"
+                aria-label="Réinitialiser la carte"
                 disabled={zoomIndex === 1}
                 onClick={() => setZoomIndex(1)}
               >
@@ -142,24 +142,24 @@ export function ContactSection() {
           <aside className="rounded-[24px] border border-madie-burgundy-dark/20 bg-white px-7 py-8 lg:min-h-[568px] lg:px-9">
             <div className="border-b border-madie-ink/15 pb-6">
               <p className="madie-eyebrow mb-3 text-madie-ink/60">
-                Horario
+                Horaires
               </p>
               <p className="text-[17px] leading-[1.75]">
-                Lun 11:00–20:30
+                Lun. 11 h 00 – 20 h 30
                 <br />
-                Mar–Jue Cerrado
+                Mar.–Jeu. fermé
                 <br />
-                Vie 13:00–20:30
+                Ven. 13 h 00 – 20 h 30
                 <br />
-                Sáb 17:00–20:30
+                Sam. 17 h 00 – 20 h 30
                 <br />
-                Dom 13:30–20:30
+                Dim. 13 h 30 – 20 h 30
               </p>
             </div>
 
             <div className="border-b border-madie-ink/15 py-6">
               <p className="madie-eyebrow mb-3 text-madie-ink/60">
-                Teléfono
+                Téléphone
               </p>
               <a
                 href="tel:+34603861349"
@@ -183,7 +183,7 @@ export function ContactSection() {
               </div>
               <div>
                 <p className="madie-eyebrow mb-3 text-madie-ink/60">
-                  Pedidos
+                  Commandes
                 </p>
                 <a
                   href="mailto:orders@madie.es"
@@ -196,7 +196,7 @@ export function ContactSection() {
 
             <div className="pt-6">
               <p className="madie-eyebrow mb-4 text-madie-ink/60">
-                Síguenos
+                Suivez-nous
               </p>
               <div className="flex flex-wrap gap-x-6 gap-y-3 text-[17px]">
                 <a

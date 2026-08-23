@@ -32,7 +32,7 @@ function GoogleMark() {
 function RatingRow() {
   return (
     <div
-      aria-label="Valoración de Google: 5,0 de 5, basada en 83 reseñas"
+      aria-label="Note Google : 5,0 sur 5, basée sur 83 avis"
       className="flex h-[18px] items-center gap-2 [font-family:var(--font-inter),system-ui,sans-serif] text-[12px] font-semibold leading-none text-[#F3FAF8]"
     >
       <GoogleMark />
@@ -40,7 +40,7 @@ function RatingRow() {
         ★★★★★
       </span>
       <span>5,0</span>
-      <span className="hidden text-[#F3FAF8]/70 sm:inline">83 reseñas</span>
+      <span className="hidden text-[#F3FAF8]/70 sm:inline">83 avis</span>
     </div>
   );
 }
@@ -48,7 +48,7 @@ function RatingRow() {
 function LanguagePills() {
   return (
     <nav
-      aria-label="Seleccionar idioma"
+      aria-label="Sélectionner la langue"
       className="absolute top-5 right-5 z-20 flex h-9 items-center rounded-full border border-[#F3FAF8]/20 bg-[#041D22]/30 p-1 backdrop-blur-[2px] sm:top-7 sm:right-7 lg:top-12 lg:right-12"
     >
       <a
@@ -56,7 +56,7 @@ function LanguagePills() {
         className="flex h-7 min-w-10 items-center justify-center rounded-full bg-[#F3FAF8] px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#13A7B2] uppercase"
         href="#inicio"
       >
-        ES
+        FR
       </a>
       <a
         className="flex h-7 min-w-10 items-center justify-center rounded-full px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#F3FAF8]/70 uppercase transition-colors duration-150 hover:text-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#F3FAF8]/70"
@@ -68,9 +68,9 @@ function LanguagePills() {
       <a
         className="flex h-7 min-w-10 items-center justify-center rounded-full px-3 [font-family:var(--font-inter),system-ui,sans-serif] text-[10px] font-semibold tracking-[0.16em] text-[#F3FAF8]/70 uppercase transition-colors duration-150 hover:text-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#F3FAF8]/70"
         href="#inicio"
-        lang="fr"
+              lang="es"
       >
-        FR
+        ES
       </a>
     </nav>
   );
@@ -79,7 +79,7 @@ function LanguagePills() {
 function ScrollCue() {
   return (
     <a
-      aria-label="Sobre el café"
+      aria-label="À propos de nos donuts"
       className="group absolute right-12 bottom-12 z-20 hidden size-[140px] items-center justify-center rounded-full border border-[#F3FAF8]/30 text-[#F3FAF8] transition-transform duration-700 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F3FAF8] lg:flex motion-reduce:transition-none"
       href="#story"
     >
@@ -102,7 +102,7 @@ function ScrollCue() {
           letterSpacing="2.1"
         >
           <textPath href="#hero-scroll-circle">
-            SOBRE EL CAFÉ · SOBRE EL CAFÉ · SOBRE EL CAFÉ ·
+            NOS DONUTS · NOS DONUTS · NOS DONUTS ·
           </textPath>
         </text>
       </svg>
@@ -142,22 +142,21 @@ export function HeroSection() {
 
           <h1 className="mt-[52px] max-w-[320px] font-heading text-[36px] leading-[43.2px] font-bold tracking-[0.01em] uppercase sm:mt-10 sm:max-w-[640px] sm:text-[48px] sm:leading-[57.6px] lg:max-w-[768px] lg:text-[60px] lg:leading-[72px]">
             <span className="madie-text-stroke block text-[#F3FAF8]">
-              Madeleines francesas.
+              Donuts artisanaux.
             </span>
-            <span className="block text-[#F3FAF8]">Mañanas de Madrid.</span>
+            <span className="block text-[#F3FAF8]">Matins gourmands.</span>
           </h1>
 
           <p className="mt-4 max-w-[320px] text-[16px] leading-[24px] text-[#F3FAF8]/80 sm:mt-6 sm:max-w-[576px] lg:text-[16.8px] lg:leading-[25.2px]">
             <span className="sm:hidden">
-              Nuevo en <strong>Chamberí.</strong> Madeleines horneadas cada día,
-              maridadas con cafés de especialidad — un sabor nuevo cada semana,
-              los clásicos de siempre y caprichos para los peludos.
+              Nouveau à Madrid. <strong>Donuts préparés chaque jour</strong>, cafés
+              de spécialité, une saveur inédite chaque semaine et des classiques
+              à partager.
             </span>
             <span className="hidden sm:inline">
-              Algo nuevo se hornea en Chamberí. Madeleines recién horneadas cada
-              día, maridadas con cafés de especialidad. Un sabor nuevo cada
-              semana, los clásicos de siempre y un pequeño capricho para los
-              peludos.
+              Quelque chose de délicieux se prépare à Madrid. Des donuts frais,
+              des cafés de spécialité, une nouvelle saveur chaque semaine et les
+              grands classiques que l’on aime retrouver.
             </span>
           </p>
         </div>
@@ -166,7 +165,7 @@ export function HeroSection() {
           className="group absolute bottom-[38px] left-6 z-20 inline-flex h-[46.72px] items-center gap-3 rounded-full bg-[#FF8B6A] px-7 py-3.5 font-heading text-[12.48px] leading-[18.72px] font-bold tracking-[1.248px] text-[#07515B] uppercase transition-all duration-150 hover:-translate-y-0.5 hover:gap-4 hover:bg-[#F3FAF8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F3FAF8] sm:bottom-12 sm:left-10 lg:left-12 motion-reduce:transform-none"
           href="#menu"
         >
-          <span>Encuentra tu favorita</span>
+          <span>Trouve ton donut</span>
           <ArrowRightIcon className="size-5 shrink-0" />
         </a>
 
