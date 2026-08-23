@@ -49,7 +49,7 @@
 }
 
 :root {
-  --background: #F3FAF8;
+  --background: #FFFFFF;
   --foreground: #102F35;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -136,7 +136,7 @@
   --color-madie-burgundy-light: #2A7E86;
   --color-madie-rose: #FF8B6A;
   --color-madie-rose-light: #FFD1C4;
-  --color-madie-cream: #F3FAF8;
+  --color-madie-cream: #FFFFFF;
   --color-madie-cream-dark: #DCEDEA;
   --color-madie-sky: #75D7E0;
   --color-madie-ink: #102F35;
@@ -149,13 +149,13 @@
     --madie-burgundy-light: #2A7E86;
     --madie-rose: #FF8B6A;
     --madie-rose-light: #FFD1C4;
-    --madie-cream: #F3FAF8;
+    --madie-cream: #FFFFFF;
     --madie-cream-dark: #DCEDEA;
     --madie-sky: #75D7E0;
     --madie-ink: #102F35;
     min-height: 100svh;
     overflow: clip;
-    background: var(--madie-cream);
+    background: #FFFFFF;
     color: var(--madie-ink);
     font-family: var(--font-cottorway), "EB Garamond", serif;
   }

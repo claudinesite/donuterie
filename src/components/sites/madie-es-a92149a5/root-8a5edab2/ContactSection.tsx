@@ -50,13 +50,13 @@ export function ContactSection() {
   return (
     <section
       id="contacto"
-      className="relative scroll-mt-20 overflow-hidden bg-[linear-gradient(145deg,#13A7B2_0%,#07515B_100%)] pt-12 pb-16 text-madie-cream lg:pt-16 lg:pb-0"
+      className="relative scroll-mt-20 overflow-hidden bg-white pt-12 pb-16 text-madie-ink lg:pt-16 lg:pb-0"
     >
       <div className="madie-grain" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 lg:px-10">
         <header className="mx-auto mb-16 max-w-[600px] text-center">
-          <p className="madie-eyebrow mb-4 text-madie-cream/55">
+          <p className="madie-eyebrow mb-4 text-madie-ink/60">
             Pásate a vernos
           </p>
           <h2 className="madie-display text-[36px] leading-[1.1] font-bold tracking-[0.01em] uppercase lg:text-[72px] lg:leading-[79.2px]">
@@ -100,7 +100,7 @@ export function ContactSection() {
               />
             </div>
 
-            <div className="absolute top-4 right-4 z-20 flex flex-col overflow-hidden rounded-xl border border-madie-cream/15 bg-madie-burgundy-dark/85 shadow-lg backdrop-blur-sm">
+            <div className="absolute top-4 right-4 z-20 flex flex-col overflow-hidden rounded-xl border border-madie-cream/15 bg-madie-burgundy-dark/85 text-madie-cream shadow-lg backdrop-blur-sm">
               <button
                 type="button"
                 className="flex size-10 cursor-pointer items-center justify-center border-b border-madie-cream/10 text-xl leading-none transition-colors hover:bg-madie-cream/10 disabled:cursor-not-allowed disabled:opacity-40"
@@ -130,7 +130,7 @@ export function ContactSection() {
               </button>
             </div>
 
-            <div className="absolute bottom-5 left-5 z-20 max-w-[290px] rounded-[18px] border border-madie-cream/10 bg-madie-burgundy-dark/90 px-5 py-4 shadow-xl backdrop-blur-sm">
+            <div className="absolute bottom-5 left-5 z-20 max-w-[290px] rounded-[18px] border border-madie-cream/10 bg-madie-burgundy-dark/90 px-5 py-4 text-madie-cream shadow-xl backdrop-blur-sm">
               <p className="madie-display text-[17px] leading-[1.15] font-bold tracking-[0.035em] uppercase">
                 C/ de Donoso Cortés, 62
                 <br />
@@ -139,9 +139,9 @@ export function ContactSection() {
             </div>
           </div>
 
-          <aside className="rounded-[24px] border border-madie-cream/10 bg-madie-burgundy-dark/35 px-7 py-8 lg:min-h-[568px] lg:px-9">
-            <div className="border-b border-madie-cream/10 pb-6">
-              <p className="madie-eyebrow mb-3 text-madie-cream/45">
+          <aside className="rounded-[24px] border border-madie-burgundy-dark/20 bg-white px-7 py-8 lg:min-h-[568px] lg:px-9">
+            <div className="border-b border-madie-ink/15 pb-6">
+              <p className="madie-eyebrow mb-3 text-madie-ink/60">
                 Horario
               </p>
               <p className="text-[17px] leading-[1.75]">
@@ -157,8 +157,8 @@ export function ContactSection() {
               </p>
             </div>
 
-            <div className="border-b border-madie-cream/10 py-6">
-              <p className="madie-eyebrow mb-3 text-madie-cream/45">
+            <div className="border-b border-madie-ink/15 py-6">
+              <p className="madie-eyebrow mb-3 text-madie-ink/60">
                 Teléfono
               </p>
               <a
@@ -169,9 +169,9 @@ export function ContactSection() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 border-b border-madie-cream/10 py-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 border-b border-madie-ink/15 py-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               <div>
-                <p className="madie-eyebrow mb-3 text-madie-cream/45">
+                <p className="madie-eyebrow mb-3 text-madie-ink/60">
                   Email
                 </p>
                 <a
@@ -182,7 +182,7 @@ export function ContactSection() {
                 </a>
               </div>
               <div>
-                <p className="madie-eyebrow mb-3 text-madie-cream/45">
+                <p className="madie-eyebrow mb-3 text-madie-ink/60">
                   Pedidos
                 </p>
                 <a
@@ -195,7 +195,7 @@ export function ContactSection() {
             </div>
 
             <div className="pt-6">
-              <p className="madie-eyebrow mb-4 text-madie-cream/45">
+              <p className="madie-eyebrow mb-4 text-madie-ink/60">
                 Síguenos
               </p>
               <div className="flex flex-wrap gap-x-6 gap-y-3 text-[17px]">
@@ -203,7 +203,7 @@ export function ContactSection() {
                   href="https://www.instagram.com/madie.madrid"
                   target="_blank"
                   rel="noreferrer"
-                  className="underline decoration-madie-cream/30 underline-offset-4 transition-colors hover:text-madie-rose"
+                  className="underline decoration-madie-ink/30 underline-offset-4 transition-colors hover:text-madie-rose"
                 >
                   Instagram
                 </a>
@@ -211,7 +211,7 @@ export function ContactSection() {
                   href="https://wa.me/34603861349"
                   target="_blank"
                   rel="noreferrer"
-                  className="underline decoration-madie-cream/30 underline-offset-4 transition-colors hover:text-madie-rose"
+                  className="underline decoration-madie-ink/30 underline-offset-4 transition-colors hover:text-madie-rose"
                 >
                   WhatsApp
                 </a>

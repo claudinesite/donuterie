@@ -50,7 +50,7 @@ export function StoryIntro() {
     <section
       ref={sectionRef}
       id="story"
-      className="relative min-h-[639.25px] overflow-hidden bg-madie-cream py-24 lg:min-h-[689.14px] lg:py-32"
+      className="relative min-h-[639.25px] overflow-hidden bg-white py-24 lg:min-h-[689.14px] lg:py-32"
     >
       <div
         aria-hidden="true"

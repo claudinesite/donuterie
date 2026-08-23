@@ -63,7 +63,7 @@ export function InstagramSection() {
 
   return (
     <section
-      className="relative min-h-[1077px] overflow-hidden bg-[#F3FAF8] px-6 py-24 text-[#13A7B2] lg:h-[880px] lg:min-h-0 lg:px-10 lg:py-32"
+      className="relative min-h-[1077px] overflow-hidden bg-white px-6 py-24 text-[#13A7B2] lg:h-[880px] lg:min-h-0 lg:px-10 lg:py-32"
       id="instagram"
       ref={sectionRef}
     >

@@ -114,7 +114,7 @@ function ScrollCue() {
 export function HeroSection() {
   return (
     <section
-      className="relative h-[100svh] bg-[#F3FAF8] sm:min-h-[720px]"
+      className="relative h-[100svh] bg-white sm:min-h-[720px]"
       id="inicio"
     >
       <div className="absolute inset-2 overflow-hidden rounded-[20px] bg-[#07515B] lg:inset-5 lg:rounded-[28px]">
