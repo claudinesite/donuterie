@@ -119,8 +119,8 @@ export function Header() {
             className={`pointer-events-auto flex flex-row items-center gap-1 [font-family:var(--font-cottorway),serif] text-[26px] leading-none font-normal tracking-[-0.04em] transition-colors duration-300 lg:text-[30px] ${controlColor}`}
             href="#inicio"
           >
-            <span>Le Petit</span>
-            <span>Bleu.</span>
+            <span>Le petit</span>
+            <span>bleu</span>
           </a>
 
           <div className="pointer-events-auto flex items-center gap-3">
