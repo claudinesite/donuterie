@@ -73,7 +73,7 @@ export function StoryIntro() {
 
         <div className="mx-auto mt-12 max-w-[58ch] space-y-5 text-[16px] leading-6 text-madie-ink/75 md:text-[17.28px] md:leading-[28.08px]">
           <p>
-            En Madie creemos que una madeleine puede contar mucho más que una
+            En Le Petit Bleu creemos que una madeleine puede contar mucho más que una
             receta.
           </p>
           <p>
@@ -82,7 +82,7 @@ export function StoryIntro() {
             cuidada, inspirada en esas pastelerías donde el olor a mantequilla
             recién horneada forma parte de los recuerdos.
           </p>
-          <p>Esa receta original es el corazón de MADIE.</p>
+          <p>Esa receta original es el corazón de LE PETIT BLEU.</p>
         </div>
       </div>
     </section>

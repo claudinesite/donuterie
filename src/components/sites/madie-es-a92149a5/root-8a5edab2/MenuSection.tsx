@@ -179,7 +179,7 @@ const menuPanels: MenuPanel[] = [
           {
             name: "Ube Matcha Latte",
             description:
-              "La mezcla más especial de MADIE: ube dulce y cremoso combinado con matcha japonés. Visual, diferente y sorprendentemente adictivo.",
+              "La mezcla más especial de Le Petit Bleu: ube dulce y cremoso combinado con matcha japonés. Visual, diferente y sorprendentemente adictivo.",
             image: "d3cff6c5c4973034.png",
           },
           {
@@ -208,38 +208,38 @@ const menuPanels: MenuPanel[] = [
     label: "Para llevar",
     groups: [
       {
-        title: "Madie Packs",
+        title: "Le Petit Bleu Packs",
         products: [
           {
-            name: "Madie's Vainilla",
+            name: "Le Petit Bleu Vainilla",
             description: "3 madeleines clásicas de vainilla",
             image: "c5352357afa3358d.png",
           },
           {
-            name: "Madie's Chocolate",
+            name: "Le Petit Bleu Chocolate",
             description: "3 madeleines clásicas de chocolate",
             image: "b39844ef0a1136eb.png",
           },
           {
-            name: "Mix Mini Madie's Chocolate & Vainilla",
+            name: "Mix Mini Le Petit Bleu Chocolate & Vainilla",
             description:
               "Mix de madeleines clásicas de chocolate y vainilla",
             image: "adb9edd773e0c191.png",
           },
           {
-            name: "Mix Madie's Chocolate Y Vainilla",
+            name: "Mix Le Petit Bleu Chocolate Y Vainilla",
             description:
               "3 madeleines clásicas mix chocolate y vainilla",
             image: "35d703f4e04e7407.png",
           },
           {
-            name: "MADIE Box",
+            name: "Le Petit Bleu Box",
             description:
               "Madeleines artesanales en pack de 6, 12 o 24 piezas.",
             image: "1e6de299a4c8261a.png",
           },
           {
-            name: "Madies for Doggies",
+            name: "Le Petit Bleu for Doggies",
             description: "¡Solo por tiempo limitado!",
             image: "304158a5505a1cf5.png",
           },
@@ -249,7 +249,7 @@ const menuPanels: MenuPanel[] = [
         title: "Café & té en bolsa",
         products: [
           {
-            name: "MADIE Guatemala Café Nica",
+            name: "Le Petit Bleu Guatemala Café Nica",
             image: "eb255236e2f9e81a.png",
           },
         ],

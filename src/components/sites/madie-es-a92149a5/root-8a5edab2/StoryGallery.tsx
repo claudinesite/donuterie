@@ -24,7 +24,7 @@ type StoryState = {
 
 const storyStates: readonly StoryState[] = [
   {
-    lead: "MADIE también nace de la idea de ",
+    lead: "LE PETIT BLEU también nace de la idea de ",
     emphasis: "reinterpretar lo clásico.",
     tail: " De mezclar tradición con creatividad, París con Madrid, lo artesanal con lo inesperado.",
     media: { kind: "image", src: `${assetRoot}/dbf2832577ec8d08` },
@@ -42,7 +42,7 @@ const storyStates: readonly StoryState[] = [
     media: { kind: "image", src: `${assetRoot}/a91c3e23425caf55` },
   },
   {
-    lead: "Porque MADIE no es solo una cafetería. Es un lugar donde ",
+    lead: "Porque Le Petit Bleu no es solo una cafetería. Es un lugar donde ",
     emphasis: "la tradición se reinventa.",
     tail: "",
     media: { kind: "image", src: `${assetRoot}/c6c18df4fa64c020` },
@@ -225,7 +225,7 @@ export function StoryGallery() {
                 <div
                   aria-label={
                     isActive
-                      ? `Historia de Madie ${activeIndex + 1} de ${storyStates.length}`
+                      ? `Historia de Le Petit Bleu ${activeIndex + 1} de ${storyStates.length}`
                       : undefined
                   }
                   className={`relative aspect-[3/4] w-[78%] origin-center overflow-hidden rounded-[18px] border border-[#102F35]/30 bg-white shadow-[0_18px_42px_rgba(4,29,34,0.2)] transition-all duration-[550ms] ease-[cubic-bezier(.2,.7,.3,1)] will-change-transform ${stackPositionClasses[position]} ${isActive ? "pointer-events-auto cursor-grab touch-none select-none active:cursor-grabbing" : ""}`}

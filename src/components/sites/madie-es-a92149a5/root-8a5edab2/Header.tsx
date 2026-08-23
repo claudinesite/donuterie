@@ -133,16 +133,13 @@ export function Header() {
             )}
           </button>
 
-          <Image
-            src={`${assetRoot}/4bc97f9a582e1ac1.png`}
-            alt="Madie"
-            width={94}
-            height={32}
-            preload
-            className={`h-8 w-[93.7px] object-contain transition-[filter] duration-300 ${
-              isOpen || !isPastHero ? "brightness-0 invert" : ""
+          <span
+            className={`madie-hand inline-flex h-8 w-[130px] items-center text-[28px] leading-none transition-colors duration-300 ${
+              isOpen || !isPastHero ? "text-white" : "text-madie-burgundy"
             }`}
-          />
+          >
+            Le Petit Bleu
+          </span>
         </div>
       </header>
 

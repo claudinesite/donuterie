@@ -138,7 +138,7 @@ export function CateringSection() {
           <h2 className="madie-display madie-text-stroke text-[36px] leading-[1.1] text-madie-cream sm:text-[48px] lg:text-[96px] lg:leading-[105.6px]">
             <span className="block">Días grandes,</span>
             <span className="block">más dulces</span>
-            <span className="block">con Madie</span>
+          <span className="block">con Le Petit Bleu</span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-[58ch] text-[16px] leading-[1.6] text-madie-cream/85 md:text-[18px]">

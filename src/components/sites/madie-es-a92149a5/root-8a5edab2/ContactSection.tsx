@@ -75,7 +75,7 @@ export function ContactSection() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`${assetRoot}/2627c1191ccf1fa9`}
-                alt="Mapa ilustrado de Chamberí alrededor de Madie"
+                alt="Mapa ilustrado de Chamberí alrededor de Le Petit Bleu"
                 className="absolute inset-0 size-full object-cover object-center"
               />
 
@@ -95,7 +95,7 @@ export function ContactSection() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`${assetRoot}/9133fcfa121b28e4`}
-                alt="Madie"
+                alt="Le Petit Bleu"
                 className="absolute top-[47%] left-[53%] w-[116px] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_5px_12px_rgba(7,81,91,0.3)]"
               />
             </div>

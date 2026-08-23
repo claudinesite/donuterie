@@ -36,7 +36,7 @@ const caveat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Madie — Pastelería de Madeleines Francesas en Chamberí, Madrid",
+  title: "Le Petit Bleu — Pastelería de Madeleines Francesas en Chamberí, Madrid",
   description:
     "Madeleines francesas recién horneadas y cafés de especialidad en Chamberí, Madrid.",
 };
