@@ -295,7 +295,7 @@ function ProductCard({ product }: { product: Product }) {
         ) : null}
 
         {product.description ? (
-          <p className="text-[14px] leading-[1.5] text-madie-burgundy/75">
+          <p className="text-[14px] leading-[1.5] text-black">
             {product.description}
           </p>
         ) : null}
