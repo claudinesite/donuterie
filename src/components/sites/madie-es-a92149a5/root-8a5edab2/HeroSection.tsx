@@ -1,96 +1,65 @@
-import Image from "next/image";
+import { ArrowRightIcon } from "../shared/icons";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "../shared/icons";
-
-const donutStack =
-  "/sites/madie-es-a92149a5/root-8a5edab2/assets/le-petit-bleu-donut-stack.png";
-
-function HeroPagination() {
+function ActionBlock({
+  href,
+  label,
+  detail,
+}: {
+  href: string;
+  label: string;
+  detail: string;
+}) {
   return (
-    <div className="absolute bottom-7 left-6 z-30 flex items-center gap-3 text-white sm:left-9 lg:bottom-10 lg:left-12">
-      <button
-        aria-label="Donut précédent"
-        className="flex size-9 items-center justify-center rounded-full bg-[#087F89]/55 text-white/80 backdrop-blur-sm transition-colors hover:bg-white hover:text-[#13A7B2] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-white"
-        type="button"
-      >
-        <ArrowLeftIcon className="size-4" />
-      </button>
-      <button
-        aria-label="Donut suivant"
-        className="flex size-9 items-center justify-center rounded-full bg-[#087F89]/55 text-white/80 backdrop-blur-sm transition-colors hover:bg-white hover:text-[#13A7B2] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-white"
-        type="button"
-      >
-        <ArrowRightIcon className="size-4" />
-      </button>
-      <p className="ml-2 flex items-baseline [font-family:var(--font-inter),system-ui,sans-serif] font-bold">
-        <span className="text-[15px]">02</span>
-        <span className="ml-1 text-[25px] leading-none text-white/14">03</span>
+    <div className="flex flex-col items-center text-center">
+      <p className="font-sans text-[17px] leading-none font-bold tracking-[-0.02em] text-[#13A7B2] uppercase sm:text-[20px]">
+        {label}
       </p>
-    </div>
-  );
-}
-
-function RecipeCard() {
-  return (
-    <aside className="absolute right-0 bottom-6 z-30 hidden w-[190px] rounded-l-[16px] bg-[#087F89]/60 p-3 text-white shadow-[0_18px_45px_rgba(4,71,77,0.16)] backdrop-blur-md sm:block lg:bottom-8 lg:w-[225px] lg:p-5">
-      <p className="[font-family:var(--font-inter),system-ui,sans-serif] text-[9px] font-medium tracking-[0.04em] text-white/60 uppercase">
-        La recette du jour
+      <p className="mt-2 font-heading text-[18px] leading-none text-[#13A7B2]/85 sm:text-[20px]">
+        {detail}
       </p>
-      <h2 className="mt-1.5 [font-family:var(--font-inter),system-ui,sans-serif] text-[14px] leading-none font-bold lg:text-[16px]">
-        Donut caramel
-      </h2>
       <a
-        className="mt-3.5 flex items-center justify-between [font-family:var(--font-inter),system-ui,sans-serif] text-[9px] font-semibold text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:text-[10px]"
-        href="#menu"
+        className="group mt-5 inline-flex h-11 items-center gap-3 rounded-[5px] border border-[#13A7B2] bg-[#13A7B2] px-6 font-sans text-[13px] leading-none font-bold tracking-[0.03em] text-white transition-colors duration-200 hover:bg-white hover:text-[#13A7B2] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
+        href={href}
       >
-        <span>Découvrir la recette</span>
-        <span className="flex size-7 items-center justify-center rounded-full bg-white text-[#13A7B2] lg:size-8">
-          <span className="ml-0.5 block h-0 w-0 border-y-[4px] border-l-[6px] border-y-transparent border-l-[#13A7B2]" />
-        </span>
+        <span>{label}</span>
+        <ArrowRightIcon className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
       </a>
-    </aside>
+    </div>
   );
 }
 
 export function HeroSection() {
   return (
     <section
-      className="relative isolate h-[100svh] min-h-[560px] overflow-hidden bg-[#13A7B2] text-white"
+      className="relative min-h-[745px] overflow-hidden bg-[repeating-linear-gradient(90deg,#ffffff_0,#ffffff_82px,#13A7B2_82px,#13A7B2_124px)] px-4 pt-[122px] pb-14 text-[#13A7B2] sm:min-h-[780px] sm:px-8 sm:pt-[145px] lg:min-h-[820px] lg:px-12 lg:pt-[158px]"
       id="inicio"
     >
-      <div
-        aria-hidden="true"
-        className="absolute top-1/2 left-1/2 z-0 aspect-square w-[min(33vw,500px)] min-w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0B8690]/55"
-      />
-      <div
-        aria-hidden="true"
-        className="madie-grain pointer-events-none absolute inset-0 z-[1] opacity-[0.07]"
-      />
+      <div className="relative z-10 mx-auto flex min-h-[590px] w-full max-w-[960px] flex-col items-center text-center sm:min-h-[620px]">
+        <h1 className="max-w-[800px] font-heading text-[53px] leading-[0.95] tracking-[-0.035em] text-[#13A7B2] sm:text-[74px] sm:leading-[0.92] lg:text-[92px]">
+          Une donuterie
+          <br />
+          artisanale à Madrid
+        </h1>
 
-      <h1 className="absolute top-1/2 left-1/2 z-10 hidden w-[72%] -translate-x-1/2 -translate-y-1/2 items-center justify-between [font-family:var(--font-inter),system-ui,sans-serif] text-[clamp(52px,6vw,94px)] leading-none font-bold tracking-[-0.055em] sm:flex">
-        <span>Caramel</span>
-        <span className="-translate-x-7">Donuts</span>
-      </h1>
+        <p className="mt-8 max-w-[440px] font-heading text-[21px] leading-[1.2] text-[#13A7B2]/85 sm:mt-10 sm:text-[25px]">
+          Des donuts préparés chaque jour, des glaçages généreux et du café de spécialité.
+        </p>
 
-      <h1 className="pointer-events-none absolute inset-x-5 top-28 bottom-36 z-30 flex flex-col justify-between [font-family:var(--font-inter),system-ui,sans-serif] text-[44px] leading-[0.9] font-bold tracking-[-0.055em] sm:hidden">
-        <span className="self-start">Caramel</span>
-        <span className="self-end">Donuts</span>
-      </h1>
-
-      <div className="pointer-events-none absolute inset-y-0 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center">
-        <Image
-          alt="Pile verticale de donuts artisanaux au caramel et au chocolat"
-          className="h-[70%] w-auto max-w-none object-contain drop-shadow-[0_26px_28px_rgba(4,72,77,0.24)] sm:h-[82%]"
-          height={1672}
-          priority
-          sizes="(max-width: 639px) 66vw, 34vw"
-          src={donutStack}
-          width={941}
-        />
+        <div className="mt-auto grid w-full max-w-[600px] grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16">
+          <ActionBlock
+            detail="Retrait local et livraison"
+            href="#menu"
+            label="Commander en ligne"
+          />
+          <ActionBlock
+            detail="Pour vos moments gourmands"
+            href="#catering"
+            label="Événements"
+          />
+        </div>
       </div>
 
-      <HeroPagination />
-      <RecipeCard />
+      <div className="absolute inset-x-0 bottom-0 border-t border-[#13A7B2]/25" />
     </section>
   );
 }

@@ -37,25 +37,8 @@ const languages = ["FR", "EN"] as const;
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPastHero, setIsPastHero] = useState(false);
   const [activeItem, setActiveItem] = useState<MenuItem>(menuItems[0]);
   const scrollTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    const hero = document.querySelector<HTMLElement>("#inicio");
-
-    if (!hero) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsPastHero(!entry.isIntersecting),
-      { threshold: 0 },
-    );
-
-    observer.observe(hero);
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     if (!isOpen) {
@@ -106,66 +89,38 @@ export function Header() {
     }, 1100);
   };
 
-  const controlColor = isOpen || !isPastHero
-    ? "text-madie-cream"
-    : "text-madie-burgundy";
-
   return (
     <>
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-[60] px-6 pt-6 sm:pr-0 sm:pl-8 sm:pt-7 lg:pr-4">
-        <div className="flex items-start justify-between">
+      <header className="pointer-events-none fixed inset-x-2 top-2 z-[60] sm:inset-x-4 sm:top-4 lg:inset-x-8 lg:top-6">
+        <div className="relative h-[64px] rounded-[8px] border border-[#13A7B2]/25 bg-white/95 shadow-[0_4px_18px_rgba(19,167,178,0.05)] backdrop-blur-sm sm:h-[76px]">
           <a
             aria-label="Le Petit Bleu — accueil"
-            className={`pointer-events-auto flex flex-row items-center gap-1 [font-family:var(--font-cottorway),serif] text-[26px] leading-none font-normal tracking-[-0.04em] transition-colors duration-300 lg:text-[30px] ${controlColor}`}
+            className="madie-hand pointer-events-auto absolute inset-y-0 left-5 flex items-center whitespace-nowrap text-[32px] leading-none text-[#13A7B2] transition-opacity duration-200 hover:opacity-75 sm:left-7 sm:text-[40px] lg:left-9 lg:text-[48px]"
             href="#inicio"
           >
-            <span>Le petit</span>
-            <span>bleu</span>
+            Le petit bleu
           </a>
 
-          <div className="pointer-events-auto flex items-center gap-3">
+          <div className="pointer-events-auto absolute inset-y-0 right-5 flex items-center sm:right-7">
+            <button
+              type="button"
+              className="flex h-8 w-9 cursor-pointer items-center justify-center text-[#13A7B2] transition-opacity duration-200 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
+              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isOpen}
+              aria-controls="madie-menu-overlay"
+              onClick={() => setIsOpen((open) => !open)}
+            >
+              {isOpen ? <CloseIcon className="size-6" /> : <MenuIcon className="size-6" />}
+            </button>
+          </div>
+
+          <div className="pointer-events-auto absolute inset-y-0 right-20 flex items-center sm:right-24">
             <a
-              className={`hidden h-10 w-[205px] items-center gap-3 rounded-full px-5 [font-family:var(--font-inter),system-ui,sans-serif] text-[9px] font-medium transition-[color,background-color,opacity,transform] duration-300 md:flex ${
-                isOpen
-                  ? "pointer-events-none translate-y-[-6px] opacity-0"
-                  : isPastHero
-                    ? "bg-white/95 text-madie-burgundy shadow-[0_8px_24px_rgba(7,81,91,0.12)]"
-                    : "bg-[#087F89]/48 text-white/65 backdrop-blur-md"
-              }`}
+              className="font-sans text-[14px] font-semibold tracking-[0.04em] text-[#13A7B2] uppercase transition-opacity duration-200 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#13A7B2]"
               href="#menu"
             >
-              <svg
-                aria-hidden="true"
-                className="size-4 shrink-0"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="1.8" />
-                <path d="m16 16 4 4" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />
-              </svg>
-              <span>Quel donut aujourd’hui ?</span>
+              Commander
             </a>
-
-          <button
-            type="button"
-            className={`flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full transition-[color,background-color,transform] duration-300 hover:scale-105 focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:outline-none ${controlColor} ${
-              isOpen
-                ? "bg-white/10"
-                : isPastHero
-                  ? "bg-white/95 shadow-[0_8px_24px_rgba(7,81,91,0.12)]"
-                  : "bg-[#087F89]/48 backdrop-blur-md"
-            }`}
-            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            aria-expanded={isOpen}
-            aria-controls="madie-menu-overlay"
-            onClick={() => setIsOpen((open) => !open)}
-          >
-            {isOpen ? (
-              <CloseIcon className="size-5" />
-            ) : (
-              <MenuIcon className="size-5" />
-            )}
-          </button>
           </div>
         </div>
       </header>
