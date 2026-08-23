@@ -201,6 +201,16 @@
     opacity: 0.4;
   }
 
+  .madie-stripes {
+    background: repeating-linear-gradient(
+      90deg,
+      #13a7b2 0,
+      #13a7b2 28px,
+      #ffffff 28px,
+      #ffffff 56px
+    );
+  }
+
   .madie-reveal {
     opacity: 0;
     transform: translateY(14px);

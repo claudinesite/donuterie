@@ -151,12 +151,9 @@ export function StoryGallery() {
 
   return (
     <section
-      className="relative min-h-[788.5px] overflow-hidden bg-[#13A7B2] px-6 pt-16 pb-24 text-white lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
+      className="madie-stripes relative min-h-[788.5px] overflow-hidden px-6 pt-16 pb-24 text-[#102F35] lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
       id="historia"
     >
-      <div className="madie-grain" />
-      <div className="pointer-events-none absolute inset-0 bg-[url('/sites/madie-es-a92149a5/root-8a5edab2/assets/4bc97f9a582e1ac1.png')] bg-repeat opacity-[0.05] [background-position:20px_10px] [background-size:220px_72px]" />
-
       <div className="relative z-10 mx-auto grid h-full w-full max-w-[1066px] grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_550px] lg:items-center lg:gap-10">
         <div className="order-2 w-full max-w-[440px] self-center lg:order-1 lg:self-start lg:pt-4">
           <video
@@ -203,14 +200,14 @@ export function StoryGallery() {
             >
               <ArrowRightIcon className="size-5" />
             </button>
-            <span className="madie-mono ml-1 text-[11px] leading-none tracking-[0.04em] text-white/80">
+            <span className="madie-mono ml-1 text-[11px] leading-none tracking-[0.04em] text-[#102F35]/75">
               {String(activeIndex + 1).padStart(2, "0")} / 04
             </span>
           </div>
         </div>
 
         <div className="relative order-1 mx-auto h-[380px] w-full max-w-[550px] lg:order-2 lg:h-[572px]">
-          <p className="madie-eyebrow absolute -top-8 left-1/2 hidden -translate-x-1/2 whitespace-nowrap text-white/65 lg:block">
+          <p className="madie-eyebrow absolute -top-8 left-1/2 hidden -translate-x-1/2 whitespace-nowrap text-[#102F35]/65 lg:block">
             Arrástrame →
           </p>
 
@@ -231,7 +228,7 @@ export function StoryGallery() {
                       ? `Historia de Madie ${activeIndex + 1} de ${storyStates.length}`
                       : undefined
                   }
-                  className={`relative aspect-[3/4] w-[78%] origin-center overflow-hidden rounded-[18px] border border-white/65 bg-[#07515B] shadow-[0_18px_42px_rgba(4,29,34,0.28)] transition-all duration-[550ms] ease-[cubic-bezier(.2,.7,.3,1)] will-change-transform ${stackPositionClasses[position]} ${isActive ? "pointer-events-auto cursor-grab touch-none select-none active:cursor-grabbing" : ""}`}
+                  className={`relative aspect-[3/4] w-[78%] origin-center overflow-hidden rounded-[18px] border border-[#102F35]/30 bg-white shadow-[0_18px_42px_rgba(4,29,34,0.2)] transition-all duration-[550ms] ease-[cubic-bezier(.2,.7,.3,1)] will-change-transform ${stackPositionClasses[position]} ${isActive ? "pointer-events-auto cursor-grab touch-none select-none active:cursor-grabbing" : ""}`}
                   onPointerCancel={(event) => finishDrag(event, true)}
                   onPointerDown={isActive ? handlePointerDown : undefined}
                   onPointerMove={isActive ? handlePointerMove : undefined}
