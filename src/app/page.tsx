@@ -24,7 +24,9 @@ function WaveDivider({
     ? isDeep
       ? "bg-[#0A3D45]"
       : "bg-[#13A7B2]"
-    : "bg-[#F3FAF8]";
+    : isDeep
+      ? "bg-[#13A7B2]"
+      : "bg-[#F3FAF8]";
   const fill = reverse
     ? "fill-[#F3FAF8]"
     : isDeep
@@ -34,7 +36,7 @@ function WaveDivider({
   return (
     <div
       aria-hidden="true"
-      className={`relative h-[48px] overflow-hidden sm:h-[64px] lg:h-[88px] ${background}`}
+      className={`relative h-[74px] overflow-hidden sm:h-[104px] lg:h-[138px] ${background}`}
     >
       <svg
         className={`absolute inset-0 size-full ${flip ? "-scale-x-100" : ""}`}
@@ -43,7 +45,7 @@ function WaveDivider({
       >
         <path
           className={fill}
-          d="M0 42C220 78 414 88 612 72C822 55 1056 58 1236 72C1324 78 1392 84 1440 90V140H0V42Z"
+          d="M0 54C188 100 346 103 526 82C733 58 906 68 1062 80C1213 92 1332 88 1440 102V140H0V54Z"
         />
       </svg>
     </div>
