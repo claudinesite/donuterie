@@ -8,12 +8,12 @@ const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
 const instagramUrl = "https://www.instagram.com/madie.madrid";
 
 const instagramImages = [
-  "9e3e990121631589",
-  "592572b9ae4cfaa5",
-  "0dd83427e7c9ac18",
-  "f78bc47fdc450b57",
-  "5291171d284535ff",
-  "a42a57f4b32b5c4d",
+  "9e09fc284006ddbd.png",
+  "7daeb867e3fc2cde.png",
+  "1e6de299a4c8261a.png",
+  "c5352357afa3358d.png",
+  "43fcfc4ca22de4c3.png",
+  "a8541c71504da466.png",
 ] as const;
 
 const cardDelays = [
