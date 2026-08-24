@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
-
 const zoomClasses = [
   "scale-[0.85]",
   "scale-100",
@@ -60,13 +58,18 @@ export function ContactSection() {
                 className="absolute top-[47%] left-[53%] size-12 -translate-x-1/2 -translate-y-1/2 rounded-full bg-madie-rose/55 [animation:madie-map-pulse_2.4s_cubic-bezier(0,0,.2,1)_infinite]"
                 aria-hidden="true"
               />
-              {/* Native image is intentional: the local file is an extensionless AVIF payload. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`${assetRoot}/9133fcfa121b28e4`}
-                alt="Le Petit Bleu"
-                className="absolute top-[47%] left-[53%] w-[116px] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_5px_12px_rgba(7,81,91,0.3)]"
-              />
+              <div
+                className="absolute top-[47%] left-[53%] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2"
+                aria-label="Le Petit Bleu"
+                role="img"
+              >
+                <span className="flex size-16 items-center justify-center rounded-full border-4 border-white bg-[#07515B] shadow-[0_5px_12px_rgba(7,81,91,0.3)]">
+                  <span className="size-5 rounded-full border-[3px] border-white bg-[#13A7B2]" aria-hidden="true" />
+                </span>
+                <span className="rounded-full bg-white px-3 py-1 font-sans text-[10px] font-semibold tracking-[0.08em] text-[#07515B] uppercase shadow-sm">
+                  Le Petit Bleu
+                </span>
+              </div>
             </div>
 
             <div className="absolute top-4 right-4 z-20 flex flex-col overflow-hidden rounded-xl border border-madie-cream/15 bg-madie-burgundy-dark/85 text-madie-cream shadow-lg backdrop-blur-sm">
