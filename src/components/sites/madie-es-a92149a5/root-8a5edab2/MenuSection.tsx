@@ -279,7 +279,7 @@ const slideClasses = [
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <article className="grid min-h-[190px] grid-cols-[96px_minmax(0,1fr)] items-center gap-4 rounded-[26px] border border-white/70 bg-white/45 p-5 shadow-[0_18px_50px_rgba(7,81,91,0.14)] backdrop-blur-[18px] sm:grid-cols-[140px_minmax(0,1fr)] sm:gap-5 sm:p-6">
+    <article className="grid min-h-[172px] grid-cols-[96px_minmax(0,1fr)] gap-4 border-b border-madie-ink/15 pb-8 sm:grid-cols-[140px_minmax(0,1fr)] sm:gap-5">
       {product.imagePosition ? (
         <div
           role="img"
