@@ -14,6 +14,7 @@ type Product = {
   name: string;
   description?: string;
   image: string;
+  imagePosition?: string;
   badge?: string;
   note?: string;
 };
@@ -39,19 +40,22 @@ const menuPanels: MenuPanel[] = [
             name: "Vanille",
             description:
               "Le grand classique : un donut moelleux, léger et délicatement parfumé à la vanille. Simple, authentique et parfait avec un café.",
-            image: "a141bf8a7536a154.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "0% 0%",
           },
           {
             name: "Chocolate",
             description:
               "Un donut au cacao intense, avec un cœur tendre et moelleux. Un incontournable pour les amoureux du chocolat.",
-            image: "e7e2d6c9b7c5cbd1.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "25% 0%",
           },
           {
             name: "Marbré",
             description:
               "Le mariage de la vanille et du chocolat dans un donut tendre et marbré. Classique, réconfortant et irrésistible.",
-            image: "01d642bf49256cd4.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "50% 0%",
           },
         ],
       },
@@ -62,46 +66,53 @@ const menuPanels: MenuPanel[] = [
             name: "Pistache blanche",
             description:
               "Un glaçage crémeux au chocolat blanc et des éclats de pistache. Doux, élégant et délicatement torréfié.",
-            image: "9e09fc284006ddbd.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "75% 0%",
             badge: "Meilleure vente",
           },
           {
             name: "Rose",
             description:
               "Un glaçage fruité aux notes florales et un cœur moelleux. Un donut délicat, gourmand et très coloré.",
-            image: "7daeb867e3fc2cde.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "100% 0%",
           },
           {
             name: "Matcha",
             description:
               "Un donut enrobé de chocolat au matcha, au parfait équilibre entre douceur et thé vert japonais.",
-            image: "9432c0cb28480de0.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "0% 100%",
             badge: "Meilleure vente",
           },
           {
             name: "Myrtille",
             description:
               "Un glaçage crémeux à la myrtille, relevé de fruits naturels. Doux, frais et légèrement acidulé.",
-            image: "fbaf039fb9decc77.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "25% 100%",
           },
           {
             name: "Citron",
             description:
               "Un donut avec un glaçage citron doux et rafraîchissant.",
-            image: "26100ef699035982.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "50% 100%",
           },
           {
             name: "Coco au charbon actif",
             description:
               "Une alliance surprenante de coco, cacao noir et charbon actif. Exotique, crémeuse et singulière.",
-            image: "22918087e8b1a3f8.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "75% 100%",
             note: "Fruits à coque",
           },
           {
             name: "Chai",
             description:
               "Inspiré du chai, avec des notes de cannelle, vanille et cardamome. Aromatique, chaleureux et réconfortant.",
-            image: "0b29af24c9ebd195.png",
+            image: "donut-menu-grid.png",
+            imagePosition: "100% 100%",
           },
           {
             name: "Fresa",
@@ -269,14 +280,27 @@ const slideClasses = [
 function ProductCard({ product }: { product: Product }) {
   return (
     <article className="grid min-h-[172px] grid-cols-[140px_minmax(0,1fr)] gap-5 border-b border-madie-burgundy/15 pb-8">
-      <Image
-        src={`${assetRoot}/${product.image}`}
-        alt=""
-        width={140}
-        height={140}
-        sizes="140px"
-        className="size-[140px] object-contain drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)]"
-      />
+      {product.imagePosition ? (
+        <div
+          role="img"
+          aria-label={`${product.name} donut`}
+          className="size-[140px] bg-no-repeat drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)]"
+          style={{
+            backgroundImage: `url(${assetRoot}/${product.image})`,
+            backgroundPosition: product.imagePosition,
+            backgroundSize: "500% 200%",
+          }}
+        />
+      ) : (
+        <Image
+          src={`${assetRoot}/${product.image}`}
+          alt=""
+          width={140}
+          height={140}
+          sizes="140px"
+          className="size-[140px] object-contain drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)]"
+        />
+      )}
 
       <div className="min-w-0 pt-2">
         <div className="mb-2 flex flex-wrap items-center gap-2">
@@ -327,7 +351,10 @@ function ProductPanel({
             {group.title}
           </h3>
           <div className="grid grid-cols-1 gap-x-14 lg:grid-cols-2">
-            {group.products.map((product) => (
+            {(panel.label === "Donuts" && groupIndex === 1
+              ? group.products.slice(0, 7)
+              : group.products
+            ).map((product) => (
               <ProductCard key={product.name} product={product} />
             ))}
           </div>
