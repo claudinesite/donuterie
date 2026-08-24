@@ -397,7 +397,7 @@ export function MenuSection() {
   return (
     <section
       id="menu"
-      className="madie-menu-stripes scroll-mt-20 overflow-hidden pb-20 pt-12 text-madie-ink lg:pb-32 lg:pt-20"
+      className="madie-menu-stripes scroll-mt-20 overflow-hidden pb-20 pt-12 text-madie-burgundy lg:pb-32 lg:pt-20"
     >
       <div className="mx-auto mb-12 grid w-full max-w-[1200px] grid-cols-1 gap-8 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:px-12">
         <h2 className="madie-display text-5xl leading-none font-bold tracking-[0.01em] uppercase lg:text-[96px] lg:leading-[96px]">
@@ -405,7 +405,7 @@ export function MenuSection() {
         </h2>
 
         <div className="lg:pt-2">
-          <p className="max-w-[520px] text-[17px] leading-[1.6] text-madie-ink/85">
+          <p className="max-w-[520px] text-[17px] leading-[1.6] text-madie-burgundy/85">
             Découvrez notre sélection de donuts artisanaux, de cafés de
             spécialité et de boissons créatives. Tout est préparé chaque jour
             dans notre atelier à Moncton.
