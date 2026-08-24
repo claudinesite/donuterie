@@ -115,12 +115,23 @@ export function Header() {
           </div>
 
           <div className="pointer-events-auto absolute inset-y-0 right-16 hidden items-center sm:flex sm:right-20">
-            <a
-              className="font-sans text-[11px] font-semibold tracking-[0.04em] text-white uppercase transition-opacity duration-200 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-              href="#menu"
-            >
-              Commander
-            </a>
+            <div className="flex items-center gap-0.5 rounded-full border border-white/35 p-0.5">
+              {languages.map((language) => (
+                <button
+                  key={language}
+                  type="button"
+                  className={`flex h-7 min-w-8 cursor-pointer items-center justify-center rounded-full px-2 font-sans text-[10px] font-semibold tracking-[0.08em] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                    language === "FR"
+                      ? "bg-white text-madie-burgundy"
+                      : "text-white/75 hover:bg-white/15 hover:text-white"
+                  }`}
+                  aria-current={language === "FR" ? "true" : undefined}
+                  aria-label={`Changer la langue vers ${language}`}
+                >
+                  {language}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </header>
@@ -139,24 +150,6 @@ export function Header() {
         }`}
       >
         <div className="madie-grain" aria-hidden="true" />
-
-        <div className="absolute top-24 left-6 z-10 flex h-10 items-center rounded-full border border-madie-cream/20 p-1 madie-eyebrow sm:left-9 lg:top-28 lg:left-12">
-          {languages.map((language) => (
-            <button
-              key={language}
-              type="button"
-              className={`flex h-8 min-w-10 cursor-pointer items-center justify-center rounded-full px-3 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-madie-cream ${
-                language === "FR"
-                  ? "bg-madie-cream text-madie-burgundy"
-                  : "text-madie-cream/60 hover:text-madie-cream"
-              }`}
-              aria-current={language === "FR" ? "true" : undefined}
-              aria-label={`Changer la langue vers ${language}`}
-            >
-              {language}
-            </button>
-          ))}
-        </div>
 
         <div className="relative mx-auto flex min-h-full w-full max-w-[824px] items-center px-6 pt-32 pb-24 lg:px-0 lg:pt-28 lg:pb-20">
           <div className="grid w-full grid-cols-1 lg:grid-cols-[374px_minmax(0,1fr)] lg:items-center lg:gap-16">
