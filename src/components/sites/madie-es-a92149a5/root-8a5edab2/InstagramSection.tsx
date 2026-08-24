@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRightIcon, InstagramIcon } from "../shared/icons";
 
 const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
-const instagramUrl = "https://www.instagram.com/madie.madrid";
+const instagramUrl = "https://www.instagram.com/claudine_eyram/";
 
 const instagramImages = [
   "instagram-donut-pistachio.png",

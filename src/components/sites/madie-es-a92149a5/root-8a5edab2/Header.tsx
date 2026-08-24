@@ -264,7 +264,7 @@ export function Header() {
                   </p>
                   <div className="flex flex-col items-start gap-1.5">
                     <a
-                      href="https://www.instagram.com/madie.madrid"
+                      href="https://www.instagram.com/claudine_eyram/"
                       target="_blank"
                       rel="noreferrer"
                       className="transition-colors duration-200 hover:text-madie-cream"

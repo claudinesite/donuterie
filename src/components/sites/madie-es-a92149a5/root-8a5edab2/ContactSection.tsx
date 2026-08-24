@@ -200,7 +200,7 @@ export function ContactSection() {
               </p>
               <div className="flex flex-wrap gap-x-6 gap-y-3 text-[17px]">
                 <a
-                  href="https://www.instagram.com/madie.madrid"
+                  href="https://www.instagram.com/claudine_eyram/"
                   target="_blank"
                   rel="noreferrer"
                   className="underline decoration-madie-ink/30 underline-offset-4 transition-colors hover:text-madie-rose"
