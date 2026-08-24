@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 import {
@@ -9,24 +8,22 @@ import {
 } from "@/components/sites/madie-es-a92149a5/shared/icons";
 
 const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
+const menuVideo = `${assetRoot}/8cb64c4b2cd18888.webm`;
 
 const menuItems = [
   {
     label: "Menu",
     href: "#menu",
-    image: `${assetRoot}/64b30c39412940e3.jpg`,
     caption: "Préparé chaque matin",
   },
   {
     label: "Événements",
     href: "#catering",
-    image: `${assetRoot}/5a5fb6ad0c2dff8f.jpg`,
     caption: "Une table pensée pour partager",
   },
   {
     label: "Nous trouver",
     href: "#contacto",
-    image: `${assetRoot}/de2e0b19d937fb62.jpg`,
     caption: "On t’attend à Moncton",
   },
 ] as const;
@@ -202,20 +199,17 @@ export function Header() {
         <div className="relative mx-auto flex min-h-full w-full max-w-[824px] items-center px-6 pt-32 pb-24 lg:px-0 lg:pt-28 lg:pb-20">
           <div className="grid w-full grid-cols-1 lg:grid-cols-[374px_minmax(0,1fr)] lg:items-center lg:gap-16">
             <div className="relative hidden h-[500px] w-[374px] overflow-hidden rounded-[18px] lg:block">
-              {menuItems.map((item) => (
-                <Image
-                  key={item.label}
-                  src={item.image}
-                  alt=""
-                  fill
-                  sizes="374px"
-                  className={`object-cover transition-[opacity,transform] duration-500 ease-out ${
-                    activeItem.label === item.label
-                      ? "scale-100 opacity-100"
-                      : "scale-[1.03] opacity-0"
-                  }`}
-                />
-              ))}
+              <video
+                aria-hidden="true"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                className="absolute inset-0 size-full object-cover"
+              >
+                <source src={menuVideo} type="video/webm" />
+              </video>
               <div
                 className="absolute inset-0 bg-gradient-to-t from-madie-burgundy-dark/90 via-transparent to-transparent"
                 aria-hidden="true"
