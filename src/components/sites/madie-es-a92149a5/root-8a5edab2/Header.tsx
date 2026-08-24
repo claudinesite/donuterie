@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 import {
@@ -8,7 +9,7 @@ import {
 } from "@/components/sites/madie-es-a92149a5/shared/icons";
 
 const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
-const menuVideo = `${assetRoot}/8cb64c4b2cd18888.webm`;
+const menuImage = `${assetRoot}/menu-cafe-interior.png`;
 
 const menuItems = [
   {
@@ -199,17 +200,13 @@ export function Header() {
         <div className="relative mx-auto flex min-h-full w-full max-w-[824px] items-center px-6 pt-32 pb-24 lg:px-0 lg:pt-28 lg:pb-20">
           <div className="grid w-full grid-cols-1 lg:grid-cols-[374px_minmax(0,1fr)] lg:items-center lg:gap-16">
             <div className="relative hidden h-[500px] w-[374px] overflow-hidden rounded-[18px] lg:block">
-              <video
-                aria-hidden="true"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                className="absolute inset-0 size-full object-cover"
-              >
-                <source src={menuVideo} type="video/webm" />
-              </video>
+              <Image
+                src={menuImage}
+                alt="Intérieur de la donuterie Le Petit Bleu"
+                fill
+                sizes="374px"
+                className="object-cover"
+              />
               <div
                 className="absolute inset-0 bg-gradient-to-t from-madie-burgundy-dark/90 via-transparent to-transparent"
                 aria-hidden="true"
