@@ -8,12 +8,12 @@ const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
 const instagramUrl = "https://www.instagram.com/madie.madrid";
 
 const instagramImages = [
-  "9e09fc284006ddbd.png",
-  "7daeb867e3fc2cde.png",
-  "1e6de299a4c8261a.png",
-  "c5352357afa3358d.png",
-  "43fcfc4ca22de4c3.png",
-  "a8541c71504da466.png",
+  "instagram-donut-pistachio.png",
+  "instagram-donut-box.png",
+  "instagram-packaging.png",
+  "instagram-blue-cup.png",
+  "instagram-blue-donut.png",
+  "instagram-donut-trio.png",
 ] as const;
 
 const cardDelays = [
@@ -124,10 +124,6 @@ export function InstagramSection() {
               target="_blank"
             >
               <picture className="block size-full">
-                <source
-                  srcSet={`${assetRoot}/${image}`}
-                  type="image/avif"
-                />
                 <img
                   alt=""
                   className="size-full object-cover transition-transform duration-700 ease-[cubic-bezier(.2,.7,.3,1)] group-hover:scale-105"
