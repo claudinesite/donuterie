@@ -6,7 +6,6 @@ import { HeroSection } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/
 import { InstagramSection } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/InstagramSection";
 import { MenuSection } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/MenuSection";
 import { StoryIntro } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/StoryIntro";
-import { StoryGallery } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/StoryGallery";
 
 interface WaveDividerProps {
   reverse?: boolean;
@@ -48,8 +47,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <StoryIntro />
-        <StoryGallery />
-        <WaveDivider reverse flip />
         <MenuSection />
         <CateringSection />
         <InstagramSection />

@@ -279,12 +279,12 @@ const slideClasses = [
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <article className="grid min-h-[172px] grid-cols-[140px_minmax(0,1fr)] gap-5 border-b border-madie-burgundy/15 pb-8">
+    <article className="grid min-h-[190px] grid-cols-[96px_minmax(0,1fr)] items-center gap-4 rounded-[26px] border border-white/70 bg-white/45 p-5 shadow-[0_18px_50px_rgba(7,81,91,0.14)] backdrop-blur-[18px] sm:grid-cols-[140px_minmax(0,1fr)] sm:gap-5 sm:p-6">
       {product.imagePosition ? (
         <div
           role="img"
           aria-label={`${product.name} donut`}
-          className="size-[140px] bg-no-repeat drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)]"
+          className="size-24 bg-no-repeat drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)] sm:size-[140px]"
           style={{
             backgroundImage: `url(${assetRoot}/${product.image})`,
             backgroundPosition: product.imagePosition,
@@ -298,7 +298,7 @@ function ProductCard({ product }: { product: Product }) {
           width={140}
           height={140}
           sizes="140px"
-          className="size-[140px] object-contain drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)]"
+          className="size-24 object-contain drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)] sm:size-[140px]"
         />
       )}
 
@@ -350,7 +350,7 @@ function ProductPanel({
           >
             {group.title}
           </h3>
-          <div className="grid grid-cols-1 gap-x-14 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {(panel.label === "Donuts" && groupIndex === 1
               ? group.products.slice(0, 7)
               : group.products
@@ -397,7 +397,7 @@ export function MenuSection() {
   return (
     <section
       id="menu"
-      className="scroll-mt-20 overflow-hidden bg-white pb-20 pt-12 text-madie-burgundy lg:pb-32 lg:pt-20"
+      className="madie-stripes scroll-mt-20 overflow-hidden pb-20 pt-12 text-madie-ink lg:pb-32 lg:pt-20"
     >
       <div className="mx-auto mb-12 grid w-full max-w-[1200px] grid-cols-1 gap-8 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:px-12">
         <h2 className="madie-display text-5xl leading-none font-bold tracking-[0.01em] uppercase lg:text-[96px] lg:leading-[96px]">
@@ -405,7 +405,7 @@ export function MenuSection() {
         </h2>
 
         <div className="lg:pt-2">
-          <p className="max-w-[520px] text-[17px] leading-[1.6] text-madie-burgundy/80">
+          <p className="max-w-[520px] text-[17px] leading-[1.6] text-madie-ink/85">
             Découvrez notre sélection de donuts artisanaux, de cafés de
             spécialité et de boissons créatives. Tout est préparé chaque jour
             dans notre atelier à Moncton.
@@ -431,7 +431,7 @@ export function MenuSection() {
                   className={`madie-display flex h-[38px] cursor-pointer items-center justify-center rounded-full border px-5 py-2.5 text-xs leading-none font-bold tracking-[1.2px] uppercase transition-[background-color,border-color] duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-madie-burgundy ${
                     isActive
                       ? "border-madie-rose bg-madie-rose"
-                      : "border-madie-burgundy/30 bg-transparent hover:bg-madie-rose/20"
+                      : "border-white/70 bg-white/45 backdrop-blur-md hover:bg-white/65"
                   }`}
                   onClick={() => setActiveIndex(index)}
                 >
