@@ -52,7 +52,7 @@ export function StoryIntro() {
     <section
       ref={sectionRef}
       id="story"
-      className="relative overflow-hidden bg-white"
+      className="relative overflow-hidden border-b border-[#102F35]/15 bg-white"
     >
       <div className="grid min-h-[760px] grid-cols-1 lg:grid-cols-2">
         <div className="relative flex min-h-[680px] items-center overflow-hidden px-6 py-20 sm:px-10 lg:min-h-[780px] lg:px-[clamp(48px,6vw,96px)] lg:py-24">
