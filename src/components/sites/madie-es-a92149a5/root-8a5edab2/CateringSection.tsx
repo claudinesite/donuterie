@@ -148,7 +148,7 @@ export function CateringSection() {
           </p>
 
           <a
-            href="mailto:hola@madie.es"
+            href="mailto:hola@lepetitbleu.com"
             className="madie-eyebrow mt-8 inline-flex h-12 items-center justify-center rounded-full bg-madie-rose px-8 text-madie-ink transition-colors duration-300 hover:bg-madie-rose-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-madie-cream"
           >
             Commander

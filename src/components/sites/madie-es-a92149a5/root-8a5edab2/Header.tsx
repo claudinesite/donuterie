@@ -280,7 +280,7 @@ export function Header() {
                       WhatsApp
                     </a>
                     <a
-                      href="mailto:info@madie.es"
+                      href="mailto:info@lepetitbleu.com"
                       className="transition-colors duration-200 hover:text-madie-cream"
                     >
                       Email

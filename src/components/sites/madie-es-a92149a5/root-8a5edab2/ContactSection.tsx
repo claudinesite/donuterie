@@ -147,10 +147,10 @@ export function ContactSection() {
                   Email
                 </p>
                 <a
-                  href="mailto:info@madie.es"
+                  href="mailto:info@lepetitbleu.com"
                   className="text-[17px] leading-[1.6] transition-colors hover:text-madie-rose"
                 >
-                  info@madie.es
+                  info@lepetitbleu.com
                 </a>
               </div>
               <div>
@@ -158,10 +158,10 @@ export function ContactSection() {
                   Commandes
                 </p>
                 <a
-                  href="mailto:orders@madie.es"
+                  href="mailto:orders@lepetitbleu.com"
                   className="text-[17px] leading-[1.6] transition-colors hover:text-madie-rose"
                 >
-                  orders@madie.es
+                  orders@lepetitbleu.com
                 </a>
               </div>
             </div>
