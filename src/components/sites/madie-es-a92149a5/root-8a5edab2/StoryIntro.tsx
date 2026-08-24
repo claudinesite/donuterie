@@ -52,27 +52,27 @@ export function StoryIntro() {
       id="story"
       className="relative overflow-hidden border-b border-[#102F35]/15 bg-white"
     >
-      <div className="relative flex min-h-[560px] items-center justify-center overflow-hidden px-6 py-20 text-center sm:px-10 lg:min-h-[620px] lg:px-[clamp(48px,6vw,96px)] lg:py-24">
+      <div className="relative flex min-h-[500px] items-center justify-center overflow-hidden px-6 py-16 text-center sm:px-10 lg:min-h-[560px] lg:px-[clamp(48px,6vw,96px)] lg:py-20">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 bg-[url('/sites/madie-es-a92149a5/root-8a5edab2/assets/67a0d73c790a0445.jpg')] opacity-10 mix-blend-multiply"
           />
 
           <div
-            className={`madie-reveal relative w-full max-w-[590px] ${isVisible ? "is-visible" : ""}`}
+            className={`madie-reveal relative w-full max-w-[660px] ${isVisible ? "is-visible" : ""}`}
           >
-            <p className="madie-eyebrow mb-7 text-madie-burgundy/70">
+            <p className="madie-eyebrow mb-5 text-[9px] text-madie-burgundy/70 lg:text-[10px]">
               Notre histoire
             </p>
 
-            <h2 className="madie-display madie-text-stroke text-[42px] leading-[0.95] text-madie-burgundy sm:text-[54px] lg:text-[clamp(54px,5vw,76px)]">
-              Une tradition{" "}
-              <span className="inline-block italic [-webkit-text-fill-color:currentColor] [-webkit-text-stroke:0]">
+            <h2 className="madie-display madie-text-stroke text-[44px] leading-[0.9] text-madie-burgundy sm:text-[54px] lg:text-[clamp(56px,4.8vw,72px)]">
+              <span className="block">Une tradition</span>
+              <span className="block italic [-webkit-text-fill-color:currentColor] [-webkit-text-stroke:0]">
                 réinventée
               </span>
             </h2>
 
-            <div className="mx-auto mt-12 max-w-[56ch] space-y-5 text-[16px] leading-[1.65] text-madie-ink/75 md:text-[17px]">
+            <div className="mx-auto mt-8 max-w-[56ch] space-y-4 text-[14px] leading-[1.55] text-madie-ink/75 md:text-[15px]">
               <p>
                 Chez Le Petit Bleu, nous pensons qu’un donut peut raconter bien plus
                 qu’une simple recette.
