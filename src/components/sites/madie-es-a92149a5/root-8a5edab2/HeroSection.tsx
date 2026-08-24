@@ -44,7 +44,7 @@ export function HeroSection() {
 
       <div className="relative z-10 hidden h-full min-h-[620px] grid-cols-[minmax(0,1fr)_clamp(250px,21vw,320px)_minmax(0,1fr)] px-10 pt-20 pb-20 lg:grid xl:px-16">
         <div className="flex min-w-0 flex-col justify-center pr-10 xl:pr-16">
-          <h1 className="ml-auto max-w-[560px] text-right font-heading text-[clamp(58px,5.6vw,88px)] leading-[0.83] font-bold tracking-[-0.035em] uppercase">
+          <h1 className="ml-auto max-w-[560px] text-right font-heading text-[clamp(58px,5.6vw,88px)] leading-[0.94] font-bold tracking-[-0.035em] uppercase">
             Une
             <br />
             donuterie
@@ -58,7 +58,7 @@ export function HeroSection() {
         <div aria-hidden="true" />
 
         <div className="flex min-w-0 flex-col justify-center pl-10 xl:pl-16">
-          <h1 className="max-w-[600px] font-heading text-[clamp(54px,5vw,84px)] leading-[0.83] font-bold tracking-[-0.035em] uppercase">
+          <h1 className="max-w-[600px] font-heading text-[clamp(54px,5vw,84px)] leading-[0.94] font-bold tracking-[-0.035em] uppercase">
             Artisanale
             <br />
             à Moncton
