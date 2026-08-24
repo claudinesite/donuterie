@@ -2,8 +2,9 @@ const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
 
 export function StoryGallery() {
   return (
-    <div
-      className="madie-stripes relative flex min-h-[720px] items-center justify-center overflow-hidden px-6 py-16 text-[#102F35] sm:px-10 lg:min-h-[780px] lg:px-12"
+    <section
+      aria-label="L'atelier Le Petit Bleu"
+      className="madie-stripes relative flex min-h-[720px] items-center justify-center overflow-hidden border-b border-[#102F35]/15 px-6 py-16 text-[#102F35] sm:px-10 lg:min-h-[780px] lg:px-12"
       id="historia"
     >
       <video
@@ -20,6 +21,6 @@ export function StoryGallery() {
           type="video/mp4"
         />
       </video>
-    </div>
+    </section>
   );
 }

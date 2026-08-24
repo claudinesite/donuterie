@@ -2,8 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { StoryGallery } from "./StoryGallery";
-
 function useRevealOnce() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -54,8 +52,7 @@ export function StoryIntro() {
       id="story"
       className="relative overflow-hidden border-b border-[#102F35]/15 bg-white"
     >
-      <div className="grid min-h-[760px] grid-cols-1 lg:grid-cols-2">
-        <div className="relative flex min-h-[680px] items-center overflow-hidden px-6 py-20 sm:px-10 lg:min-h-[780px] lg:px-[clamp(48px,6vw,96px)] lg:py-24">
+      <div className="relative flex min-h-[560px] items-center overflow-hidden px-6 py-20 sm:px-10 lg:min-h-[620px] lg:px-[clamp(48px,6vw,96px)] lg:py-24">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 bg-[url('/sites/madie-es-a92149a5/root-8a5edab2/assets/67a0d73c790a0445.jpg')] opacity-10 mix-blend-multiply"
@@ -89,9 +86,6 @@ export function StoryIntro() {
               <p>Cette gourmandise est au cœur de LE PETIT BLEU.</p>
             </div>
           </div>
-        </div>
-
-        <StoryGallery />
       </div>
     </section>
   );
