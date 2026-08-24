@@ -8,7 +8,7 @@ const hangingDonut =
 function HeroLink({ href, label }: { href: string; label: string }) {
   return (
     <a
-      className="group inline-flex h-11 items-center gap-3 rounded-full bg-[#07515B] px-6 font-heading text-[12px] leading-none font-bold tracking-[0.1em] text-white uppercase transition-all duration-200 hover:-translate-y-0.5 hover:gap-4 hover:bg-white hover:text-[#07515B] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+      className="group inline-flex h-11 items-center gap-3 border-b border-white/70 font-heading text-[12px] leading-none font-bold tracking-[0.12em] text-white uppercase transition-[gap,border-color,opacity] duration-200 hover:gap-5 hover:border-white hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
       href={href}
     >
       <span>{label}</span>
@@ -28,14 +28,15 @@ export function HeroSection() {
         className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.08),transparent_34%)]"
       />
       <div aria-hidden="true" className="madie-grain-ivory z-0" />
+      <div aria-hidden="true" className="absolute top-[82px] right-10 left-10 z-10 hidden h-px bg-[#F4EAD8]/40 lg:block xl:right-16 xl:left-16" />
 
-      <div className="pointer-events-none absolute top-0 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:w-[240px] lg:w-[clamp(250px,22vw,340px)]">
+      <div className="pointer-events-none absolute top-0 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:w-[240px] lg:w-[clamp(330px,25vw,380px)]">
         <Image
           alt="Donut artisanal bleu suspendu à une corde"
           className="h-auto w-full drop-shadow-[0_26px_30px_rgba(7,81,91,0.3)]"
           height={1756}
           priority
-          sizes="(max-width: 639px) 250px, (max-width: 1023px) 300px, 22vw"
+          sizes="(max-width: 639px) 250px, (max-width: 1023px) 300px, 25vw"
           src={hangingDonut}
           width={1024}
         />
@@ -43,13 +44,13 @@ export function HeroSection() {
 
       <div className="relative z-10 hidden h-full min-h-[620px] grid-cols-[minmax(0,1fr)_clamp(250px,21vw,320px)_minmax(0,1fr)] px-10 pt-20 pb-20 lg:grid xl:px-16">
         <div className="flex min-w-0 flex-col justify-center pr-10 xl:pr-16">
-          <h1 className="ml-auto max-w-[520px] text-right font-heading text-[clamp(48px,4.9vw,74px)] leading-[0.88] font-bold tracking-[-0.025em] uppercase">
+          <h1 className="ml-auto max-w-[560px] text-right font-heading text-[clamp(58px,5.6vw,88px)] leading-[0.83] font-bold tracking-[-0.035em] uppercase">
             Une
             <br />
             donuterie
           </h1>
 
-          <p className="mt-10 ml-auto max-w-[410px] text-right font-sans text-[18px] leading-[1.3] text-white/85">
+          <p className="mt-8 ml-auto max-w-[34ch] text-right font-sans text-[16px] leading-[1.45] text-white/85">
             Des donuts préparés chaque jour, des glaçages généreux et du café de spécialité.
           </p>
         </div>
@@ -57,17 +58,22 @@ export function HeroSection() {
         <div aria-hidden="true" />
 
         <div className="flex min-w-0 flex-col justify-center pl-10 xl:pl-16">
-          <h1 className="max-w-[560px] font-heading text-[clamp(48px,4.9vw,74px)] leading-[0.88] font-bold tracking-[-0.025em] uppercase">
+          <h1 className="max-w-[600px] font-heading text-[clamp(54px,5vw,84px)] leading-[0.83] font-bold tracking-[-0.035em] uppercase">
             Artisanale
             <br />
             à Moncton
           </h1>
 
-          <div className="mt-10 flex flex-wrap items-start gap-4">
+          <div className="mt-8 flex flex-wrap items-start gap-x-7 gap-y-2">
             <HeroLink href="#menu" label="Commander en ligne" />
             <HeroLink href="#catering" label="Événements" />
           </div>
         </div>
+      </div>
+
+      <div className="pointer-events-none absolute right-10 bottom-[68px] left-10 z-10 hidden items-end justify-between border-t border-[#F4EAD8]/40 pt-3 font-sans text-[10px] leading-none tracking-[0.2em] text-white/70 uppercase lg:flex xl:right-16 xl:left-16">
+        <span>Moncton · Nouveau-Brunswick</span>
+        <span>Donuts artisanaux · Café de spécialité</span>
       </div>
 
       <div className="relative z-10 flex min-h-[640px] flex-col px-5 pt-[310px] pb-20 sm:min-h-[680px] sm:px-8 sm:pt-[410px] lg:hidden">
@@ -95,7 +101,7 @@ export function HeroSection() {
       </div>
 
       <div className="absolute inset-x-0 bottom-0 z-30 flex h-12 items-center overflow-hidden bg-[#07515B] text-white">
-        <div className="flex min-w-max [animation:madie-marquee_18s_linear_infinite] motion-reduce:animate-none">
+        <div className="flex min-w-max [animation:madie-marquee_24s_linear_infinite] motion-reduce:animate-none">
           {[0, 1].map((copy) => (
             <div
               aria-hidden={copy === 1}
