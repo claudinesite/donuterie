@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRightIcon } from "../shared/icons";
 
 const hangingDonut =
-  "/sites/madie-es-a92149a5/root-8a5edab2/assets/hanging-blue-donut.png";
+  "/sites/madie-es-a92149a5/root-8a5edab2/assets/hanging-blue-donut-long-rope.png";
 
 function HeroLink({ href, label }: { href: string; label: string }) {
   return (
@@ -29,13 +29,13 @@ export function HeroSection() {
       />
       <div aria-hidden="true" className="madie-grain-ivory z-0" />
 
-      <div className="pointer-events-none absolute top-0 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:w-[240px] lg:w-[clamp(250px,22vw,340px)]">
+      <div className="pointer-events-none absolute top-0 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:w-[240px] lg:w-[clamp(230px,20vw,300px)]">
         <Image
           alt="Donut artisanal bleu suspendu à une corde"
           className="h-auto w-full drop-shadow-[0_26px_30px_rgba(7,81,91,0.3)]"
-          height={1536}
+          height={1756}
           priority
-          sizes="(max-width: 639px) 250px, (max-width: 1023px) 300px, 22vw"
+          sizes="(max-width: 639px) 250px, (max-width: 1023px) 300px, 23vw"
           src={hangingDonut}
           width={1024}
         />
