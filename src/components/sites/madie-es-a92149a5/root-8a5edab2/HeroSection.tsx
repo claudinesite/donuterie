@@ -29,12 +29,7 @@ export function HeroSection() {
       />
       <div aria-hidden="true" className="madie-grain-ivory z-0" />
 
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-0 left-1/2 z-[19] h-8 w-[10px] -translate-x-1/2 bg-[repeating-linear-gradient(135deg,#07515B_0,#07515B_3px,#0C7A86_3px,#0C7A86_6px)] shadow-[2px_0_5px_rgba(7,81,91,0.28)] sm:h-10 sm:w-3 lg:h-14"
-      />
-
-      <div className="pointer-events-none absolute top-8 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:top-10 sm:w-[240px] lg:top-14 lg:w-[clamp(230px,20vw,300px)]">
+      <div className="pointer-events-none absolute top-0 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:w-[240px] lg:w-[clamp(230px,20vw,300px)]">
         <Image
           alt="Donut artisanal bleu suspendu à une corde"
           className="h-auto w-full drop-shadow-[0_26px_30px_rgba(7,81,91,0.3)]"
