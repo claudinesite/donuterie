@@ -28,7 +28,7 @@ export function HeroSection() {
         className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.08),transparent_34%)]"
       />
       <div aria-hidden="true" className="madie-grain-ivory z-0" />
-      <div aria-hidden="true" className="absolute top-[82px] right-10 left-10 z-10 hidden h-px bg-[#F4EAD8]/40 lg:block xl:right-16 xl:left-16" />
+      <div aria-hidden="true" className="absolute top-[82px] right-10 left-10 z-10 hidden h-px bg-[#F4EAD8]/40 lg:block" />
 
       <div className="pointer-events-none absolute top-0 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:w-[240px] lg:w-[clamp(330px,25vw,380px)]">
         <Image
