@@ -38,7 +38,49 @@ const languages = ["FR", "EN"] as const;
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<MenuItem>(menuItems[0]);
+  const [isLightSection, setIsLightSection] = useState(false);
   const scrollTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    const darkSectionIds = new Set(["inicio", "catering"]);
+    const sectionIds = ["inicio", "story", "menu", "catering", "instagram", "contacto"];
+    let frame: number | null = null;
+
+    const updateHeaderTone = () => {
+      frame = null;
+      const probeY = 36;
+      const activeSection = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter((section): section is HTMLElement => Boolean(section))
+        .filter((section) => {
+          const rect = section.getBoundingClientRect();
+          return rect.top <= probeY && rect.bottom > probeY;
+        })
+        .at(-1);
+
+      setIsLightSection(activeSection ? !darkSectionIds.has(activeSection.id) : true);
+    };
+
+    const scheduleHeaderToneUpdate = () => {
+      if (frame !== null) {
+        return;
+      }
+
+      frame = window.requestAnimationFrame(updateHeaderTone);
+    };
+
+    updateHeaderTone();
+    window.addEventListener("scroll", scheduleHeaderToneUpdate, { passive: true });
+    window.addEventListener("resize", scheduleHeaderToneUpdate);
+
+    return () => {
+      if (frame !== null) {
+        window.cancelAnimationFrame(frame);
+      }
+      window.removeEventListener("scroll", scheduleHeaderToneUpdate);
+      window.removeEventListener("resize", scheduleHeaderToneUpdate);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isOpen) {
@@ -89,13 +131,15 @@ export function Header() {
     }, 1100);
   };
 
+  const useLightHeader = isLightSection && !isOpen;
+
   return (
     <>
       <header className="pointer-events-none fixed inset-x-0 top-0 z-[60] px-5 pt-4 sm:px-7 sm:pt-5 lg:px-10 lg:pt-6">
         <div className="relative h-[42px] sm:h-[48px]">
           <a
             aria-label="Le Petit Bleu — accueil"
-            className="madie-hand pointer-events-auto absolute inset-y-0 left-0 flex items-center whitespace-nowrap text-[18px] leading-none text-white transition-opacity duration-200 hover:opacity-75 sm:text-[21px] lg:text-[24px]"
+            className={`madie-hand pointer-events-auto absolute inset-y-0 left-0 flex items-center whitespace-nowrap text-[18px] leading-none transition-[color,opacity] duration-300 hover:opacity-75 sm:text-[21px] lg:text-[24px] ${useLightHeader ? "text-madie-ink" : "text-white"}`}
             href="#inicio"
           >
             Le petit bleu
@@ -104,7 +148,7 @@ export function Header() {
           <div className="pointer-events-auto absolute inset-y-0 right-0 flex items-center">
             <button
               type="button"
-              className="flex h-8 w-9 cursor-pointer items-center justify-center text-white transition-opacity duration-200 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className={`flex h-8 w-9 cursor-pointer items-center justify-center transition-[color,opacity] duration-300 hover:opacity-65 focus-visible:outline-2 focus-visible:outline-offset-4 ${useLightHeader ? "text-madie-ink focus-visible:outline-madie-ink" : "text-white focus-visible:outline-white"}`}
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isOpen}
               aria-controls="madie-menu-overlay"
@@ -115,15 +159,19 @@ export function Header() {
           </div>
 
           <div className="pointer-events-auto absolute inset-y-0 right-16 hidden items-center sm:flex sm:right-20">
-            <div className="flex items-center gap-0.5 rounded-full border border-white/35 p-0.5">
+            <div className={`flex items-center gap-0.5 rounded-full border p-0.5 transition-colors duration-300 ${useLightHeader ? "border-madie-ink/25" : "border-white/35"}`}>
               {languages.map((language) => (
                 <button
                   key={language}
                   type="button"
-                  className={`flex h-7 min-w-8 cursor-pointer items-center justify-center rounded-full px-2 font-sans text-[10px] font-semibold tracking-[0.08em] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                  className={`flex h-7 min-w-8 cursor-pointer items-center justify-center rounded-full px-2 font-sans text-[10px] font-semibold tracking-[0.08em] transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 ${
                     language === "FR"
-                      ? "bg-white text-madie-burgundy"
-                      : "text-white/75 hover:bg-white/15 hover:text-white"
+                      ? useLightHeader
+                        ? "bg-madie-burgundy text-white"
+                        : "bg-white text-madie-burgundy"
+                      : useLightHeader
+                        ? "text-madie-ink/70 hover:bg-madie-burgundy/10 hover:text-madie-ink"
+                        : "text-white/75 hover:bg-white/15 hover:text-white"
                   }`}
                   aria-current={language === "FR" ? "true" : undefined}
                   aria-label={`Changer la langue vers ${language}`}
