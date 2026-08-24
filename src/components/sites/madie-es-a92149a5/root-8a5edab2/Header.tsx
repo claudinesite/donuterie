@@ -42,8 +42,8 @@ export function Header() {
   const scrollTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const darkSectionIds = new Set(["inicio", "catering"]);
-    const sectionIds = ["inicio", "story", "menu", "catering", "instagram", "contacto"];
+    const darkSectionIds = new Set(["inicio", "catering", "contacto", "site-footer"]);
+    const sectionIds = ["inicio", "story", "menu", "catering", "instagram", "contacto", "site-footer"];
     let frame: number | null = null;
 
     const updateHeaderTone = () => {
