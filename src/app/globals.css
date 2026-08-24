@@ -223,6 +223,17 @@
     ) !important;
   }
 
+  .madie-menu-stripes {
+    background-color: #ffffff;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(19, 167, 178, 0.08) 0,
+      rgba(19, 167, 178, 0.08) 80px,
+      rgba(255, 255, 255, 0.96) 80px,
+      rgba(255, 255, 255, 0.96) 160px
+    );
+  }
+
   .madie-reveal {
     opacity: 0;
     transform: translateY(14px);

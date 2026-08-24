@@ -397,7 +397,7 @@ export function MenuSection() {
   return (
     <section
       id="menu"
-      className="madie-stripes scroll-mt-20 overflow-hidden pb-20 pt-12 text-madie-ink lg:pb-32 lg:pt-20"
+      className="madie-menu-stripes scroll-mt-20 overflow-hidden pb-20 pt-12 text-madie-ink lg:pb-32 lg:pt-20"
     >
       <div className="mx-auto mb-12 grid w-full max-w-[1200px] grid-cols-1 gap-8 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:px-12">
         <h2 className="madie-display text-5xl leading-none font-bold tracking-[0.01em] uppercase lg:text-[96px] lg:leading-[96px]">
