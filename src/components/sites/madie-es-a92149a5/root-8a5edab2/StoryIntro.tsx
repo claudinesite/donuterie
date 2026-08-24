@@ -72,7 +72,7 @@ export function StoryIntro() {
               </span>
             </h2>
 
-            <div className="mx-auto mt-8 max-w-[56ch] space-y-4 text-[14px] leading-[1.55] text-madie-ink/75 md:text-[15px]">
+            <div className="mx-auto mt-8 max-w-[56ch] space-y-4 text-left text-[14px] leading-[1.55] text-madie-ink/75 md:text-[15px]">
               <p>
                 Chez Le Petit Bleu, nous pensons qu’un donut peut raconter bien plus
                 qu’une simple recette.
