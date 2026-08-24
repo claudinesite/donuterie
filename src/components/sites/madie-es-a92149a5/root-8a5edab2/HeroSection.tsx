@@ -29,7 +29,12 @@ export function HeroSection() {
       />
       <div aria-hidden="true" className="madie-grain-ivory z-0" />
 
-      <div className="pointer-events-none absolute top-0 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:w-[240px] lg:w-[clamp(230px,20vw,300px)]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 left-1/2 z-[19] h-8 w-[10px] -translate-x-1/2 bg-[repeating-linear-gradient(135deg,#07515B_0,#07515B_3px,#0C7A86_3px,#0C7A86_6px)] shadow-[2px_0_5px_rgba(7,81,91,0.28)] sm:h-10 sm:w-3 lg:h-14"
+      />
+
+      <div className="pointer-events-none absolute top-8 left-1/2 z-20 w-[180px] -translate-x-1/2 sm:top-10 sm:w-[240px] lg:top-14 lg:w-[clamp(230px,20vw,300px)]">
         <Image
           alt="Donut artisanal bleu suspendu à une corde"
           className="h-auto w-full drop-shadow-[0_26px_30px_rgba(7,81,91,0.3)]"
@@ -41,7 +46,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 hidden h-full min-h-[620px] grid-cols-[minmax(0,1fr)_clamp(250px,21vw,320px)_minmax(0,1fr)] px-10 pt-20 pb-10 lg:grid xl:px-16">
+      <div className="relative z-10 hidden h-full min-h-[620px] grid-cols-[minmax(0,1fr)_clamp(250px,21vw,320px)_minmax(0,1fr)] px-10 pt-20 pb-20 lg:grid xl:px-16">
         <div className="flex min-w-0 flex-col justify-center pr-10 xl:pr-16">
           <h1 className="ml-auto max-w-[520px] text-right font-heading text-[clamp(48px,4.9vw,74px)] leading-[0.88] font-bold tracking-[-0.025em] uppercase">
             Une
@@ -60,7 +65,7 @@ export function HeroSection() {
           <h1 className="max-w-[560px] font-heading text-[clamp(48px,4.9vw,74px)] leading-[0.88] font-bold tracking-[-0.025em] uppercase">
             Artisanale
             <br />
-            à Madrid
+            à Moncton
           </h1>
 
           <div className="mt-10 flex flex-wrap items-start gap-4">
@@ -70,7 +75,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 flex min-h-[640px] flex-col px-5 pt-[274px] pb-8 sm:min-h-[680px] sm:px-8 sm:pt-[370px] lg:hidden">
+      <div className="relative z-10 flex min-h-[640px] flex-col px-5 pt-[310px] pb-20 sm:min-h-[680px] sm:px-8 sm:pt-[410px] lg:hidden">
         <div className="grid grid-cols-2 gap-4">
           <h1 className="font-heading text-[26px] leading-[0.9] font-bold tracking-[-0.025em] uppercase sm:text-[48px]">
             <span className="block">Une</span>
@@ -79,7 +84,7 @@ export function HeroSection() {
 
           <h1 className="text-right font-heading text-[26px] leading-[0.9] font-bold tracking-[-0.025em] uppercase sm:text-[48px]">
             <span className="block whitespace-nowrap">Artisanale</span>
-            <span className="block whitespace-nowrap">à Madrid</span>
+            <span className="block whitespace-nowrap">à Moncton</span>
           </h1>
         </div>
 
@@ -91,6 +96,28 @@ export function HeroSection() {
             <HeroLink href="#menu" label="Commander" />
             <HeroLink href="#catering" label="Événements" />
           </div>
+        </div>
+      </div>
+
+      <div className="absolute inset-x-0 bottom-0 z-30 flex h-12 items-center overflow-hidden bg-[#07515B] text-white">
+        <div className="flex min-w-max [animation:madie-marquee_18s_linear_infinite] motion-reduce:animate-none">
+          {[0, 1].map((copy) => (
+            <div
+              aria-hidden={copy === 1}
+              className="flex shrink-0 items-center"
+              key={copy}
+            >
+              {["Donuts artisanaux", "Café de spécialité", "Préparés chaque jour", "Moncton"].map((item) => (
+                <span
+                  className="flex shrink-0 items-center gap-6 px-6 font-heading text-[13px] font-bold tracking-[0.11em] uppercase sm:px-8 sm:text-[14px]"
+                  key={`${copy}-${item}`}
+                >
+                  {item}
+                  <span aria-hidden="true" className="size-1.5 rounded-full bg-[#13A7B2]" />
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>

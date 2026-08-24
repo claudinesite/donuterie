@@ -27,7 +27,7 @@ const menuItems = [
     label: "Nous trouver",
     href: "#contacto",
     image: `${assetRoot}/de2e0b19d937fb62.jpg`,
-    caption: "On t’attend à Madrid",
+    caption: "On t’attend à Moncton",
   },
 ] as const;
 
@@ -252,9 +252,9 @@ export function Header() {
                     Nous trouver
                   </p>
                   <address className="not-italic">
-                    C/ de Donoso Cortés, 62, Chamberí,
+                    Moncton,
                     <br />
-                    28015 Madrid
+                    Nouveau-Brunswick, Canada
                   </address>
                   <a
                     href="tel:+34603861349"

@@ -62,7 +62,7 @@ export function ContactSection() {
           <h2 className="madie-display text-[36px] leading-[1.1] font-bold tracking-[0.01em] uppercase lg:text-[72px] lg:leading-[79.2px]">
             <span className="madie-text-stroke-thin">Retrouve-nous</span>
             <br />
-            <span>à Madrid.</span>
+            <span>à Moncton.</span>
           </h2>
         </header>
 
@@ -75,7 +75,7 @@ export function ContactSection() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`${assetRoot}/2627c1191ccf1fa9`}
-                alt="Plan illustré de Madrid autour de Le Petit Bleu"
+                alt="Plan illustré autour de Le Petit Bleu à Moncton"
                 className="absolute inset-0 size-full object-cover object-center"
               />
 
@@ -132,9 +132,9 @@ export function ContactSection() {
 
             <div className="absolute bottom-5 left-5 z-20 max-w-[290px] rounded-[18px] border border-madie-cream/10 bg-madie-burgundy-dark/90 px-5 py-4 text-madie-cream shadow-xl backdrop-blur-sm">
               <p className="madie-display text-[17px] leading-[1.15] font-bold tracking-[0.035em] uppercase">
-                C/ de Donoso Cortés, 62
+                Moncton
                 <br />
-                Chamberí, 28015 Madrid
+                Nouveau-Brunswick, Canada
               </p>
             </div>
           </div>

@@ -381,7 +381,7 @@ export function MenuSection() {
           <p className="max-w-[520px] text-[17px] leading-[1.6] text-madie-burgundy/80">
             Découvrez notre sélection de donuts artisanaux, de cafés de
             spécialité et de boissons créatives. Tout est préparé chaque jour
-            dans notre atelier à Madrid.
+            dans notre atelier à Moncton.
           </p>
 
           <div

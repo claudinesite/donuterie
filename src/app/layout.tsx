@@ -36,7 +36,7 @@ const caveat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Le Petit Bleu — Donuterie artisanale à Madrid",
+  title: "Le Petit Bleu — Donuterie artisanale à Moncton",
   description:
     "Des donuts artisanaux et des cafés de spécialité chez Le Petit Bleu.",
 };
