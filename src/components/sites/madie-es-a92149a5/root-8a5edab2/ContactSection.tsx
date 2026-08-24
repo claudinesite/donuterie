@@ -12,30 +12,6 @@ const zoomClasses = [
   "scale-[1.45]",
 ] as const;
 
-type StationPillProps = {
-  name: string;
-  position: string;
-};
-
-function StationPill({ name, position }: StationPillProps) {
-  return (
-    <div
-      className={`absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-1 rounded-full bg-madie-cream px-2 py-1 font-sans text-[8px] leading-none font-semibold whitespace-nowrap text-madie-burgundy shadow-sm ${position}`}
-    >
-      {/* Native image keeps the tiny station decoration coupled to the map canvas. */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={`${assetRoot}/2a3b5a08862f1128.svg`}
-        alt=""
-        width={15}
-        height={9}
-        className="h-[9px] w-[15px] object-contain"
-      />
-      <span>{name}</span>
-    </div>
-  );
-}
-
 export function ContactSection() {
   const [zoomIndex, setZoomIndex] = useState(1);
 
@@ -73,19 +49,12 @@ export function ContactSection() {
             >
               {/* Native image is intentional: the local file is an extensionless AVIF payload. */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`${assetRoot}/2627c1191ccf1fa9`}
-                alt="Plan illustré autour de Le Petit Bleu à Moncton"
-                className="absolute inset-0 size-full object-cover object-center"
+              <iframe
+                title="Carte de Le Petit Bleu à Moncton"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-64.86%2C46.03%2C-64.70%2C46.15&layer=mapnik&marker=46.0878%2C-64.7782"
+                loading="lazy"
+                className="absolute inset-0 size-full border-0"
               />
-
-              <StationPill
-                name="Islas Filipinas"
-                position="top-[28%] left-[38%]"
-              />
-              <StationPill name="Canal" position="top-[30%] left-[91%]" />
-              <StationPill name="Moncloa" position="top-[72%] left-[8%]" />
-              <StationPill name="Quevedo" position="top-[82%] left-[88%]" />
 
               <span
                 className="absolute top-[47%] left-[53%] size-12 -translate-x-1/2 -translate-y-1/2 rounded-full bg-madie-rose/55 [animation:madie-map-pulse_2.4s_cubic-bezier(0,0,.2,1)_infinite]"
