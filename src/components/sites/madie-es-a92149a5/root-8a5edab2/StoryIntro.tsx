@@ -50,7 +50,7 @@ export function StoryIntro() {
     <section
       ref={sectionRef}
       id="story"
-      className="relative overflow-hidden bg-white"
+      className="relative overflow-hidden bg-transparent"
     >
       <div className="relative flex min-h-[500px] items-center justify-center overflow-hidden px-6 py-16 text-center sm:px-10 lg:min-h-[560px] lg:px-[clamp(48px,6vw,96px)] lg:py-20">
           <div
