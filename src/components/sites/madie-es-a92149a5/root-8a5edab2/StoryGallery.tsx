@@ -150,64 +150,28 @@ export function StoryGallery() {
   const currentStory = storyStates[activeIndex];
 
   return (
-    <section
-      className="madie-stripes relative min-h-[788.5px] overflow-hidden px-6 pt-16 pb-24 text-[#102F35] lg:h-[736.5px] lg:min-h-0 lg:px-10 lg:pb-20"
+    <div
+      className="madie-stripes relative flex min-h-[720px] overflow-hidden px-6 py-16 text-[#102F35] sm:px-10 lg:min-h-[780px] lg:px-12"
       id="historia"
     >
-      <div className="relative z-10 mx-auto grid h-full w-full max-w-[1066px] grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_550px] lg:items-center lg:gap-10">
-        <div className="order-2 w-full max-w-[440px] self-center lg:order-1 lg:self-start lg:pt-4">
-          <video
-            aria-hidden="true"
-            autoPlay
-            className="pointer-events-none hidden h-44 w-44 object-contain lg:block"
-            loop
-            muted
-            playsInline
-            preload="metadata"
-          >
-            <source
-              src={`${assetRoot}/8cb64c4b2cd18888.webm`}
-              type="video/webm"
-            />
-          </video>
+      <video
+        aria-hidden="true"
+        autoPlay
+        className="pointer-events-none absolute top-5 left-5 z-0 h-24 w-24 object-contain opacity-80 sm:h-28 sm:w-28 lg:top-8 lg:left-8 lg:h-32 lg:w-32"
+        loop
+        muted
+        playsInline
+        preload="metadata"
+      >
+        <source
+          src={`${assetRoot}/8cb64c4b2cd18888.webm`}
+          type="video/webm"
+        />
+      </video>
 
-          <div
-            aria-live="polite"
-            className="mt-0 lg:mt-9"
-            key={activeIndex}
-          >
-            <p className="animate-in fade-in slide-in-from-bottom-2 max-w-[430px] text-[16.8px] leading-[25.2px] duration-300">
-              {currentStory.lead}
-              <strong className="font-bold">{currentStory.emphasis}</strong>
-              {currentStory.tail}
-            </p>
-          </div>
-
-          <div className="mt-8 flex items-center gap-3 lg:mt-11">
-            <button
-              aria-label="Histoire précédente"
-              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-              onClick={() => changeStory(-1)}
-              type="button"
-            >
-              <ArrowLeftIcon className="size-5" />
-            </button>
-            <button
-              aria-label="Histoire suivante"
-              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-              onClick={() => changeStory(1)}
-              type="button"
-            >
-              <ArrowRightIcon className="size-5" />
-            </button>
-            <span className="madie-mono ml-1 text-[11px] leading-none tracking-[0.04em] text-[#102F35]/75">
-              {String(activeIndex + 1).padStart(2, "0")} / 04
-            </span>
-          </div>
-        </div>
-
-        <div className="relative order-1 mx-auto h-[380px] w-full max-w-[550px] lg:order-2 lg:h-[572px]">
-          <p className="madie-eyebrow absolute -top-8 left-1/2 hidden -translate-x-1/2 whitespace-nowrap text-[#102F35]/65 lg:block">
+      <div className="relative z-10 mx-auto flex w-full max-w-[620px] flex-col justify-center">
+        <div className="relative mx-auto h-[380px] w-full max-w-[540px] sm:h-[460px] lg:h-[500px]">
+          <p className="madie-eyebrow absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-[#102F35]/65">
             Fais glisser →
           </p>
 
@@ -228,7 +192,7 @@ export function StoryGallery() {
                       ? `Histoire Le Petit Bleu ${activeIndex + 1} sur ${storyStates.length}`
                       : undefined
                   }
-                  className={`relative aspect-[3/4] w-[78%] origin-center overflow-hidden rounded-[18px] border border-[#102F35]/30 bg-white shadow-[0_18px_42px_rgba(4,29,34,0.2)] transition-all duration-[550ms] ease-[cubic-bezier(.2,.7,.3,1)] will-change-transform ${stackPositionClasses[position]} ${isActive ? "pointer-events-auto cursor-grab touch-none select-none active:cursor-grabbing" : ""}`}
+                  className={`relative aspect-[3/4] w-[78%] origin-center overflow-hidden rounded-[18px] border border-[#102F35]/30 bg-white shadow-[0_18px_42px_rgba(4,29,34,0.2)] transition-all duration-[550ms] ease-[cubic-bezier(.2,.7,.3,1)] will-change-transform sm:w-[72%] ${stackPositionClasses[position]} ${isActive ? "pointer-events-auto cursor-grab touch-none select-none active:cursor-grabbing" : ""}`}
                   onPointerCancel={(event) => finishDrag(event, true)}
                   onPointerDown={isActive ? handlePointerDown : undefined}
                   onPointerMove={isActive ? handlePointerMove : undefined}
@@ -242,7 +206,39 @@ export function StoryGallery() {
             );
           })}
         </div>
+
+        <div className="relative z-[60] mx-auto -mt-3 w-full max-w-[480px] bg-[#F4EAD8] px-5 py-5 shadow-[0_18px_36px_rgba(4,29,34,0.16)] sm:px-6">
+          <div aria-live="polite" key={activeIndex}>
+            <p className="animate-in fade-in slide-in-from-bottom-2 text-[15px] leading-[1.5] duration-300 sm:text-[16px]">
+              {currentStory.lead}
+              <strong className="font-bold">{currentStory.emphasis}</strong>
+              {currentStory.tail}
+            </p>
+          </div>
+
+          <div className="mt-5 flex items-center gap-3">
+            <button
+              aria-label="Histoire précédente"
+              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#102F35]"
+              onClick={() => changeStory(-1)}
+              type="button"
+            >
+              <ArrowLeftIcon className="size-5" />
+            </button>
+            <button
+              aria-label="Histoire suivante"
+              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FF8B6A] text-[#13A7B2] transition-colors duration-150 hover:bg-[#FFD1C4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#102F35]"
+              onClick={() => changeStory(1)}
+              type="button"
+            >
+              <ArrowRightIcon className="size-5" />
+            </button>
+            <span className="madie-mono ml-1 text-[11px] leading-none tracking-[0.04em] text-[#102F35]/75">
+              {String(activeIndex + 1).padStart(2, "0")} / 04
+            </span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
