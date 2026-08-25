@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import { ArrowRightIcon, InstagramIcon } from "../shared/icons";
+import { useLanguage } from "./LanguageProvider";
+import { gsap, MOTION, useGSAP } from "./motion";
 
 const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
 const instagramUrl = "https://www.instagram.com/claudine_eyram/";
@@ -16,50 +18,51 @@ const instagramImages = [
   "instagram-donut-trio.png",
 ] as const;
 
-const cardDelays = [
-  "delay-0",
-  "delay-[80ms]",
-  "delay-[160ms]",
-  "delay-[240ms]",
-  "delay-[320ms]",
-  "delay-[400ms]",
-] as const;
-
 export function InstagramSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const { language } = useLanguage();
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
+  useGSAP(
+    () => {
+      const section = sectionRef.current;
 
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    );
+      if (!section) {
+        return;
+      }
 
-    if (reducedMotion.matches) {
-      const animationFrame = window.requestAnimationFrame(() => {
-        setIsVisible(true);
+      const media = gsap.matchMedia();
+
+      media.add("(prefers-reduced-motion: no-preference)", () => {
+        gsap.from("[data-instagram-intro]", {
+          autoAlpha: 0,
+          duration: 0.78,
+          ease: MOTION.easeOut,
+          y: 18,
+          scrollTrigger: {
+            once: true,
+            start: "top 80%",
+            trigger: section,
+          },
+        });
+        gsap.from("[data-instagram-card]", {
+          autoAlpha: 0,
+          duration: 0.64,
+          ease: MOTION.easeOut,
+          scale: 0.98,
+          stagger: 0.07,
+          y: 14,
+          scrollTrigger: {
+            once: true,
+            start: "top 68%",
+            trigger: section,
+          },
+        });
       });
-      return () => window.cancelAnimationFrame(animationFrame);
-    }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry?.isIntersecting) return;
-        setIsVisible(true);
-        observer.disconnect();
-      },
-      { rootMargin: "0px 0px -10%", threshold: 0.14 },
-    );
-
-    observer.observe(section);
-    return () => observer.disconnect();
-  }, []);
-
-  const revealClasses = isVisible
-    ? "translate-y-0 opacity-100"
-    : "translate-y-[14px] opacity-0";
+      return () => media.revert();
+    },
+    { scope: sectionRef },
+  );
 
   return (
     <section
@@ -70,34 +73,33 @@ export function InstagramSection() {
       <div className="madie-grain opacity-[0.1]" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1200px]">
-        <div
-          className={`${revealClasses} transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.7,.3,1)] motion-reduce:transform-none motion-reduce:transition-none`}
-        >
+        <div data-instagram-intro>
           <p className="madie-eyebrow flex items-center gap-2.5 text-[#13A7B2]/75">
             <InstagramIcon className="size-6 stroke-[1.8]" />
-            <span>Le Petit Bleu sur Instagram</span>
+            <span>{language === "fr" ? "Le Petit Bleu sur Instagram" : "Le Petit Bleu on Instagram"}</span>
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-8 lg:mt-12 lg:grid-cols-[1.5fr_.9fr] lg:gap-16">
             <h2 className="max-w-[760px] font-heading text-[44px] leading-[48.4px] font-bold tracking-[0.01em] uppercase sm:text-[60px] sm:leading-[66px] lg:text-[72px] lg:leading-[79.2px]">
               <span className="madie-text-stroke block text-[#13A7B2]">
-                Découvre ce qui{" "}
+                {language === "fr" ? "Découvre ce qui" : "Discover what"}{" "}
                 <span className="[-webkit-text-fill-color:#13A7B2] [-webkit-text-stroke:0]">
-                  sort
+                  {language === "fr" ? "sort" : "comes"}
                 </span>
               </span>
-              <span className="block text-[#13A7B2]">de notre four</span>
+              <span className="block text-[#13A7B2]">{language === "fr" ? "de notre four" : "from our oven"}</span>
               <span className="madie-text-stroke block text-[#13A7B2]">
-                avant tout le monde.
+                {language === "fr" ? "avant tout le monde." : "before everyone else."}
               </span>
             </h2>
 
             <div className="self-end lg:pb-2">
               <p className="max-w-[440px] text-[17px] leading-[1.6] text-[#102F35]">
-                Rejoins les{" "}
-                <span className="font-bold text-[#FF8B6A]">1 365 gourmands</span>
-                {" "}qui ne manquent jamais une fournée : chaque création et boisson
-                de saison apparaît d’abord sur notre Instagram.
+                {language === "fr" ? "Rejoins les " : "Join "}
+                <span className="font-bold text-[#FF8B6A]">{language === "fr" ? "1 365 gourmands" : "1,365 food lovers"}</span>
+                {language === "fr"
+                  ? " qui ne manquent jamais une fournée : chaque création et boisson de saison apparaît d’abord sur notre Instagram."
+                  : " who never miss a fresh bake: every seasonal creation and drink appears first on our Instagram."}
               </p>
 
               <a
@@ -106,7 +108,7 @@ export function InstagramSection() {
                 rel="noreferrer"
                 target="_blank"
               >
-                <span>Le Petit Bleu sur Instagram</span>
+                <span>{language === "fr" ? "Le Petit Bleu sur Instagram" : "Le Petit Bleu on Instagram"}</span>
                 <ArrowRightIcon className="size-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
             </div>
@@ -116,8 +118,9 @@ export function InstagramSection() {
         <div className="-mx-6 mt-14 flex snap-x snap-mandatory gap-[18px] overflow-x-auto px-6 pb-4 [scrollbar-width:none] lg:mx-0 lg:mt-16 lg:grid lg:grid-cols-6 lg:overflow-visible lg:px-0 lg:pb-0 [&::-webkit-scrollbar]:hidden">
           {instagramImages.map((image, index) => (
             <a
+                data-instagram-card
                 aria-label={`Voir la publication ${index + 1} de Le Petit Bleu sur Instagram`}
-              className={`group relative aspect-[3/4] w-[260px] shrink-0 snap-center overflow-hidden rounded-[14px] bg-[#DCEDEA] shadow-[0_10px_30px_rgba(7,81,91,0.08)] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.7,.3,1)] lg:w-auto ${cardDelays[index]} ${revealClasses} motion-reduce:transform-none motion-reduce:transition-none`}
+              className="group relative aspect-[3/4] w-[260px] shrink-0 snap-center overflow-hidden rounded-[14px] bg-[#DCEDEA] shadow-[0_10px_30px_rgba(7,81,91,0.08)] transition-transform duration-500 ease-[cubic-bezier(.2,.7,.3,1)] lg:w-auto"
               href={instagramUrl}
               key={image}
               rel="noreferrer"

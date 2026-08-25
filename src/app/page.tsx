@@ -2,10 +2,11 @@ import { CateringSection } from "@/components/sites/madie-es-a92149a5/root-8a5ed
 import { ContactSection } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/ContactSection";
 import { Footer } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/Footer";
 import { Header } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/Header";
-import { HeroSection } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/HeroSection";
+import { HeroStoryOverlap } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/HeroStoryOverlap";
 import { InstagramSection } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/InstagramSection";
+import { LanguageProvider } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/LanguageProvider";
 import { MenuSection } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/MenuSection";
-import { StoryIntro } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/StoryIntro";
+import { MotionProvider } from "@/components/sites/madie-es-a92149a5/root-8a5edab2/MotionProvider";
 
 interface WaveDividerProps {
   reverse?: boolean;
@@ -42,18 +43,20 @@ function WaveDivider({
 
 export default function Home() {
   return (
-    <div className="madie-site">
-      <Header />
-      <main>
-        <HeroSection />
-        <StoryIntro />
-        <MenuSection />
-        <CateringSection />
-        <InstagramSection />
-        <WaveDivider />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="madie-site">
+        <MotionProvider />
+        <Header />
+        <main>
+          <HeroStoryOverlap />
+          <MenuSection />
+          <CateringSection />
+          <InstagramSection />
+          <WaveDivider />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }

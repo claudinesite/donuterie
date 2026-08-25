@@ -8,6 +8,9 @@ import {
   useState,
 } from "react";
 
+import { useLanguage } from "./LanguageProvider";
+import { gsap, MOTION, useGSAP } from "./motion";
+
 const assetRoot = "/sites/madie-es-a92149a5/root-8a5edab2/assets";
 
 type Product = {
@@ -277,14 +280,55 @@ const slideClasses = [
   "-translate-x-[200%]",
 ] as const;
 
+const englishDescriptions: Record<string, string> = {
+  Americano: "Espresso softened with hot water for a light, aromatic coffee to savour slowly.",
+  Capuchino: "Intense espresso, creamy foam and a touch of cocoa or cinnamon. Classic and comforting.",
+  Chai: "Inspired by chai, with cinnamon, vanilla and cardamom. Aromatic, warm and comforting.",
+  "Chai Latte": "A creamy chai-spiced drink with cinnamon, vanilla and cardamom. Soft and comforting.",
+  Chocolate: "A deep cocoa donut with a tender, fluffy centre. An essential for chocolate lovers.",
+  Citron: "A donut with a sweet, refreshing lemon glaze.",
+  "Coco Matcha": "A soft, balanced Japanese matcha blended with creamy milk. Refreshing and delicate.",
+  "Coco au charbon actif": "A surprising blend of coconut, dark cocoa and activated charcoal. Exotic and singular.",
+  Espresso: "A short espresso with an intense taste and deep aroma. Powerful and full of character.",
+  Fresa: "Strawberry chocolate glaze with a crisp fruit topping. Sweet, intense and joyful.",
+  Latte: "Espresso and creamy milk with a soft latte art finish. Balanced and perfect any time.",
+  Mango: "A creamy mango glaze, soft and tropical. Fresh, exotic and perfect any time.",
+  Matcha: "Pure matcha, milk and ice for an intense, fresh and energising drink.",
+  Marbré: "Vanilla and chocolate meet in a tender marbled donut. Classic, comforting and irresistible.",
+  Myrtille: "A creamy blueberry glaze lifted with natural fruit. Soft, fresh and lightly tart.",
+  Orange: "A donut glazed with natural orange, light, fragrant and delicately tangy.",
+  "Pistache blanche": "Creamy white chocolate glaze with pistachio pieces. Soft, elegant and gently toasted.",
+  Rose: "A fruity glaze with floral notes and a tender centre. Delicate, indulgent and colourful.",
+  Vanille: "The great classic: a soft vanilla donut, light and delicately fragrant. Perfect with coffee.",
+  "Spiruline bleue": "A naturally blue spirulina glaze, soft and velvety with a hint of coconut.",
+  "Thai Tea Latte": "Traditional Thai tea with creamy milk, soft and delicately spiced.",
+  "Ube Latte": "A creamy ube drink with a touch of natural vanilla. Vibrant and irresistible.",
+  "Ube Matcha Latte": "Le Petit Bleu's signature: soft, creamy ube with Japanese matcha. Colourful and surprising.",
+};
+
+const englishGroupTitles: Record<string, string> = {
+  "Café & thé en sachet": "Coffee & tea bags",
+  "Café de spécialité": "Specialty coffee",
+  Créations: "Creations",
+  "Les classiques": "Classics",
+  "Packs Le Petit Bleu": "Le Petit Bleu packs",
+  Premium: "Premium",
+};
+
 function ProductCard({ product }: { product: Product }) {
+  const { language } = useLanguage();
+  const description = language === "en"
+    ? englishDescriptions[product.name] ?? product.description
+    : product.description;
+
   return (
-    <article className="grid min-h-[172px] grid-cols-[96px_minmax(0,1fr)] gap-4 pb-8 sm:grid-cols-[140px_minmax(0,1fr)] sm:gap-5">
+    <article data-menu-product className="group grid min-h-[172px] grid-cols-[96px_minmax(0,1fr)] gap-4 pb-8 sm:grid-cols-[140px_minmax(0,1fr)] sm:gap-5">
       {product.imagePosition ? (
         <div
           role="img"
           aria-label={`${product.name} donut`}
-          className="size-24 bg-no-repeat drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)] sm:size-[140px]"
+          data-menu-donut
+          className="size-24 bg-no-repeat drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)] transition-transform duration-300 ease-out group-hover:scale-[1.04] group-hover:rotate-[3deg] sm:size-[140px]"
           style={{
             backgroundImage: `url(${assetRoot}/${product.image})`,
             backgroundPosition: product.imagePosition,
@@ -298,18 +342,21 @@ function ProductCard({ product }: { product: Product }) {
           width={140}
           height={140}
           sizes="140px"
-          className="size-24 object-contain drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)] sm:size-[140px]"
+          data-menu-donut
+          className="size-24 object-contain drop-shadow-[0_6px_14px_rgba(7,81,91,0.18)] transition-transform duration-300 ease-out group-hover:scale-[1.04] group-hover:rotate-[3deg] sm:size-[140px]"
         />
       )}
 
-      <div className="min-w-0 pt-2">
+      <div data-menu-product-copy className="min-w-0 pt-2 transition-transform duration-300 ease-out group-hover:translate-x-0.5">
         <div className="mb-2 flex flex-wrap items-center gap-2">
           <h4 className="madie-display text-[18px] leading-[1.05] font-bold tracking-[0.04em] uppercase">
             {product.name}
           </h4>
           {product.badge ? (
             <span className="rounded-full bg-madie-rose px-2.5 py-1 font-sans text-[9px] leading-none font-semibold tracking-[0.12em] uppercase">
-              {product.badge}
+              {language === "en" && product.badge === "Meilleure vente"
+                ? "Best seller"
+                : product.badge}
             </span>
           ) : null}
         </div>
@@ -320,10 +367,10 @@ function ProductCard({ product }: { product: Product }) {
           </p>
         ) : null}
 
-        {product.description ? (
-          <p className="text-[14px] leading-[1.5] text-black">
-            {product.description}
-          </p>
+          {description ? (
+            <p className="text-[14px] leading-[1.5] text-black">
+            {description}
+            </p>
         ) : null}
       </div>
     </article>
@@ -337,6 +384,8 @@ function ProductPanel({
   panel: MenuPanel;
   panelIndex: number;
 }) {
+  const { language } = useLanguage();
+
   return (
     <div className="space-y-16 lg:space-y-20">
       {panel.groups.map((group, groupIndex) => (
@@ -348,7 +397,7 @@ function ProductPanel({
             id={`menu-group-${panelIndex}-${groupIndex}`}
             className="madie-display madie-text-stroke-thin mb-8 text-2xl leading-8 font-bold tracking-[0.05em] uppercase"
           >
-            {group.title}
+            {language === "en" ? englishGroupTitles[group.title] ?? group.title : group.title}
           </h3>
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {(panel.label === "Donuts" && groupIndex === 1
@@ -366,6 +415,8 @@ function ProductPanel({
 
 export function MenuSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { language } = useLanguage();
+  const sectionRef = useRef<HTMLElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const panelRefs = useRef<Array<HTMLDivElement | null>>([]);
 
@@ -394,27 +445,109 @@ export function MenuSection() {
     return () => resizeObserver.disconnect();
   }, [activeIndex, measureActivePanel]);
 
+  useGSAP(
+    () => {
+      const activePanel = panelRefs.current[activeIndex];
+
+      if (!activePanel) {
+        return;
+      }
+
+      const media = gsap.matchMedia();
+
+      media.add(
+        {
+          desktop: "(min-width: 1024px)",
+          reducedMotion: "(prefers-reduced-motion: reduce)",
+        },
+        (context) => {
+          if (context.conditions?.reducedMotion) {
+            return;
+          }
+
+          const isDesktop = context.conditions?.desktop ?? false;
+          const products = activePanel.querySelectorAll<HTMLElement>("[data-menu-product]");
+          const donuts = activePanel.querySelectorAll<HTMLElement>("[data-menu-donut]");
+          const stripeLayer = sectionRef.current?.querySelector<HTMLElement>("[data-menu-stripe-layer]");
+
+          gsap.from(products, {
+            autoAlpha: 0,
+            duration: 0.72,
+            ease: MOTION.easeOut,
+            stagger: MOTION.staggerFast,
+            x: (index) => (isDesktop && index % 2 === 0 ? -10 : isDesktop ? 10 : 0),
+            y: isDesktop ? 22 : 14,
+            scrollTrigger: {
+              once: true,
+              start: "top 82%",
+              trigger: activePanel,
+            },
+          });
+
+          gsap.from(donuts, {
+            duration: 0.76,
+            ease: MOTION.easeOut,
+            rotation: (index) => (index % 2 === 0 ? -4 : 4),
+            scale: 0.95,
+            stagger: MOTION.staggerFast,
+            scrollTrigger: {
+              once: true,
+              start: "top 82%",
+              trigger: activePanel,
+            },
+          });
+
+          if (stripeLayer) {
+            gsap.fromTo(
+              stripeLayer,
+              { y: -6 },
+              {
+                y: 6,
+                ease: "none",
+                scrollTrigger: {
+                  end: "bottom top",
+                  scrub: 1,
+                  start: "top bottom",
+                  trigger: sectionRef.current,
+                },
+              },
+            );
+          }
+        },
+      );
+
+      return () => media.revert();
+    },
+    { dependencies: [activeIndex], revertOnUpdate: true, scope: sectionRef },
+  );
+
   return (
     <section
       id="menu"
-      className="madie-menu-stripes scroll-mt-20 overflow-hidden pb-20 pt-12 text-madie-burgundy lg:pb-32 lg:pt-20"
+      ref={sectionRef}
+      className="relative madie-menu-stripes scroll-mt-20 overflow-hidden pb-20 pt-12 text-madie-burgundy lg:pb-32 lg:pt-20"
     >
-      <div className="mx-auto mb-12 grid w-full max-w-[1200px] grid-cols-1 gap-8 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:px-12">
+      <div
+        data-menu-stripe-layer
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(90deg,rgba(19,167,178,0.045)_0,rgba(19,167,178,0.045)_80px,transparent_80px,transparent_160px)]"
+      />
+      <div className="relative z-10 mx-auto mb-12 grid w-full max-w-[1200px] grid-cols-1 gap-8 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:px-12">
         <h2 className="madie-display text-5xl leading-none font-bold tracking-[0.01em] uppercase lg:text-[96px] lg:leading-[96px]">
-          <span className="madie-text-stroke-thin">Le</span> menu
+          {language === "en" ? "The menu" : <><span className="madie-text-stroke-thin">Le</span> menu</>}
         </h2>
 
         <div className="lg:pt-2">
           <p className="max-w-[520px] text-[17px] leading-[1.6] text-madie-burgundy/85">
-            Découvrez notre sélection de donuts artisanaux, de cafés de
-            spécialité et de boissons créatives. Tout est préparé chaque jour
-            dans notre atelier à Moncton.
+            {language === "fr"
+              ? "Découvrez notre sélection de donuts artisanaux, de cafés de spécialité et de boissons créatives. Tout est préparé chaque jour dans notre atelier à Moncton."
+              : "Discover our selection of handmade donuts, specialty coffee and creative drinks. Everything is prepared fresh each day in our Moncton kitchen."}
           </p>
 
           <div
             className="mt-7 flex flex-wrap gap-2.5"
             role="tablist"
-            aria-label="Catégories du menu"
+            aria-label={language === "fr" ? "Catégories du menu" : "Menu categories"}
           >
             {menuPanels.map((panel, index) => {
               const isActive = index === activeIndex;
@@ -435,7 +568,9 @@ export function MenuSection() {
                   }`}
                   onClick={() => setActiveIndex(index)}
                 >
-                  {panel.label}
+                  {language === "fr"
+                    ? panel.label
+                    : ["Donuts", "Coffee", "Take away"][index]}
                 </button>
               );
             })}
@@ -445,7 +580,7 @@ export function MenuSection() {
 
       <div
         ref={viewportRef}
-        className="overflow-hidden transition-[height] duration-[650ms] ease-[cubic-bezier(.34,1.15,.64,1)]"
+        className="relative z-10 overflow-hidden transition-[height] duration-[650ms] ease-[cubic-bezier(.34,1.15,.64,1)]"
       >
         <div
           className={`flex items-start transition-transform duration-[650ms] ease-[cubic-bezier(.34,1.15,.64,1)] ${slideClasses[activeIndex]}`}

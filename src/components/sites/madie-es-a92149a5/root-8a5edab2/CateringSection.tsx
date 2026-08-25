@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { useLanguage } from "./LanguageProvider";
+import { gsap, useGSAP } from "./motion";
+
 function useCateringMotion() {
   const sectionRef = useRef<HTMLElement>(null);
   const imageWrapperRef = useRef<HTMLDivElement>(null);
@@ -41,11 +44,8 @@ function useCateringMotion() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let frameId: number | null = null;
-
-    const updateParallax = () => {
+  useGSAP(
+    () => {
       const section = sectionRef.current;
       const imageWrapper = imageWrapperRef.current;
 
@@ -53,54 +53,37 @@ function useCateringMotion() {
         return;
       }
 
-      if (reduceMotion.matches) {
-        imageWrapper.style.transform = "translate3d(0, 0, 0)";
-        return;
-      }
+      const media = gsap.matchMedia();
 
-      const bounds = section.getBoundingClientRect();
-      const travel = window.innerHeight + bounds.height;
-      const progress = Math.min(
-        Math.max((window.innerHeight - bounds.top) / travel, 0),
-        1,
-      );
-      const offset = (progress - 0.5) * 130;
-
-      imageWrapper.style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0)`;
-    };
-
-    const queueParallaxUpdate = () => {
-      if (frameId !== null) {
-        return;
-      }
-
-      frameId = window.requestAnimationFrame(() => {
-        frameId = null;
-        updateParallax();
+      media.add("(prefers-reduced-motion: no-preference)", () => {
+        gsap.fromTo(
+          imageWrapper,
+          { scale: 1, y: -34 },
+          {
+            ease: "none",
+            scale: 1.07,
+            y: 34,
+            scrollTrigger: {
+              end: "bottom top",
+              scrub: 1,
+              start: "top bottom",
+              trigger: section,
+            },
+          },
+        );
       });
-    };
 
-    queueParallaxUpdate();
-    window.addEventListener("scroll", queueParallaxUpdate, { passive: true });
-    window.addEventListener("resize", queueParallaxUpdate);
-    reduceMotion.addEventListener("change", queueParallaxUpdate);
-
-    return () => {
-      window.removeEventListener("scroll", queueParallaxUpdate);
-      window.removeEventListener("resize", queueParallaxUpdate);
-      reduceMotion.removeEventListener("change", queueParallaxUpdate);
-
-      if (frameId !== null) {
-        window.cancelAnimationFrame(frameId);
-      }
-    };
-  }, []);
+      return () => media.revert();
+    },
+    { scope: sectionRef },
+  );
 
   return { imageWrapperRef, isVisible, sectionRef };
 }
 
 export function CateringSection() {
   const { imageWrapperRef, isVisible, sectionRef } = useCateringMotion();
+  const { language } = useLanguage();
 
   return (
     <section
@@ -132,26 +115,26 @@ export function CateringSection() {
           className={`madie-reveal mx-auto max-w-[770px] motion-reduce:transform-none motion-reduce:transition-none ${isVisible ? "is-visible" : ""}`}
         >
           <p className="madie-eyebrow mb-6 flex items-center justify-center gap-4 text-madie-cream/85 before:h-px before:w-7 before:bg-madie-cream/50 before:content-[''] after:h-px after:w-7 after:bg-madie-cream/50 after:content-['']">
-            Événements
+            {language === "fr" ? "Événements" : "Events"}
           </p>
 
           <h2 className="madie-display madie-text-stroke text-[36px] leading-[1.1] text-madie-cream sm:text-[48px] lg:text-[96px] lg:leading-[105.6px]">
-            <span className="block">Les grands jours,</span>
-            <span className="block">encore plus doux</span>
-            <span className="block">avec Le Petit Bleu</span>
+            <span className="block">{language === "fr" ? "Les grands jours," : "Big days,"}</span>
+            <span className="block">{language === "fr" ? "encore plus doux" : "made even sweeter"}</span>
+            <span className="block">{language === "fr" ? "avec Le Petit Bleu" : "with Le Petit Bleu"}</span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-[58ch] text-[16px] leading-[1.6] text-madie-cream/85 md:text-[18px]">
-            Mariages, lancements ou un mardi au bureau qui mérite mieux : nous
-            imaginons des boîtes de donuts sur mesure et des instants gourmands
-            pour toutes les occasions.
+            {language === "fr"
+              ? "Mariages, lancements ou un mardi au bureau qui mérite mieux : nous imaginons des boîtes de donuts sur mesure et des instants gourmands pour toutes les occasions."
+              : "Weddings, launches or a Tuesday at the office that deserves better: we create custom donut boxes and sweet moments for every occasion."}
           </p>
 
           <a
             href="mailto:hola@lepetitbleu.com"
             className="madie-eyebrow mt-8 inline-flex h-12 items-center justify-center rounded-full bg-madie-rose px-8 text-madie-ink transition-colors duration-300 hover:bg-madie-rose-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-madie-cream"
           >
-            Commander
+            {language === "fr" ? "Commander" : "Order"}
           </a>
         </div>
       </div>
