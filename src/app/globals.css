@@ -234,6 +234,17 @@
     );
   }
 
+  .madie-footer-stripes {
+    background-color: #ffffff;
+    background-image: repeating-linear-gradient(
+      90deg,
+      #13a7b2 0,
+      #13a7b2 112px,
+      #ffffff 112px,
+      #ffffff 224px
+    );
+  }
+
   .madie-reveal {
     opacity: 0;
     transform: translateY(14px);
