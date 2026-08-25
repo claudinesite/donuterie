@@ -28,10 +28,10 @@ export function ContactSection() {
     >
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 lg:px-10">
         <header className="mx-auto mb-16 max-w-[600px] text-center">
-          <p className="madie-eyebrow mb-4 text-madie-ink/60">
+          <p className="madie-eyebrow mb-4 text-madie-burgundy">
             Passe nous voir
           </p>
-          <h2 className="madie-display text-[36px] leading-[1.1] font-bold tracking-[0.01em] uppercase lg:text-[72px] lg:leading-[79.2px]">
+          <h2 className="madie-display text-[36px] leading-[1.1] font-bold tracking-[0.01em] text-madie-burgundy uppercase lg:text-[72px] lg:leading-[79.2px]">
             <span className="madie-text-stroke-thin">Retrouve-nous</span>
             <br />
             <span>à Moncton.</span>
