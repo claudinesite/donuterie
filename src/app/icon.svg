@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>Donut Le Petit Bleu</title>
+  <rect width="512" height="512" rx="128" fill="#F4EAD8"/>
+  <circle cx="256" cy="274" r="166" fill="#07515B"/>
+  <circle cx="256" cy="248" r="158" fill="#13A7B2"/>
+  <path d="M113 211c34-77 107-121 184-111 60 8 108 44 135 91-29-20-61-29-94-26-46 4-76 27-116 30-39 3-74-10-109-2Z" fill="#58C5C7" opacity=".85"/>
+  <path d="M117 305c34 59 91 97 157 101 70 5 132-27 168-84-36 26-77 39-116 36-48-4-73-29-112-33-33-4-63 3-97-20Z" fill="#07515B" opacity=".22"/>
+  <circle cx="256" cy="248" r="70" fill="#F4EAD8" stroke="#07515B" stroke-width="18"/>
+  <circle cx="256" cy="248" r="40" fill="#13A7B2" opacity=".28"/>
+</svg>
