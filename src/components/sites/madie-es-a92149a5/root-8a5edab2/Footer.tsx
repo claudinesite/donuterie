@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer id="site-footer" className="madie-footer-stripes min-h-[337.5px] px-6 text-madie-ink lg:h-[337.5px]">
+    <footer id="site-footer" className="madie-footer-stripes min-h-[337.5px] border-t border-madie-ink/20 px-6 text-madie-ink lg:h-[337.5px]">
       <div className="mx-auto flex min-h-[337.5px] max-w-[1200px] flex-col lg:h-full">
         <div className="flex flex-1 items-center justify-center py-10">
           <p className="madie-hand text-[64px] leading-none text-madie-burgundy-dark">
