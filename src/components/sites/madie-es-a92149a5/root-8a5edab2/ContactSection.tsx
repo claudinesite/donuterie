@@ -26,8 +26,6 @@ export function ContactSection() {
       id="contacto"
       className="relative scroll-mt-20 overflow-hidden bg-[#13A7B2] pt-12 pb-16 text-white lg:pt-16 lg:pb-0"
     >
-      <div className="madie-grain" aria-hidden="true" />
-
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 lg:px-10">
         <header className="mx-auto mb-16 max-w-[600px] text-center">
           <p className="madie-eyebrow mb-4 text-white/70">
